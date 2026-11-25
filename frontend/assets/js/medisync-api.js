@@ -4,10 +4,10 @@
 (function (window) {
   'use strict';
 
-  const DEFAULT_API =
-    window.location.port === '8000'
-      ? ''
-      : 'http://127.0.0.1:8000';
+  const DEFAULT_API = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? 'http://127.0.0.1:8000'
+  : window.location.origin;
+
 
   const API_BASE = localStorage.getItem('medisync_api_base') || DEFAULT_API;
   const TOKEN_KEY = 'medisync_token';
