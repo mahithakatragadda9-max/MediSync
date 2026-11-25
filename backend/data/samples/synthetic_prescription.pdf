@@ -1,0 +1,50 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 869 >>
+stream
+BT
+/F1 11 Tf
+50 760 Td
+15 TL
+(SYNTHETIC DEMO PRESCRIPTION - FOR HACKATHON DEMONSTRATION ONLY) Tj
+T* (Outpatient Care Summary \(Synthetic Sample\)) Tj
+T* (Prescription Date: 2026-11-02) Tj
+T* (Prescriber: Dr. Kavita Rao \(Internal Medicine\)) Tj
+T* (------------------------------------------------------------) Tj
+T* (ACTIVE MEDICATIONS:) Tj
+T* (Medication: Cholecalciferol \(Vitamin D3\) 60000 IU - Once weekly for 8 weeks) Tj
+T* (Medication: Magnesium Glycinate 200 mg - Once nightly at bedtime) Tj
+T* (Medication: Sumatriptan 50 mg - As needed for acute severe headache \(max 2/week\)) Tj
+T* (DOCUMENTED ALLERGIES:) Tj
+T* (Allergy: Penicillin \(rash\)) Tj
+T* (CLINICAL EVENTS:) Tj
+T* (Event: Follow-up scheduled in 6 weeks to repeat TSH and 25-OH Vitamin D.) Tj
+T* (Observation: Track sleep duration and resting heart rate trends alongside headache frequency.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001161 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1231
+%%EOF

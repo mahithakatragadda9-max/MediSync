@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account — MediSync Health Intelligence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/medisync.css">
+</head>
+<body class="page-auth">
+    <div class="auth-wrapper">
+        <div class="auth-brand">
+            <div class="logo">
+                <div class="logo-box">M</div>
+                MediSync
+            </div>
+            <h3 class="fw-bold mb-2">Create Your MediSync Account</h3>
+            <p>Patients receive an instant MediSync ID &amp; privacy-safe QR code. Healthcare professionals enter credential verification.</p>
+            <ul class="features">
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="rgba(255,255,255,0.2)"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Unique MS-2026-XXXXXX Identity for Patients
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="rgba(255,255,255,0.2)"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Explicit, Revocable Consent Control
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="rgba(255,255,255,0.2)"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Modular Wearable CSV/JSON Ingestion
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="rgba(255,255,255,0.2)"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Aligned with DPDP Act 2023 Minimization Principles
+                </li>
+            </ul>
+            <a href="index.html" class="btn btn-outline-light btn-sm mt-4">&larr; Back to MediSync Home</a>
+        </div>
+
+        <div class="auth-form-side py-4">
+            <div class="auth-form">
+                <h2>Create Account</h2>
+                <p class="subtitle mb-3">Choose your account role to get started</p>
+
+                <div id="regError" class="alert alert-danger py-2 small d-none"></div>
+
+                <form id="registerForm" novalidate>
+                    <div class="btn-group w-100 mb-3" role="group">
+                        <input type="radio" class="btn-check" name="role" id="rolePatient" value="patient" checked>
+                        <label class="btn btn-outline-primary" for="rolePatient">Patient</label>
+                        <input type="radio" class="btn-check" name="role" id="rolePro" value="professional">
+                        <label class="btn btn-outline-primary" for="rolePro">Healthcare Professional</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-medium" for="fullname">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="e.g., Priya Nair" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-medium" for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <!-- Patient-only fields -->
+                    <div id="patientFields" class="row g-2 mb-3">
+                        <div class="col-4">
+                            <label class="form-label fw-medium small" for="age">Age</label>
+                            <input type="number" class="form-control" id="age" min="1" max="120" placeholder="28">
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label fw-medium small" for="sex">Sex</label>
+                            <select class="form-select" id="sex" style="height:48px;border-radius:10px;">
+                                <option value="">Optional</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label fw-medium small" for="bloodGroup">Blood Group</label>
+                            <select class="form-select" id="bloodGroup" style="height:48px;border-radius:10px;">
+                                <option value="">Optional</option>
+                                <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+                                <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Professional-only fields -->
+                    <div id="proFields" class="d-none">
+                        <div class="mb-3">
+                            <label class="form-label fw-medium" for="specialty">Medical Specialty</label>
+                            <input type="text" class="form-control" id="specialty" placeholder="e.g., Internal Medicine">
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <label class="form-label fw-medium small" for="regNum">Registration / License #</label>
+                                <input type="text" class="form-control" id="regNum" placeholder="NMC-XX-12345">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label fw-medium small" for="facility">Clinic / Hospital</label>
+                                <input type="text" class="form-control" id="facility" placeholder="Care Clinic">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-medium" for="password">Password (min 8 chars)</label>
+                        <input type="password" class="form-control" id="password" placeholder="Create a strong password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-medium" for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter password" required>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="terms" required>
+                        <label class="form-check-label text-muted fs-12" for="terms">
+                            I understand MediSync provides educational health organization and is not a clinical diagnosis tool.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" id="regBtn">Create Account</button>
+                </form>
+
+                <p class="text-center text-muted mt-3 mb-0 fs-12">
+                    Already have an account? <a href="auth-login.html" class="text-decoration-none fw-semibold text-primary">Sign In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/medisync-api.js"></script>
+    <script>
+        function toggleRoleFields() {
+            const isPro = document.getElementById('rolePro').checked;
+            document.getElementById('patientFields').classList.toggle('d-none', isPro);
+            document.getElementById('proFields').classList.toggle('d-none', !isPro);
+        }
+        document.getElementById('rolePatient').addEventListener('change', toggleRoleFields);
+        document.getElementById('rolePro').addEventListener('change', toggleRoleFields);
+
+        document.getElementById('registerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const errEl = document.getElementById('regError');
+            const btn = document.getElementById('regBtn');
+            errEl.classList.add('d-none');
+
+            const role = document.getElementById('rolePro').checked ? 'professional' : 'patient';
+            const full_name = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirmPassword').value;
+            const terms = document.getElementById('terms').checked;
+
+            if (!full_name || !email || password.length < 8) {
+                errEl.textContent = 'Please provide your name, valid email, and a password of at least 8 characters.';
+                errEl.classList.remove('d-none');
+                return;
+            }
+            if (password !== confirm) {
+                errEl.textContent = 'Passwords do not match.';
+                errEl.classList.remove('d-none');
+                return;
+            }
+            if (!terms) {
+                errEl.textContent = 'Please acknowledge the educational health notice to continue.';
+                errEl.classList.remove('d-none');
+                return;
+            }
+
+            const payload = { full_name, email, password, role };
+            if (role === 'patient') {
+                const age = document.getElementById('age').value;
+                if (age) payload.age = parseInt(age, 10);
+                payload.sex = document.getElementById('sex').value || null;
+                payload.blood_group = document.getElementById('bloodGroup').value || null;
+            } else {
+                payload.specialty = document.getElementById('specialty').value.trim();
+                payload.registration_number = document.getElementById('regNum').value.trim();
+                payload.facility_name = document.getElementById('facility').value.trim();
+                if (!payload.specialty || !payload.registration_number) {
+                    errEl.textContent = 'Professionals must enter their specialty and medical registration number.';
+                    errEl.classList.remove('d-none');
+                    return;
+                }
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Creating account...';
+            try {
+                const res = await MediSync.apiFetch('/api/auth/register', {
+                    method: 'POST',
+                    skipAuthRedirect: true,
+                    body: JSON.stringify(payload)
+                });
+                MediSync.saveSession(res.access_token, res.user);
+                MediSync.redirectByRole(res.user.role);
+            } catch (err) {
+                errEl.textContent = err.message;
+                errEl.classList.remove('d-none');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Create Account';
+            }
+        });
+    </script>
+</body>
+</html>

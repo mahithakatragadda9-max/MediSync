@@ -1,0 +1,97 @@
+{
+  "synthetic_notice": "Synthetic sample wearable export for MediSync demonstration",
+  "source_device": "Synthetic Smartwatch JSON Export",
+  "observations": [
+    {
+      "observed_at": "2026-11-19T07:30:00Z",
+      "resting_hr": 64.1,
+      "avg_hr": 76.1,
+      "spo2": 98.4,
+      "sleep_hours": 7.5,
+      "deep_sleep_hours": 1.73,
+      "steps": 8791,
+      "active_minutes": 43,
+      "hrv_ms": 56.6,
+      "activity_context": "moderate_daily",
+      "quality_score": 0.94
+    },
+    {
+      "observed_at": "2026-11-20T07:30:00Z",
+      "resting_hr": 64.7,
+      "avg_hr": 73.7,
+      "spo2": 98.0,
+      "sleep_hours": 7.2,
+      "deep_sleep_hours": 1.66,
+      "steps": 9108,
+      "active_minutes": 44,
+      "hrv_ms": 58.2,
+      "activity_context": "moderate_daily",
+      "quality_score": 0.94
+    },
+    {
+      "observed_at": "2026-11-21T07:30:00Z",
+      "resting_hr": 65.9,
+      "avg_hr": 75.9,
+      "spo2": 98.2,
+      "sleep_hours": 7.1,
+      "deep_sleep_hours": 1.63,
+      "steps": 9425,
+      "active_minutes": 45,
+      "hrv_ms": 51.8,
+      "activity_context": "moderate_daily",
+      "quality_score": 0.94
+    },
+    {
+      "observed_at": "2026-11-22T07:30:00Z",
+      "resting_hr": 76.5,
+      "avg_hr": 84.0,
+      "spo2": 97.3,
+      "sleep_hours": 5.2,
+      "deep_sleep_hours": 0.85,
+      "steps": 4300,
+      "active_minutes": 18,
+      "hrv_ms": 39.0,
+      "activity_context": "sedentary_desk",
+      "quality_score": 0.93
+    },
+    {
+      "observed_at": "2026-11-23T07:30:00Z",
+      "resting_hr": 77.6,
+      "avg_hr": 85.2,
+      "spo2": 97.2,
+      "sleep_hours": 5.05,
+      "deep_sleep_hours": 0.8,
+      "steps": 4120,
+      "active_minutes": 16,
+      "hrv_ms": 37.8,
+      "activity_context": "sedentary_desk",
+      "quality_score": 0.93
+    },
+    {
+      "observed_at": "2026-11-24T07:30:00Z",
+      "resting_hr": 78.7,
+      "avg_hr": 86.4,
+      "spo2": 97.1,
+      "sleep_hours": 4.9,
+      "deep_sleep_hours": 0.75,
+      "steps": 3940,
+      "active_minutes": 14,
+      "hrv_ms": 36.6,
+      "activity_context": "sedentary_desk",
+      "quality_score": 0.93
+    },
+    {
+      "observed_at": "2026-11-25T07:30:00Z",
+      "resting_hr": 79.8,
+      "avg_hr": 87.6,
+      "spo2": 97.0,
+      "sleep_hours": 4.75,
+      "deep_sleep_hours": 0.7,
+      "steps": 3760,
+      "active_minutes": 12,
+      "hrv_ms": 35.4,
+      "activity_context": "sedentary_desk",
+      "quality_score": 0.93
+    }
+  ]
+}

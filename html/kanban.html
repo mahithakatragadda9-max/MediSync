@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board - BootUI Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/img/light-logo.png" alt="BootUI" class="logo-img">
+            <span class="logo-text">BootUI</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>DASHBOARDS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="home" class="menu-icon"></i>
+                    <span class="menu-text">Dashboards</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="index.html" class="menu-link"><span class="submenu-dot"></span>eCommerce</a></div>
+                    <div class="menu-item"><a href="dashboard-analytics.html" class="menu-link"><span class="submenu-dot"></span>Analytics</a></div>
+                    <div class="menu-item"><a href="dashboard-crm.html" class="menu-link"><span class="submenu-dot"></span>CRM</a></div>
+                    <div class="menu-item"><a href="dashboard-project.html" class="menu-link"><span class="submenu-dot"></span>Project</a></div>
+                    <div class="menu-item"><a href="dashboard-hrm.html" class="menu-link"><span class="submenu-dot"></span>HRM</a></div>
+                    <div class="menu-item"><a href="dashboard-finance.html" class="menu-link"><span class="submenu-dot"></span>Finance</a></div>
+                    <div class="menu-item"><a href="dashboard-marketing.html" class="menu-link"><span class="submenu-dot"></span>Marketing</a></div>
+                    <div class="menu-item"><a href="dashboard-healthcare.html" class="menu-link"><span class="submenu-dot"></span>Healthcare</a></div>
+                    <div class="menu-item"><a href="dashboard-education.html" class="menu-link"><span class="submenu-dot"></span>Education</a></div>
+                    <div class="menu-item"><a href="dashboard-realestate.html" class="menu-link"><span class="submenu-dot"></span>Real Estate</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>APPS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="shopping-cart" class="menu-icon"></i>
+                    <span class="menu-text">eCommerce</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="products.html" class="menu-link"><span class="submenu-dot"></span>Products</a></div>
+                    <div class="menu-item"><a href="product-detail.html" class="menu-link"><span class="submenu-dot"></span>Product Detail</a></div>
+                    <div class="menu-item"><a href="product-add.html" class="menu-link"><span class="submenu-dot"></span>Add Product</a></div>
+                    <div class="menu-item"><a href="cart.html" class="menu-link"><span class="submenu-dot"></span>Cart</a></div>
+                    <div class="menu-item"><a href="checkout.html" class="menu-link"><span class="submenu-dot"></span>Checkout</a></div>
+                    <div class="menu-item"><a href="orders.html" class="menu-link"><span class="submenu-dot"></span>Orders</a></div>
+                    <div class="menu-item"><a href="order-detail.html" class="menu-link"><span class="submenu-dot"></span>Order Detail</a></div>
+                    <div class="menu-item"><a href="customers.html" class="menu-link"><span class="submenu-dot"></span>Customers</a></div>
+                    <div class="menu-item"><a href="sellers.html" class="menu-link"><span class="submenu-dot"></span>Sellers</a></div>
+                    <div class="menu-item"><a href="reviews.html" class="menu-link"><span class="submenu-dot"></span>Reviews</a></div>
+                </div>
+            </div>
+            <div class="menu-item"><a href="chat.html" class="menu-link"><i data-feather="message-square" class="menu-icon"></i><span class="menu-text">Chat</span></a></div>
+            <div class="menu-item"><a href="email.html" class="menu-link"><i data-feather="mail" class="menu-icon"></i><span class="menu-text">Email</span></a></div>
+            <div class="menu-item"><a href="calendar.html" class="menu-link"><i data-feather="calendar" class="menu-icon"></i><span class="menu-text">Calendar</span></a></div>
+            <div class="menu-item"><a href="tasks.html" class="menu-link"><i data-feather="check-square" class="menu-icon"></i><span class="menu-text">Tasks</span></a></div>
+            <div class="menu-item"><a href="notes.html" class="menu-link"><i data-feather="edit-3" class="menu-icon"></i><span class="menu-text">Notes</span></a></div>
+            <div class="menu-item"><a href="file-manager.html" class="menu-link"><i data-feather="folder" class="menu-icon"></i><span class="menu-text">File Manager</span></a></div>
+            <div class="menu-item"><a href="contacts.html" class="menu-link"><i data-feather="users" class="menu-icon"></i><span class="menu-text">Contacts</span></a></div>
+
+            <div class="menu-item has-submenu open">
+                <a href="#" class="menu-link">
+                    <i data-feather="briefcase" class="menu-icon"></i>
+                    <span class="menu-text">Projects</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="projects-list.html" class="menu-link"><span class="submenu-dot"></span>Project List</a></div>
+                    <div class="menu-item"><a href="project-detail.html" class="menu-link"><span class="submenu-dot"></span>Project Detail</a></div>
+                    <div class="menu-item"><a href="project-create.html" class="menu-link"><span class="submenu-dot"></span>Create Project</a></div>
+                    <div class="menu-item"><a href="kanban.html" class="menu-link active"><span class="submenu-dot"></span>Kanban Board</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="target" class="menu-icon"></i>
+                    <span class="menu-text">CRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="crm-leads.html" class="menu-link"><span class="submenu-dot"></span>Leads</a></div>
+                    <div class="menu-item"><a href="crm-deals.html" class="menu-link"><span class="submenu-dot"></span>Deals</a></div>
+                    <div class="menu-item"><a href="crm-companies.html" class="menu-link"><span class="submenu-dot"></span>Companies</a></div>
+                    <div class="menu-item"><a href="crm-contacts.html" class="menu-link"><span class="submenu-dot"></span>Contacts</a></div>
+                    <div class="menu-item"><a href="crm-pipeline.html" class="menu-link"><span class="submenu-dot"></span>Pipeline</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="users" class="menu-icon"></i>
+                    <span class="menu-text">HRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="hrm-employees.html" class="menu-link"><span class="submenu-dot"></span>Employees</a></div>
+                    <div class="menu-item"><a href="hrm-departments.html" class="menu-link"><span class="submenu-dot"></span>Departments</a></div>
+                    <div class="menu-item"><a href="hrm-attendance.html" class="menu-link"><span class="submenu-dot"></span>Attendance</a></div>
+                    <div class="menu-item"><a href="hrm-payroll.html" class="menu-link"><span class="submenu-dot"></span>Payroll</a></div>
+                    <div class="menu-item"><a href="hrm-leave.html" class="menu-link"><span class="submenu-dot"></span>Leave Management</a></div>
+                    <div class="menu-item"><a href="hrm-holidays.html" class="menu-link"><span class="submenu-dot"></span>Holidays</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="dollar-sign" class="menu-icon"></i>
+                    <span class="menu-text">Finance</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="invoices.html" class="menu-link"><span class="submenu-dot"></span>Invoices</a></div>
+                    <div class="menu-item"><a href="invoice-detail.html" class="menu-link"><span class="submenu-dot"></span>Invoice Detail</a></div>
+                    <div class="menu-item"><a href="invoice-create.html" class="menu-link"><span class="submenu-dot"></span>Create Invoice</a></div>
+                    <div class="menu-item"><a href="transactions.html" class="menu-link"><span class="submenu-dot"></span>Transactions</a></div>
+                    <div class="menu-item"><a href="pricing.html" class="menu-link"><span class="submenu-dot"></span>Pricing</a></div>
+                    <div class="menu-item"><a href="wallet.html" class="menu-link"><span class="submenu-dot"></span>Wallet</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>COMPONENTS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="box" class="menu-icon"></i>
+                    <span class="menu-text">UI Elements</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="ui-alerts.html" class="menu-link"><span class="submenu-dot"></span>Alerts</a></div>
+                    <div class="menu-item"><a href="ui-badges.html" class="menu-link"><span class="submenu-dot"></span>Badges</a></div>
+                    <div class="menu-item"><a href="ui-buttons.html" class="menu-link"><span class="submenu-dot"></span>Buttons</a></div>
+                    <div class="menu-item"><a href="ui-cards.html" class="menu-link"><span class="submenu-dot"></span>Cards</a></div>
+                    <div class="menu-item"><a href="ui-dropdowns.html" class="menu-link"><span class="submenu-dot"></span>Dropdowns</a></div>
+                    <div class="menu-item"><a href="ui-modals.html" class="menu-link"><span class="submenu-dot"></span>Modals</a></div>
+                    <div class="menu-item"><a href="ui-tabs.html" class="menu-link"><span class="submenu-dot"></span>Tabs & Pills</a></div>
+                    <div class="menu-item"><a href="ui-progress.html" class="menu-link"><span class="submenu-dot"></span>Progress</a></div>
+                    <div class="menu-item"><a href="ui-spinners.html" class="menu-link"><span class="submenu-dot"></span>Spinners</a></div>
+                    <div class="menu-item"><a href="ui-toasts.html" class="menu-link"><span class="submenu-dot"></span>Toasts</a></div>
+                    <div class="menu-item"><a href="ui-tooltips.html" class="menu-link"><span class="submenu-dot"></span>Tooltips</a></div>
+                    <div class="menu-item"><a href="ui-accordion.html" class="menu-link"><span class="submenu-dot"></span>Accordion</a></div>
+                    <div class="menu-item"><a href="ui-carousel.html" class="menu-link"><span class="submenu-dot"></span>Carousel</a></div>
+                    <div class="menu-item"><a href="ui-offcanvas.html" class="menu-link"><span class="submenu-dot"></span>Offcanvas</a></div>
+                    <div class="menu-item"><a href="ui-avatars.html" class="menu-link"><span class="submenu-dot"></span>Avatars</a></div>
+                    <div class="menu-item"><a href="ui-list-group.html" class="menu-link"><span class="submenu-dot"></span>List Group</a></div>
+                    <div class="menu-item"><a href="ui-breadcrumbs.html" class="menu-link"><span class="submenu-dot"></span>Breadcrumbs</a></div>
+                    <div class="menu-item"><a href="ui-pagination.html" class="menu-link"><span class="submenu-dot"></span>Pagination</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="edit" class="menu-icon"></i>
+                    <span class="menu-text">Forms</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="form-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Elements</a></div>
+                    <div class="menu-item"><a href="form-advanced.html" class="menu-link"><span class="submenu-dot"></span>Advanced</a></div>
+                    <div class="menu-item"><a href="form-validation.html" class="menu-link"><span class="submenu-dot"></span>Validation</a></div>
+                    <div class="menu-item"><a href="form-wizard.html" class="menu-link"><span class="submenu-dot"></span>Wizard</a></div>
+                    <div class="menu-item"><a href="form-editors.html" class="menu-link"><span class="submenu-dot"></span>Editors</a></div>
+                    <div class="menu-item"><a href="form-upload.html" class="menu-link"><span class="submenu-dot"></span>File Upload</a></div>
+                    <div class="menu-item"><a href="form-layouts.html" class="menu-link"><span class="submenu-dot"></span>Form Layouts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="grid" class="menu-icon"></i>
+                    <span class="menu-text">Tables</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="table-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Tables</a></div>
+                    <div class="menu-item"><a href="table-datatable.html" class="menu-link"><span class="submenu-dot"></span>DataTables</a></div>
+                    <div class="menu-item"><a href="table-responsive.html" class="menu-link"><span class="submenu-dot"></span>Responsive</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="pie-chart" class="menu-icon"></i>
+                    <span class="menu-text">Charts</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="chart-line.html" class="menu-link"><span class="submenu-dot"></span>Line Charts</a></div>
+                    <div class="menu-item"><a href="chart-bar.html" class="menu-link"><span class="submenu-dot"></span>Bar Charts</a></div>
+                    <div class="menu-item"><a href="chart-pie.html" class="menu-link"><span class="submenu-dot"></span>Pie Charts</a></div>
+                    <div class="menu-item"><a href="chart-mixed.html" class="menu-link"><span class="submenu-dot"></span>Mixed Charts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="map" class="menu-icon"></i>
+                    <span class="menu-text">Maps</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="maps-google.html" class="menu-link"><span class="submenu-dot"></span>Google Maps</a></div>
+                    <div class="menu-item"><a href="maps-vector.html" class="menu-link"><span class="submenu-dot"></span>Vector Maps</a></div>
+                    <div class="menu-item"><a href="maps-leaflet.html" class="menu-link"><span class="submenu-dot"></span>Leaflet Maps</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="icons.html" class="menu-link"><i data-feather="feather" class="menu-icon"></i><span class="menu-text">Icons</span></a></div>
+            <div class="menu-item"><a href="widgets.html" class="menu-link"><i data-feather="layers" class="menu-icon"></i><span class="menu-text">Widgets</span></a></div>
+
+            <div class="menu-label"><span>PAGES</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="lock" class="menu-icon"></i>
+                    <span class="menu-text">Authentication</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="auth-login.html" class="menu-link"><span class="submenu-dot"></span>Login</a></div>
+                    <div class="menu-item"><a href="auth-register.html" class="menu-link"><span class="submenu-dot"></span>Register</a></div>
+                    <div class="menu-item"><a href="auth-forgot.html" class="menu-link"><span class="submenu-dot"></span>Forgot Password</a></div>
+                    <div class="menu-item"><a href="auth-reset.html" class="menu-link"><span class="submenu-dot"></span>Reset Password</a></div>
+                    <div class="menu-item"><a href="auth-lockscreen.html" class="menu-link"><span class="submenu-dot"></span>Lock Screen</a></div>
+                    <div class="menu-item"><a href="auth-2fa.html" class="menu-link"><span class="submenu-dot"></span>Two Factor</a></div>
+                    <div class="menu-item"><a href="auth-verify.html" class="menu-link"><span class="submenu-dot"></span>Email Verify</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="alert-triangle" class="menu-icon"></i>
+                    <span class="menu-text">Error Pages</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="error-400.html" class="menu-link"><span class="submenu-dot"></span>400</a></div>
+                    <div class="menu-item"><a href="error-401.html" class="menu-link"><span class="submenu-dot"></span>401</a></div>
+                    <div class="menu-item"><a href="error-403.html" class="menu-link"><span class="submenu-dot"></span>403</a></div>
+                    <div class="menu-item"><a href="error-404.html" class="menu-link"><span class="submenu-dot"></span>404</a></div>
+                    <div class="menu-item"><a href="error-500.html" class="menu-link"><span class="submenu-dot"></span>500</a></div>
+                    <div class="menu-item"><a href="error-503.html" class="menu-link"><span class="submenu-dot"></span>503</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="profile.html" class="menu-link"><i data-feather="user" class="menu-icon"></i><span class="menu-text">Profile</span></a></div>
+            <div class="menu-item"><a href="settings.html" class="menu-link"><i data-feather="settings" class="menu-icon"></i><span class="menu-text">Settings</span></a></div>
+            <div class="menu-item"><a href="faq.html" class="menu-link"><i data-feather="help-circle" class="menu-icon"></i><span class="menu-text">FAQ</span></a></div>
+            <div class="menu-item"><a href="timeline.html" class="menu-link"><i data-feather="clock" class="menu-icon"></i><span class="menu-text">Timeline</span></a></div>
+            <div class="menu-item"><a href="gallery.html" class="menu-link"><i data-feather="image" class="menu-icon"></i><span class="menu-text">Gallery</span></a></div>
+            <div class="menu-item"><a href="search-results.html" class="menu-link"><i data-feather="search" class="menu-icon"></i><span class="menu-text">Search Results</span></a></div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="app-main">
+      <!-- Header -->
+      <header class="app-header">
+            <div class="header-left">
+                <img src="assets/img/dark-logo.png" alt="BootUI" class="mobile-logo"><button class="sidebar-toggle" type="button"><i data-feather="menu"></i></button>
+                <div class="header-search">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search anything..." class="form-control">
+                    <span class="search-shortcut">Ctrl+K</span>
+                </div>
+            </div>
+            <div class="header-right">
+
+                <!-- Apps Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Apps"><i data-feather="grid"></i></button>
+                    <div class="dropdown-menu dropdown-menu-lg">
+                        <div class="dropdown-menu-header"><h6>Quick Access</h6></div>
+                        <div class="apps-grid">
+                            <a href="chat.html" class="apps-grid-item"><div class="apps-icon bg-gradient-primary"><i data-feather="message-square"></i></div><span>Chat</span></a>
+                            <a href="email.html" class="apps-grid-item"><div class="apps-icon bg-gradient-success"><i data-feather="mail"></i></div><span>Email</span></a>
+                            <a href="calendar.html" class="apps-grid-item"><div class="apps-icon bg-gradient-warning"><i data-feather="calendar"></i></div><span>Calendar</span></a>
+                            <a href="tasks.html" class="apps-grid-item"><div class="apps-icon bg-gradient-danger"><i data-feather="check-square"></i></div><span>Tasks</span></a>
+                            <a href="file-manager.html" class="apps-grid-item"><div class="apps-icon bg-gradient-info"><i data-feather="folder"></i></div><span>Files</span></a>
+                            <a href="contacts.html" class="apps-grid-item"><div class="apps-icon bg-gradient-purple"><i data-feather="users"></i></div><span>Contacts</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn notif-toggle" title="Notifications"><i data-feather="bell"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Notifications</h6><span class="badge bg-primary rounded-pill">5 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-soft-primary"><i data-feather="shopping-bag"></i></div><div class="notif-content"><p><strong>New Order</strong> received from Sarah</p><span class="notif-time">2 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-success"><i data-feather="check-circle"></i></div><div class="notif-content"><p><strong>Payment</strong> of $2,450 confirmed</p><span class="notif-time">15 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-warning"><i data-feather="alert-triangle"></i></div><div class="notif-content"><p><strong>Server CPU</strong> usage is at 92%</p><span class="notif-time">1 hour ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-info"><i data-feather="user-plus"></i></div><div class="notif-content"><p><strong>New user</strong> registered: Mike Chen</p><span class="notif-time">3 hours ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-danger"><i data-feather="alert-circle"></i></div><div class="notif-content"><p><strong>Disk space</strong> running low on server</p><span class="notif-time">5 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="#">View All Notifications</a></div>
+                    </div>
+                </div>
+
+                <!-- Messages Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Messages"><i data-feather="message-square"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Messages</h6><span class="badge bg-success rounded-pill">3 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-gradient-primary" class="avatar-badge">SW</div><div class="notif-content"><p><strong>Sarah Wilson</strong>: Can you review the design files?</p><span class="notif-time">5 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-success" class="avatar-badge">JD</div><div class="notif-content"><p><strong>John Doe</strong>: Meeting rescheduled to 3pm</p><span class="notif-time">30 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-warning" class="avatar-badge">AL</div><div class="notif-content"><p><strong>Anna Lee</strong>: Invoice #1024 has been paid</p><span class="notif-time">2 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="chat.html">View All Messages</a></div>
+                    </div>
+                </div>
+
+                <!-- User Dropdown -->
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user"><div class="header-user-avatar">DD</div><div class="header-user-info"><div class="header-user-name">David Dev</div><div class="header-user-role">Admin</div></div></div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header"><div class="avatar-circle">DD</div><h6 class="mb-0" class="text-heading">David Dev</h6><small class="text-muted">david@bootui.com</small></div>
+                        <div class="p-2">
+                            <a href="profile.html" class="dropdown-item"><i data-feather="user"></i> My Profile</a>
+                            <a href="settings.html" class="dropdown-item"><i data-feather="settings"></i> Settings</a>
+                            <a href="wallet.html" class="dropdown-item"><i data-feather="credit-card"></i> Billing</a>
+                            <a href="faq.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item text-danger"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+      <!-- Page Content -->
+      <div class="app-content">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Kanban Board</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="projects-list.html">Projects</a></li>
+                <li class="breadcrumb-item active">Kanban Board</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-soft-primary"><i data-feather="filter" class="icon-15"></i> Filters</button>
+            <button class="btn btn-primary"><i data-feather="plus" class="icon-15"></i> Add Task</button>
+          </div>
+        </div>
+
+        <!-- Kanban Board -->
+        <div class="kanban-board">
+
+          <!-- Backlog Column -->
+          <div class="kanban-column">
+            <div class="d-flex align-items-center justify-content-between p-3">
+              <div class="d-flex align-items-center gap-2">
+                <div class="kanban-status-dot bg-secondary-dot"></div>
+                <h6 class="fw-semibold mb-0">Backlog</h6>
+                <span class="badge bg-secondary fs-10">5</span>
+              </div>
+              <button class="btn btn-icon btn-sm kanban-add-btn"><i data-feather="plus" class="icon-md"></i></button>
+            </div>
+            <div class="px-3 pb-3 kanban-card-list">
+              <!-- Card 1 -->
+              <div class="kanban-card">
+                <div class="kanban-divider bg-danger-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Database schema optimization</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Optimize the current database schema to improve query performance and reduce latency.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-danger fs-10">Backend</span>
+                  <span class="badge badge-soft-warning fs-10">Database</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-primary text-white">JD</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 18</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 3</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 1</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-primary" style="width:60%;"></div></div>
+                  <small class="text-muted fs-10">3/5</small>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="kanban-card">
+                <div class="kanban-divider bg-warning-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">User research interviews</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Conduct user interviews to gather feedback on current pain points and feature requests.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-info fs-10">Research</span>
+                  <span class="badge badge-soft-primary fs-10">UX</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-success text-white">SM</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 20</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 5</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 2</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-warning" style="width:20%;"></div></div>
+                  <small class="text-muted fs-10">1/5</small>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="kanban-card">
+                <div class="kanban-divider bg-success-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Documentation update</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Update API documentation with new endpoints and authentication flow changes.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-success fs-10">Docs</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-cyan text-white">MC</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 22</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 1</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 0</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-success" style="width:0%;"></div></div>
+                  <small class="text-muted fs-10">0/5</small>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="kanban-card">
+                <div class="kanban-divider bg-warning-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Accessibility audit</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Complete WCAG 2.1 AA compliance audit on all customer-facing pages and fix issues.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-warning fs-10">A11y</span>
+                  <span class="badge badge-soft-danger fs-10">QA</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-violet text-white">EP</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 25</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 2</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 1</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-warning" style="width:40%;"></div></div>
+                  <small class="text-muted fs-10">2/5</small>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="kanban-card">
+                <div class="kanban-divider bg-info-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Third-party integrations</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Research and plan integrations with Stripe, Mailchimp, and Google Analytics APIs.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-info fs-10">Integration</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-info text-white">RL</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 28</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 4</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 3</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-info" style="width:40%;"></div></div>
+                  <small class="text-muted fs-10">2/5</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- To Do Column -->
+          <div class="kanban-column">
+            <div class="d-flex align-items-center justify-content-between p-3">
+              <div class="d-flex align-items-center gap-2">
+                <div class="kanban-status-dot bg-info-c"></div>
+                <h6 class="fw-semibold mb-0">To Do</h6>
+                <span class="badge bg-info fs-10">4</span>
+              </div>
+              <button class="btn btn-icon btn-sm kanban-add-btn"><i data-feather="plus" class="icon-md"></i></button>
+            </div>
+            <div class="px-3 pb-3 kanban-card-list">
+              <div class="kanban-card">
+                <div class="kanban-divider bg-danger-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Payment gateway integration</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Implement Stripe payment processing with 3D Secure and recurring billing support.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-danger fs-10">Backend</span>
+                  <span class="badge badge-soft-warning fs-10">Payment</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-info text-white">RL</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 16</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 7</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 2</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-danger" style="width:20%;"></div></div>
+                  <small class="text-muted fs-10">1/5</small>
+                </div>
+              </div>
+
+              <div class="kanban-card">
+                <div class="kanban-divider bg-warning-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Email notification system</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Build transactional email system with templates for signup, order confirmation, and password reset.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-primary fs-10">Feature</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-warning text-white">AK</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 19</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 2</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 0</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-warning" style="width:0%;"></div></div>
+                  <small class="text-muted fs-10">0/5</small>
+                </div>
+              </div>
+
+              <div class="kanban-card">
+                <div class="kanban-divider bg-success-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Mobile responsive fixes</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Fix responsive layout issues on tablets and mobile devices across all main pages.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-success fs-10">Bug Fix</span>
+                  <span class="badge badge-soft-info fs-10">CSS</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-success text-white">SM</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 17</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 4</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 1</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-success" style="width:60%;"></div></div>
+                  <small class="text-muted fs-10">3/5</small>
+                </div>
+              </div>
+
+              <div class="kanban-card">
+                <div class="kanban-divider bg-danger-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Security penetration testing</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Conduct comprehensive security audit including XSS, CSRF, and SQL injection testing.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-danger fs-10">Security</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-rose text-white">TN</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 21</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 6</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 4</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-danger" style="width:40%;"></div></div>
+                  <small class="text-muted fs-10">2/5</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- In Progress Column -->
+          <div class="kanban-column">
+            <div class="d-flex align-items-center justify-content-between p-3">
+              <div class="d-flex align-items-center gap-2">
+                <div class="kanban-status-dot bg-warning-c"></div>
+                <h6 class="fw-semibold mb-0">In Progress</h6>
+                <span class="badge bg-warning text-dark fs-10">3</span>
+              </div>
+              <button class="btn btn-icon btn-sm kanban-add-btn"><i data-feather="plus" class="icon-md"></i></button>
+            </div>
+            <div class="px-3 pb-3 kanban-card-list">
+              <div class="kanban-card">
+                <div class="kanban-divider bg-danger-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Implement responsive navigation</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Build the main navigation component with mega menu, mobile drawer, and search overlay.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-primary fs-10">Frontend</span>
+                  <span class="badge badge-soft-success fs-10">React</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-warning text-white">AK</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 14</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 8</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 3</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-primary" style="width:80%;"></div></div>
+                  <small class="text-muted fs-10">4/5</small>
+                </div>
+              </div>
+
+              <div class="kanban-card">
+                <div class="kanban-divider bg-warning-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Product listing page development</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Develop the product listing page with filters, search, sorting, and pagination components.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-primary fs-10">Frontend</span>
+                  <span class="badge badge-soft-danger fs-10">Backend</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-info text-white">RL</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 18</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 5</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 2</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-warning" style="width:60%;"></div></div>
+                  <small class="text-muted fs-10">3/5</small>
+                </div>
+              </div>
+
+              <div class="kanban-card">
+                <div class="kanban-divider bg-warning-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Blog content migration</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Migrate existing blog content to new CMS, update formatting, and add SEO meta tags.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-info fs-10">Content</span>
+                  <span class="badge badge-soft-warning fs-10">SEO</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-cyan text-white">MC</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 20</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 3</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 5</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-info" style="width:40%;"></div></div>
+                  <small class="text-muted fs-10">2/5</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Done Column -->
+          <div class="kanban-column">
+            <div class="d-flex align-items-center justify-content-between p-3">
+              <div class="d-flex align-items-center gap-2">
+                <div class="kanban-status-dot bg-success-c"></div>
+                <h6 class="fw-semibold mb-0">Done</h6>
+                <span class="badge bg-success fs-10">4</span>
+              </div>
+              <button class="btn btn-icon btn-sm kanban-add-btn"><i data-feather="plus" class="icon-md"></i></button>
+            </div>
+            <div class="px-3 pb-3 kanban-card-list">
+              <div class="kanban-card">
+                <div class="kanban-divider bg-success-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Homepage hero section design</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Designed and delivered the homepage hero section with animations and responsive layouts.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-info fs-10">Design</span>
+                  <span class="badge badge-soft-primary fs-10">UI</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-success text-white">SM</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 5</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 12</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 4</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-success" class="w-100"></div></div>
+                  <small class="text-muted fs-10">5/5</small>
+                </div>
+              </div>
+
+              <div class="kanban-card">
+                <div class="kanban-divider bg-success-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">CI/CD pipeline setup</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Configured GitHub Actions for automated testing, build, and deployment to staging.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-warning fs-10">DevOps</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-rose text-white">TN</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Feb 28</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 6</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 2</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-success" class="w-100"></div></div>
+                  <small class="text-muted fs-10">5/5</small>
+                </div>
+              </div>
+
+              <div class="kanban-card">
+                <div class="kanban-divider bg-success-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Design system foundation</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Created the foundational design system with color tokens, typography, spacing, and components.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-info fs-10">Design</span>
+                  <span class="badge badge-soft-success fs-10">System</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-success text-white">SM</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Feb 20</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 9</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 7</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-success" class="w-100"></div></div>
+                  <small class="text-muted fs-10">5/5</small>
+                </div>
+              </div>
+
+              <div class="kanban-card">
+                <div class="kanban-divider bg-success-c kanban-divider-mb"></div>
+                <h6 class="fw-semibold small mb-1">Image asset optimization</h6>
+                <p class="text-muted small mb-3" class="line-clamp-2">Optimized all image assets with WebP conversion, lazy loading, and responsive srcsets.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge badge-soft-success fs-10">Performance</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="avatar avatar-xs avatar-rounded" class="bg-warning text-white">AK</div>
+                  <div class="d-flex align-items-center gap-3">
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="calendar" class="icon-xs"></i> Mar 8</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="message-square" class="icon-xs"></i> 3</small>
+                    <small class="text-muted d-flex align-items-center gap-1"><i data-feather="paperclip" class="icon-xs"></i> 1</small>
+                  </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-2">
+                  <div class="progress flex-fill progress-3xs"><div class="progress-bar bg-success" class="w-100"></div></div>
+                  <small class="text-muted fs-10">5/5</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <div class="d-flex align-items-center justify-content-between">
+          <span>2024 &copy; BootUI | Crafted with &hearts; by BootUI</span>
+          <span class="text-muted">v1.0.0</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div class="backdrop-overlay"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="assets/js/app.js"></script>
+  </body>
+</html>

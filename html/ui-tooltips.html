@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips &amp; Popovers - BootUI Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/img/light-logo.png" alt="BootUI" class="logo-img">
+            <span class="logo-text">BootUI</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>DASHBOARDS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="home" class="menu-icon"></i>
+                    <span class="menu-text">Dashboards</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="index.html" class="menu-link"><span class="submenu-dot"></span>eCommerce</a></div>
+                    <div class="menu-item"><a href="dashboard-analytics.html" class="menu-link"><span class="submenu-dot"></span>Analytics</a></div>
+                    <div class="menu-item"><a href="dashboard-crm.html" class="menu-link"><span class="submenu-dot"></span>CRM</a></div>
+                    <div class="menu-item"><a href="dashboard-project.html" class="menu-link"><span class="submenu-dot"></span>Project</a></div>
+                    <div class="menu-item"><a href="dashboard-hrm.html" class="menu-link"><span class="submenu-dot"></span>HRM</a></div>
+                    <div class="menu-item"><a href="dashboard-finance.html" class="menu-link"><span class="submenu-dot"></span>Finance</a></div>
+                    <div class="menu-item"><a href="dashboard-marketing.html" class="menu-link"><span class="submenu-dot"></span>Marketing</a></div>
+                    <div class="menu-item"><a href="dashboard-healthcare.html" class="menu-link"><span class="submenu-dot"></span>Healthcare</a></div>
+                    <div class="menu-item"><a href="dashboard-education.html" class="menu-link"><span class="submenu-dot"></span>Education</a></div>
+                    <div class="menu-item"><a href="dashboard-realestate.html" class="menu-link"><span class="submenu-dot"></span>Real Estate</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>APPS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="shopping-cart" class="menu-icon"></i>
+                    <span class="menu-text">eCommerce</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="products.html" class="menu-link"><span class="submenu-dot"></span>Products</a></div>
+                    <div class="menu-item"><a href="product-detail.html" class="menu-link"><span class="submenu-dot"></span>Product Detail</a></div>
+                    <div class="menu-item"><a href="product-add.html" class="menu-link"><span class="submenu-dot"></span>Add Product</a></div>
+                    <div class="menu-item"><a href="cart.html" class="menu-link"><span class="submenu-dot"></span>Cart</a></div>
+                    <div class="menu-item"><a href="checkout.html" class="menu-link"><span class="submenu-dot"></span>Checkout</a></div>
+                    <div class="menu-item"><a href="orders.html" class="menu-link"><span class="submenu-dot"></span>Orders</a></div>
+                    <div class="menu-item"><a href="order-detail.html" class="menu-link"><span class="submenu-dot"></span>Order Detail</a></div>
+                    <div class="menu-item"><a href="customers.html" class="menu-link"><span class="submenu-dot"></span>Customers</a></div>
+                    <div class="menu-item"><a href="sellers.html" class="menu-link"><span class="submenu-dot"></span>Sellers</a></div>
+                    <div class="menu-item"><a href="reviews.html" class="menu-link"><span class="submenu-dot"></span>Reviews</a></div>
+                </div>
+            </div>
+            <div class="menu-item"><a href="chat.html" class="menu-link"><i data-feather="message-square" class="menu-icon"></i><span class="menu-text">Chat</span></a></div>
+            <div class="menu-item"><a href="email.html" class="menu-link"><i data-feather="mail" class="menu-icon"></i><span class="menu-text">Email</span></a></div>
+            <div class="menu-item"><a href="calendar.html" class="menu-link"><i data-feather="calendar" class="menu-icon"></i><span class="menu-text">Calendar</span></a></div>
+            <div class="menu-item"><a href="tasks.html" class="menu-link"><i data-feather="check-square" class="menu-icon"></i><span class="menu-text">Tasks</span></a></div>
+            <div class="menu-item"><a href="notes.html" class="menu-link"><i data-feather="edit-3" class="menu-icon"></i><span class="menu-text">Notes</span></a></div>
+            <div class="menu-item"><a href="file-manager.html" class="menu-link"><i data-feather="folder" class="menu-icon"></i><span class="menu-text">File Manager</span></a></div>
+            <div class="menu-item"><a href="contacts.html" class="menu-link"><i data-feather="users" class="menu-icon"></i><span class="menu-text">Contacts</span></a></div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="briefcase" class="menu-icon"></i>
+                    <span class="menu-text">Projects</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="projects-list.html" class="menu-link"><span class="submenu-dot"></span>Project List</a></div>
+                    <div class="menu-item"><a href="project-detail.html" class="menu-link"><span class="submenu-dot"></span>Project Detail</a></div>
+                    <div class="menu-item"><a href="project-create.html" class="menu-link"><span class="submenu-dot"></span>Create Project</a></div>
+                    <div class="menu-item"><a href="kanban.html" class="menu-link"><span class="submenu-dot"></span>Kanban Board</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="target" class="menu-icon"></i>
+                    <span class="menu-text">CRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="crm-leads.html" class="menu-link"><span class="submenu-dot"></span>Leads</a></div>
+                    <div class="menu-item"><a href="crm-deals.html" class="menu-link"><span class="submenu-dot"></span>Deals</a></div>
+                    <div class="menu-item"><a href="crm-companies.html" class="menu-link"><span class="submenu-dot"></span>Companies</a></div>
+                    <div class="menu-item"><a href="crm-contacts.html" class="menu-link"><span class="submenu-dot"></span>Contacts</a></div>
+                    <div class="menu-item"><a href="crm-pipeline.html" class="menu-link"><span class="submenu-dot"></span>Pipeline</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="users" class="menu-icon"></i>
+                    <span class="menu-text">HRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="hrm-employees.html" class="menu-link"><span class="submenu-dot"></span>Employees</a></div>
+                    <div class="menu-item"><a href="hrm-departments.html" class="menu-link"><span class="submenu-dot"></span>Departments</a></div>
+                    <div class="menu-item"><a href="hrm-attendance.html" class="menu-link"><span class="submenu-dot"></span>Attendance</a></div>
+                    <div class="menu-item"><a href="hrm-payroll.html" class="menu-link"><span class="submenu-dot"></span>Payroll</a></div>
+                    <div class="menu-item"><a href="hrm-leave.html" class="menu-link"><span class="submenu-dot"></span>Leave Management</a></div>
+                    <div class="menu-item"><a href="hrm-holidays.html" class="menu-link"><span class="submenu-dot"></span>Holidays</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="dollar-sign" class="menu-icon"></i>
+                    <span class="menu-text">Finance</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="invoices.html" class="menu-link"><span class="submenu-dot"></span>Invoices</a></div>
+                    <div class="menu-item"><a href="invoice-detail.html" class="menu-link"><span class="submenu-dot"></span>Invoice Detail</a></div>
+                    <div class="menu-item"><a href="invoice-create.html" class="menu-link"><span class="submenu-dot"></span>Create Invoice</a></div>
+                    <div class="menu-item"><a href="transactions.html" class="menu-link"><span class="submenu-dot"></span>Transactions</a></div>
+                    <div class="menu-item"><a href="pricing.html" class="menu-link"><span class="submenu-dot"></span>Pricing</a></div>
+                    <div class="menu-item"><a href="wallet.html" class="menu-link"><span class="submenu-dot"></span>Wallet</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>COMPONENTS</span></div>
+            <div class="menu-item has-submenu open">
+                <a href="#" class="menu-link">
+                    <i data-feather="box" class="menu-icon"></i>
+                    <span class="menu-text">UI Elements</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="ui-alerts.html" class="menu-link"><span class="submenu-dot"></span>Alerts</a></div>
+                    <div class="menu-item"><a href="ui-badges.html" class="menu-link"><span class="submenu-dot"></span>Badges</a></div>
+                    <div class="menu-item"><a href="ui-buttons.html" class="menu-link"><span class="submenu-dot"></span>Buttons</a></div>
+                    <div class="menu-item"><a href="ui-cards.html" class="menu-link"><span class="submenu-dot"></span>Cards</a></div>
+                    <div class="menu-item"><a href="ui-dropdowns.html" class="menu-link"><span class="submenu-dot"></span>Dropdowns</a></div>
+                    <div class="menu-item"><a href="ui-modals.html" class="menu-link"><span class="submenu-dot"></span>Modals</a></div>
+                    <div class="menu-item"><a href="ui-tabs.html" class="menu-link"><span class="submenu-dot"></span>Tabs &amp; Pills</a></div>
+                    <div class="menu-item"><a href="ui-progress.html" class="menu-link"><span class="submenu-dot"></span>Progress</a></div>
+                    <div class="menu-item"><a href="ui-spinners.html" class="menu-link"><span class="submenu-dot"></span>Spinners</a></div>
+                    <div class="menu-item"><a href="ui-toasts.html" class="menu-link"><span class="submenu-dot"></span>Toasts</a></div>
+                    <div class="menu-item"><a href="ui-tooltips.html" class="menu-link active"><span class="submenu-dot"></span>Tooltips</a></div>
+                    <div class="menu-item"><a href="ui-accordion.html" class="menu-link"><span class="submenu-dot"></span>Accordion</a></div>
+                    <div class="menu-item"><a href="ui-carousel.html" class="menu-link"><span class="submenu-dot"></span>Carousel</a></div>
+                    <div class="menu-item"><a href="ui-offcanvas.html" class="menu-link"><span class="submenu-dot"></span>Offcanvas</a></div>
+                    <div class="menu-item"><a href="ui-avatars.html" class="menu-link"><span class="submenu-dot"></span>Avatars</a></div>
+                    <div class="menu-item"><a href="ui-list-group.html" class="menu-link"><span class="submenu-dot"></span>List Group</a></div>
+                    <div class="menu-item"><a href="ui-breadcrumbs.html" class="menu-link"><span class="submenu-dot"></span>Breadcrumbs</a></div>
+                    <div class="menu-item"><a href="ui-pagination.html" class="menu-link"><span class="submenu-dot"></span>Pagination</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="edit" class="menu-icon"></i>
+                    <span class="menu-text">Forms</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="form-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Elements</a></div>
+                    <div class="menu-item"><a href="form-advanced.html" class="menu-link"><span class="submenu-dot"></span>Advanced</a></div>
+                    <div class="menu-item"><a href="form-validation.html" class="menu-link"><span class="submenu-dot"></span>Validation</a></div>
+                    <div class="menu-item"><a href="form-wizard.html" class="menu-link"><span class="submenu-dot"></span>Wizard</a></div>
+                    <div class="menu-item"><a href="form-editors.html" class="menu-link"><span class="submenu-dot"></span>Editors</a></div>
+                    <div class="menu-item"><a href="form-upload.html" class="menu-link"><span class="submenu-dot"></span>File Upload</a></div>
+                    <div class="menu-item"><a href="form-layouts.html" class="menu-link"><span class="submenu-dot"></span>Form Layouts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="grid" class="menu-icon"></i>
+                    <span class="menu-text">Tables</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="table-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Tables</a></div>
+                    <div class="menu-item"><a href="table-datatable.html" class="menu-link"><span class="submenu-dot"></span>DataTables</a></div>
+                    <div class="menu-item"><a href="table-responsive.html" class="menu-link"><span class="submenu-dot"></span>Responsive</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="pie-chart" class="menu-icon"></i>
+                    <span class="menu-text">Charts</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="chart-line.html" class="menu-link"><span class="submenu-dot"></span>Line Charts</a></div>
+                    <div class="menu-item"><a href="chart-bar.html" class="menu-link"><span class="submenu-dot"></span>Bar Charts</a></div>
+                    <div class="menu-item"><a href="chart-pie.html" class="menu-link"><span class="submenu-dot"></span>Pie Charts</a></div>
+                    <div class="menu-item"><a href="chart-mixed.html" class="menu-link"><span class="submenu-dot"></span>Mixed Charts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="map" class="menu-icon"></i>
+                    <span class="menu-text">Maps</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="maps-google.html" class="menu-link"><span class="submenu-dot"></span>Google Maps</a></div>
+                    <div class="menu-item"><a href="maps-vector.html" class="menu-link"><span class="submenu-dot"></span>Vector Maps</a></div>
+                    <div class="menu-item"><a href="maps-leaflet.html" class="menu-link"><span class="submenu-dot"></span>Leaflet Maps</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="icons.html" class="menu-link"><i data-feather="feather" class="menu-icon"></i><span class="menu-text">Icons</span></a></div>
+            <div class="menu-item"><a href="widgets.html" class="menu-link"><i data-feather="layers" class="menu-icon"></i><span class="menu-text">Widgets</span></a></div>
+
+            <div class="menu-label"><span>PAGES</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="lock" class="menu-icon"></i>
+                    <span class="menu-text">Authentication</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="auth-login.html" class="menu-link"><span class="submenu-dot"></span>Login</a></div>
+                    <div class="menu-item"><a href="auth-register.html" class="menu-link"><span class="submenu-dot"></span>Register</a></div>
+                    <div class="menu-item"><a href="auth-forgot.html" class="menu-link"><span class="submenu-dot"></span>Forgot Password</a></div>
+                    <div class="menu-item"><a href="auth-reset.html" class="menu-link"><span class="submenu-dot"></span>Reset Password</a></div>
+                    <div class="menu-item"><a href="auth-lockscreen.html" class="menu-link"><span class="submenu-dot"></span>Lock Screen</a></div>
+                    <div class="menu-item"><a href="auth-2fa.html" class="menu-link"><span class="submenu-dot"></span>Two Factor</a></div>
+                    <div class="menu-item"><a href="auth-verify.html" class="menu-link"><span class="submenu-dot"></span>Email Verify</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="alert-triangle" class="menu-icon"></i>
+                    <span class="menu-text">Error Pages</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="error-400.html" class="menu-link"><span class="submenu-dot"></span>400</a></div>
+                    <div class="menu-item"><a href="error-401.html" class="menu-link"><span class="submenu-dot"></span>401</a></div>
+                    <div class="menu-item"><a href="error-403.html" class="menu-link"><span class="submenu-dot"></span>403</a></div>
+                    <div class="menu-item"><a href="error-404.html" class="menu-link"><span class="submenu-dot"></span>404</a></div>
+                    <div class="menu-item"><a href="error-500.html" class="menu-link"><span class="submenu-dot"></span>500</a></div>
+                    <div class="menu-item"><a href="error-503.html" class="menu-link"><span class="submenu-dot"></span>503</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="profile.html" class="menu-link"><i data-feather="user" class="menu-icon"></i><span class="menu-text">Profile</span></a></div>
+            <div class="menu-item"><a href="settings.html" class="menu-link"><i data-feather="settings" class="menu-icon"></i><span class="menu-text">Settings</span></a></div>
+            <div class="menu-item"><a href="faq.html" class="menu-link"><i data-feather="help-circle" class="menu-icon"></i><span class="menu-text">FAQ</span></a></div>
+            <div class="menu-item"><a href="timeline.html" class="menu-link"><i data-feather="clock" class="menu-icon"></i><span class="menu-text">Timeline</span></a></div>
+            <div class="menu-item"><a href="gallery.html" class="menu-link"><i data-feather="image" class="menu-icon"></i><span class="menu-text">Gallery</span></a></div>
+            <div class="menu-item"><a href="search-results.html" class="menu-link"><i data-feather="search" class="menu-icon"></i><span class="menu-text">Search Results</span></a></div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="app-main">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <img src="assets/img/dark-logo.png" alt="BootUI" class="mobile-logo"><button class="sidebar-toggle" type="button"><i data-feather="menu"></i></button>
+                <div class="header-search">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search anything..." class="form-control">
+                    <span class="search-shortcut">Ctrl+K</span>
+                </div>
+            </div>
+            <div class="header-right">
+
+                <!-- Apps Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Apps"><i data-feather="grid"></i></button>
+                    <div class="dropdown-menu dropdown-menu-lg">
+                        <div class="dropdown-menu-header"><h6>Quick Access</h6></div>
+                        <div class="apps-grid">
+                            <a href="chat.html" class="apps-grid-item"><div class="apps-icon bg-gradient-primary"><i data-feather="message-square"></i></div><span>Chat</span></a>
+                            <a href="email.html" class="apps-grid-item"><div class="apps-icon bg-gradient-success"><i data-feather="mail"></i></div><span>Email</span></a>
+                            <a href="calendar.html" class="apps-grid-item"><div class="apps-icon bg-gradient-warning"><i data-feather="calendar"></i></div><span>Calendar</span></a>
+                            <a href="tasks.html" class="apps-grid-item"><div class="apps-icon bg-gradient-danger"><i data-feather="check-square"></i></div><span>Tasks</span></a>
+                            <a href="file-manager.html" class="apps-grid-item"><div class="apps-icon bg-gradient-info"><i data-feather="folder"></i></div><span>Files</span></a>
+                            <a href="contacts.html" class="apps-grid-item"><div class="apps-icon bg-gradient-purple"><i data-feather="users"></i></div><span>Contacts</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn notif-toggle" title="Notifications"><i data-feather="bell"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Notifications</h6><span class="badge bg-primary rounded-pill">5 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-soft-primary"><i data-feather="shopping-bag"></i></div><div class="notif-content"><p><strong>New Order</strong> received from Sarah</p><span class="notif-time">2 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-success"><i data-feather="check-circle"></i></div><div class="notif-content"><p><strong>Payment</strong> of $2,450 confirmed</p><span class="notif-time">15 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-warning"><i data-feather="alert-triangle"></i></div><div class="notif-content"><p><strong>Server CPU</strong> usage is at 92%</p><span class="notif-time">1 hour ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-info"><i data-feather="user-plus"></i></div><div class="notif-content"><p><strong>New user</strong> registered: Mike Chen</p><span class="notif-time">3 hours ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-danger"><i data-feather="alert-circle"></i></div><div class="notif-content"><p><strong>Disk space</strong> running low on server</p><span class="notif-time">5 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="#">View All Notifications</a></div>
+                    </div>
+                </div>
+
+                <!-- Messages Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Messages"><i data-feather="message-square"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Messages</h6><span class="badge bg-success rounded-pill">3 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-gradient-primary avatar-badge">SW</div><div class="notif-content"><p><strong>Sarah Wilson</strong>: Can you review the design files?</p><span class="notif-time">5 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-success avatar-badge">JD</div><div class="notif-content"><p><strong>John Doe</strong>: Meeting rescheduled to 3pm</p><span class="notif-time">30 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-warning avatar-badge">AL</div><div class="notif-content"><p><strong>Anna Lee</strong>: Invoice #1024 has been paid</p><span class="notif-time">2 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="chat.html">View All Messages</a></div>
+                    </div>
+                </div>
+
+                <!-- User Dropdown -->
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user"><div class="header-user-avatar">DD</div><div class="header-user-info"><div class="header-user-name">David Dev</div><div class="header-user-role">Admin</div></div></div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header"><div class="avatar-circle">DD</div><h6 class="mb-0 text-heading">David Dev</h6><small class="text-muted">david@bootui.com</small></div>
+                        <div class="p-2">
+                            <a href="profile.html" class="dropdown-item"><i data-feather="user"></i> My Profile</a>
+                            <a href="settings.html" class="dropdown-item"><i data-feather="settings"></i> Settings</a>
+                            <a href="wallet.html" class="dropdown-item"><i data-feather="credit-card"></i> Billing</a>
+                            <a href="faq.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item text-danger"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-content">
+            <div class="d-flex align-items-center justify-content-between mb-4"><div><h1 class="h3 mb-1 fw-semibold">Tooltips &amp; Popovers</h1><nav aria-label="breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="#">UI Elements</a></li><li class="breadcrumb-item active">Tooltips</li></ol></nav></div></div>
+
+            <div class="card mb-4"><div class="card-header"><h5 class="card-title mb-0">Tooltip Directions</h5></div><div class="card-body"><div class="d-flex flex-wrap gap-2"><button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Top</button><button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">Right</button><button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Bottom</button><button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">Left</button></div></div></div>
+            <div class="card mb-4"><div class="card-header"><h5 class="card-title mb-0">Tooltip on Various Elements</h5></div><div class="card-body"><p>Hover over <a href="#" data-bs-toggle="tooltip" title="Link tooltip">this link</a> to see a tooltip. Or this <span class="badge bg-primary" data-bs-toggle="tooltip" title="Badge tooltip">badge</span> or this <abbr data-bs-toggle="tooltip" title="Abbreviation tooltip">abbr</abbr>.</p><div class="d-flex flex-wrap gap-2"><button class="btn btn-outline-primary btn-sm" data-bs-toggle="tooltip" title="Edit item"><i data-feather="edit" class="icon-sm"></i></button><button class="btn btn-outline-danger btn-sm" data-bs-toggle="tooltip" title="Delete item"><i data-feather="trash-2" class="icon-sm"></i></button><button class="btn btn-outline-success btn-sm" data-bs-toggle="tooltip" title="Download"><i data-feather="download" class="icon-sm"></i></button><button class="btn btn-outline-info btn-sm" data-bs-toggle="tooltip" title="Share this"><i data-feather="share-2" class="icon-sm"></i></button></div></div></div>
+            <div class="card mb-4"><div class="card-header"><h5 class="card-title mb-0">Custom HTML Tooltip</h5></div><div class="card-body"><button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-html="true" title="<strong>Bold</strong> and <em>italic</em> text">HTML Tooltip</button> <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-html="true" title="Line 1<br>Line 2<br>Line 3">Multi-line Tooltip</button></div></div>
+            <div class="card mb-4"><div class="card-header"><h5 class="card-title mb-0">Popover Directions</h5></div><div class="card-body"><div class="d-flex flex-wrap gap-2"><button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Top Popover" data-bs-content="Content for the top popover goes here.">Top</button><button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Right Popover" data-bs-content="Content for the right popover.">Right</button><button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Bottom Popover" data-bs-content="Content for the bottom popover.">Bottom</button><button type="button" class="btn btn-warning" data-bs-toggle="popover" data-bs-placement="left" data-bs-title="Left Popover" data-bs-content="Content for the left popover.">Left</button></div></div></div>
+            <div class="card mb-4"><div class="card-header"><h5 class="card-title mb-0">Popover with HTML & Dismissible</h5></div><div class="card-body"><div class="d-flex flex-wrap gap-2"><button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-html="true" data-bs-title="Rich Popover" data-bs-content="<p>This popover has <strong>HTML</strong> content.</p><p class='mb-0'>Including <a href='#'>links</a> and formatting.</p>">HTML Popover</button><button type="button" class="btn btn-dark" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible" data-bs-content="Click anywhere else to dismiss this popover.">Dismissible Popover</button></div></div></div>
+            <div class="card mb-4"><div class="card-header"><h5 class="card-title mb-0">Rich Popover with Image</h5></div><div class="card-body"><button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-html="true" data-bs-title="User Profile" data-bs-content="<div class='d-flex align-items-center gap-2'><div class='rounded-circle bg-primary text-white d-flex align-items-center justify-content-center' style='width:40px;height:40px;min-width:40px'>JD</div><div><strong>John Doe</strong><br><small class='text-muted'>Software Engineer</small></div></div>">User Popover</button></div></div>
+        </div>
+        <footer class="app-footer"><span>2024 &copy; BootUI - Premium Admin Dashboard</span><span>Crafted with &#9829; by BootUI</span></footer>
+    </div>
+</div>
+<div class="backdrop-overlay"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

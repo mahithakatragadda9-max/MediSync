@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Intelligence Portal — MediSync</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/medisync.css">
+</head>
+<body>
+<div class="app-wrapper">
+    <!-- Sidebar (BootUI Shell) -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">M</div>
+            <span class="logo-text">MediSync</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>PATIENT INTELLIGENCE</span></div>
+            <div class="menu-item"><a href="#overview" class="menu-link active" data-view="overview"><i data-feather="home" class="menu-icon"></i><span class="menu-text">Overview</span></a></div>
+            <div class="menu-item"><a href="#records" class="menu-link" data-view="records"><i data-feather="file-text" class="menu-icon"></i><span class="menu-text">Medical Records</span></a></div>
+            <div class="menu-item"><a href="#wearables" class="menu-link" data-view="wearables"><i data-feather="activity" class="menu-icon"></i><span class="menu-text">Wearable Intelligence</span></a></div>
+            <div class="menu-item"><a href="#baseline" class="menu-link" data-view="baseline"><i data-feather="sliders" class="menu-icon"></i><span class="menu-text">Personal Baseline</span></a></div>
+            <div class="menu-item"><a href="#assistant" class="menu-link" data-view="assistant"><i data-feather="cpu" class="menu-icon"></i><span class="menu-text">AI Health Assistant</span></a></div>
+            <div class="menu-item"><a href="#timeline" class="menu-link" data-view="timeline"><i data-feather="clock" class="menu-icon"></i><span class="menu-text">Health Timeline</span></a></div>
+
+            <div class="menu-label"><span>TRUST &amp; PRIVACY</span></div>
+            <div class="menu-item">
+                <a href="#consent" class="menu-link" data-view="consent">
+                    <i data-feather="shield" class="menu-icon"></i>
+                    <span class="menu-text">Privacy &amp; Consent</span>
+                    <span id="sidebarPendingBadge" class="menu-badge d-none">0</span>
+                </a>
+            </div>
+            <div class="menu-item"><a href="index.html" class="menu-link"><i data-feather="globe" class="menu-icon"></i><span class="menu-text">Public Home</span></a></div>
+        </div>
+    </aside>
+
+    <div class="app-main">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar"><i data-feather="menu"></i></button>
+                <span class="ms-id-pill d-none d-sm-inline-flex" id="headerMsId">MS-2026-......</span>
+            </div>
+            <div class="header-right">
+                <span class="badge bg-teal-soft d-none d-md-inline-block" id="syntheticBadge">Synthetic Demo Mode</span>
+                <button class="btn btn-sm btn-soft-primary" onclick="MediSyncPatient.switchView('assistant')">
+                    <i data-feather="cpu" style="width:14px;height:14px;" class="me-1"></i> Ask AI Assistant
+                </button>
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user">
+                        <div class="header-user-avatar" id="headerAvatar">AS</div>
+                        <div class="header-user-info">
+                            <div class="header-user-name" id="headerUserName">Patient</div>
+                            <div class="header-user-role">Patient Portal</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header">
+                            <h6 class="mb-0 text-heading" id="dropdownUserName">Patient</h6>
+                            <small class="text-muted" id="dropdownUserEmail">—</small>
+                        </div>
+                        <div class="p-2">
+                            <a href="#consent" class="dropdown-item" onclick="MediSyncPatient.switchView('consent')"><i data-feather="shield"></i> Privacy &amp; Consent</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item text-danger" onclick="MediSync.logout(); return false;"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-content">
+            <div id="syntheticNoticeBar" class="ms-synthetic-banner mb-4 d-none">
+                <span><strong>Synthetic Demo Patient Active:</strong> All preloaded medical records, wearable observations, and IDs represent synthetic demonstration data—not real clinical data.</span>
+                <span class="badge bg-primary">Demo Sandbox</span>
+            </div>
+
+            <!-- ==================== VIEW 1: OVERVIEW ==================== -->
+            <section id="view-overview" class="ms-view active">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                    <div>
+                        <h1 class="h3 mb-1 fw-bold text-navy" id="welcomeHeading">Welcome back</h1>
+                        <p class="text-muted mb-0 small">Longitudinal overview of your medical history, wearable stream, and consent status.</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-primary btn-sm" onclick="MediSyncPatient.switchView('records')"><i data-feather="upload" style="width:14px;height:14px;" class="me-1"></i> Upload Report</button>
+                        <button class="btn btn-primary btn-sm" onclick="MediSyncPatient.switchView('wearables')"><i data-feather="activity" style="width:14px;height:14px;" class="me-1"></i> Import Wearable</button>
+                    </div>
+                </div>
+
+                <!-- Pending Consent Alert -->
+                <div id="overviewConsentAlert" class="alert alert-warning d-none align-items-center justify-content-between mb-4">
+                    <div class="small">
+                        <strong>Pending Healthcare Professional Request:</strong> A verified clinician has requested access to your MediSync context. Review and grant or deny permission.
+                    </div>
+                    <button class="btn btn-sm btn-warning ms-2 flex-shrink-0" onclick="MediSyncPatient.switchView('consent')">Review Request</button>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <!-- MediSync ID & Privacy-Safe QR Card -->
+                    <div class="col-xl-4">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0 fw-bold">MediSync Identity &amp; QR</h6>
+                                <span class="badge bg-teal-soft">Zero PII</span>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center text-center">
+                                <div class="ms-id-pill mb-3" id="overviewMsId">MS-2026-482910</div>
+                                <div class="ms-qr-box mb-3">
+                                    <img id="overviewQrImg" src="" alt="MediSync Privacy-Safe QR">
+                                </div>
+                                <p class="small text-muted mb-2" id="overviewQrPayload" style="font-family:var(--font-mono);font-size:0.75rem;"></p>
+                                <p class="text-muted mb-3" style="font-size:0.76rem;" id="overviewQrPrivacyNote"></p>
+                                <div class="d-flex gap-2 mt-auto w-100">
+                                    <button class="btn btn-soft-primary btn-sm flex-fill" id="copyMsIdBtn">Copy ID</button>
+                                    <button class="btn btn-outline-secondary btn-sm flex-fill" id="downloadQrBtn">Download QR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Health Profile Summary & Recent Observations -->
+                    <div class="col-xl-8">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0 fw-bold">Health Profile Summary</h6>
+                                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6 col-md-3">
+                                        <div class="p-2 bg-light rounded border">
+                                            <small class="text-muted d-block">Age / Sex</small>
+                                            <strong class="text-navy" id="profAgeSex">—</strong>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="p-2 bg-light rounded border">
+                                            <small class="text-muted d-block">Blood Group</small>
+                                            <strong class="text-navy" id="profBlood">—</strong>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="p-2 bg-light rounded border">
+                                            <small class="text-muted d-block">Height / Weight</small>
+                                            <strong class="text-navy" id="profHw">—</strong>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="p-2 bg-light rounded border">
+                                            <small class="text-muted d-block">Records / Days</small>
+                                            <strong class="text-navy" id="profCounts">—</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-4">
+                                        <small class="fw-semibold text-uppercase text-muted d-block mb-1" style="font-size:0.7rem;">Known Conditions</small>
+                                        <div id="overviewConditions" class="d-flex flex-wrap gap-1"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <small class="fw-semibold text-uppercase text-muted d-block mb-1" style="font-size:0.7rem;">Active Medications</small>
+                                        <div id="overviewMeds" class="d-flex flex-wrap gap-1"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <small class="fw-semibold text-uppercase text-muted d-block mb-1" style="font-size:0.7rem;">Allergies</small>
+                                        <div id="overviewAllergies" class="d-flex flex-wrap gap-1"></div>
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <h6 class="fw-semibold small text-navy mb-2">Most Recent Wearable Observation</h6>
+                                <div id="overviewLatestObs" class="row g-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <!-- Insights & Deviations -->
+                    <div class="col-xl-6">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0 fw-bold">Baseline &amp; Deviation Highlights</h6>
+                                <button class="btn btn-sm btn-link p-0 text-primary" onclick="MediSyncPatient.switchView('baseline')">Full Analysis &rarr;</button>
+                            </div>
+                            <div class="card-body" id="overviewInsightsList"></div>
+                        </div>
+                    </div>
+
+                    <!-- Connected Devices + Recent Timeline -->
+                    <div class="col-xl-6">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0 fw-bold">Connected Sources &amp; Recent Events</h6>
+                                <button class="btn btn-sm btn-link p-0 text-primary" onclick="MediSyncPatient.switchView('timeline')">Full Timeline &rarr;</button>
+                            </div>
+                            <div class="card-body">
+                                <div id="overviewDevicesList" class="mb-3"></div>
+                                <hr>
+                                <div id="overviewTimelineMini"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== INDIA HEALTHCARE SCHEME GUIDANCE ==================== -->
+                <div class="row g-3 mt-2" id="schemeGuidanceSection">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm" id="schemeGuidanceCard">
+                            <div class="card-header d-flex flex-wrap align-items-center justify-content-between gap-2 py-2"
+                                 style="background:linear-gradient(90deg,#0f2942 0%,#164975 100%);border-radius:0.5rem 0.5rem 0 0;">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="d-flex align-items-center justify-content-center rounded-circle"
+                                          style="width:32px;height:32px;background:rgba(13,148,136,.25);">
+                                        <i data-feather="shield" style="width:16px;height:16px;color:#0d9488;"></i>
+                                    </span>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold text-white" style="font-size:.88rem;">India Healthcare Scheme &amp; Coverage Guidance</h6>
+                                        <p class="mb-0 text-white-50" style="font-size:.72rem;">Based on your state, age group &amp; extracted medical conditions — informational only</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <label class="text-white-50 small mb-0 me-1" for="schemeStateSelect" style="font-size:.75rem;">State:</label>
+                                    <select id="schemeStateSelect" class="form-select form-select-sm"
+                                            style="width:auto;min-width:150px;font-size:.78rem;background:#1a3a5c;color:#fff;border-color:#1e4d7a;"
+                                            onchange="MediSyncPatient.onSchemeStateChange(this.value)">
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="All India">All India / Other State</option>
+                                    </select>
+                                    <button class="btn btn-sm p-1 text-white-50 border-0"
+                                            style="background:transparent;"
+                                            title="Collapse / Expand"
+                                            onclick="MediSyncPatient.toggleSchemeCard(this)"
+                                            aria-expanded="true">
+                                        <i data-feather="chevron-up" style="width:16px;height:16px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Collapsible body -->
+                            <div id="schemeGuidanceBody" class="card-body p-3">
+                                <div id="schemeGuidanceResults" class="row g-2">
+                                    <div class="col-12 text-muted small">Loading scheme guidance…</div>
+                                </div>
+                                <p class="mb-0 mt-3 text-muted" style="font-size:.70rem;">
+                                    <i data-feather="info" style="width:12px;height:12px;" class="me-1"></i>
+                                    <strong>Disclaimer:</strong> Eligibility must be verified directly on the official government portal.
+                                    MediSync does not store, transmit, or verify any eligibility data.
+                                    Scheme information is based on publicly available government sources and may change.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==================== END SCHEME GUIDANCE ==================== -->
+
+            </section>
+
+            <!-- ==================== VIEW 2: MEDICAL RECORDS ==================== -->
+            <section id="view-records" class="ms-view">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                    <div>
+                        <h1 class="h3 mb-1 fw-bold text-navy">Medical Records &amp; Document Intelligence</h1>
+                        <p class="text-muted mb-0 small">Upload lab reports, prescriptions, or checkups. Review and correct extracted entities with full source traceability.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-outline-primary btn-sm" id="downloadSampleLabBtn" target="_blank"><i data-feather="download" style="width:14px;height:14px;" class="me-1"></i> Sample Lab PDF</a>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addEntityModal"><i data-feather="plus" style="width:14px;height:14px;" class="me-1"></i> Add Manual Entry</button>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-5">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Upload Medical PDF or Report</h6></div>
+                            <div class="card-body">
+                                <form id="recordUploadForm">
+                                    <div class="mb-2">
+                                        <label class="form-label small fw-medium">Document Title</label>
+                                        <input type="text" class="form-control form-control-sm" id="docTitle" placeholder="e.g., Lipid &amp; Thyroid Panel">
+                                    </div>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <label class="form-label small fw-medium">Category</label>
+                                            <select class="form-select form-select-sm" id="docType">
+                                                <option value="lab_report">Laboratory Report</option>
+                                                <option value="prescription">Prescription</option>
+                                                <option value="checkup">Checkup Note</option>
+                                                <option value="discharge_summary">Discharge Summary</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label small fw-medium">Report Date</label>
+                                            <input type="date" class="form-control form-control-sm" id="docDate">
+                                        </div>
+                                    </div>
+                                    <div class="dropzone p-4 mb-3" id="pdfDropzone">
+                                        <i data-feather="upload-cloud" class="text-primary mb-2" style="width:32px;height:32px;"></i>
+                                        <div class="fw-semibold small" id="pdfFileLabel">Drop PDF/TXT here or click to browse</div>
+                                        <small class="text-muted">Supported: .pdf, .txt (max 15 MB)</small>
+                                        <input type="file" id="pdfFileInput" accept=".pdf,.txt" class="d-none">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100" id="uploadDocBtn">Upload &amp; Extract Information</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0 fw-bold">Uploaded Documents</h6>
+                                <span class="badge bg-teal-soft" id="docCountBadge">0 documents</span>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0 align-middle">
+                                        <thead><tr><th>Document</th><th>Type</th><th>Date</th><th>Status</th><th>Source</th></tr></thead>
+                                        <tbody id="documentsTableBody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extracted Entities with Review & Correction -->
+                <div class="card">
+                    <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
+                        <div>
+                            <h6 class="card-title mb-0 fw-bold">Extracted Medical Information</h6>
+                            <small class="text-muted">Click Edit to verify or correct any extracted condition, medication, allergy, or lab result.</small>
+                        </div>
+                        <select class="form-select form-select-sm select-w-auto" id="entityCategoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="condition">Conditions</option>
+                            <option value="medication">Medications</option>
+                            <option value="allergy">Allergies</option>
+                            <option value="lab_result">Lab Results</option>
+                            <option value="observation">Observations</option>
+                        </select>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0 align-middle">
+                                <thead><tr><th>Category</th><th>Name</th><th>Value / Details</th><th>Flag</th><th>Source Reference</th><th>Confidence</th><th>Action</th></tr></thead>
+                                <tbody id="extractedTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== VIEW 3: WEARABLE INTELLIGENCE ==================== -->
+            <section id="view-wearables" class="ms-view">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                    <div>
+                        <h1 class="h3 mb-1 fw-bold text-navy">Wearable Intelligence &amp; Device Connectors</h1>
+                        <p class="text-muted mb-0 small">Modular data ingestion supporting CSV/JSON imports. Unavailable live bridges are reported honestly.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-soft-primary btn-sm" id="importSampleJsonBtn">Import Synthetic 7d JSON</button>
+                        <button class="btn btn-outline-primary btn-sm" id="importSampleCsvBtn">Import Synthetic 30d CSV</button>
+                    </div>
+                </div>
+
+                <!-- Modular Device Connector Cards -->
+                <div class="row g-3 mb-4" id="deviceConnectorsGrid"></div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Import CSV / JSON Readings</h6></div>
+                            <div class="card-body">
+                                <form id="wearableUploadForm">
+                                    <div class="dropzone p-4 mb-3" id="wearableDropzone">
+                                        <i data-feather="watch" class="text-primary mb-2" style="width:30px;height:30px;"></i>
+                                        <div class="fw-semibold small" id="wearableFileLabel">Drop .csv or .json wearable export</div>
+                                        <small class="text-muted">Fields: observed_at, resting_hr, avg_hr, spo2, sleep_hours, steps, hrv_ms, activity_context</small>
+                                        <input type="file" id="wearableFileInput" accept=".csv,.json" class="d-none">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100" id="uploadWearableBtn">Import Wearable File</button>
+                                </form>
+                                <div class="mt-3 pt-3 border-top small">
+                                    <a id="downloadSampleCsvLink" class="text-primary d-block mb-1" target="_blank">Download Synthetic 30d CSV Template &rarr;</a>
+                                    <a id="downloadSampleJsonLink" class="text-primary d-block" target="_blank">Download Synthetic 7d JSON Sample &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Heart Rate Trends (Resting vs Average)</h6></div>
+                            <div class="card-body"><div class="chart-h-250"><canvas id="hrTrendChart"></canvas></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Sleep Duration &amp; Deep Sleep (Hours)</h6></div>
+                            <div class="card-body"><div class="chart-h-250"><canvas id="sleepTrendChart"></canvas></div></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">SpO2 (%) &amp; Daily Steps</h6></div>
+                            <div class="card-body"><div class="chart-h-250"><canvas id="activitySpo2Chart"></canvas></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== VIEW 4: PERSONAL BASELINE ==================== -->
+            <section id="view-baseline" class="ms-view">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                    <div>
+                        <h1 class="h3 mb-1 fw-bold text-navy">Personal Health Baseline &amp; Contextual Deviations</h1>
+                        <p class="text-muted mb-0 small" id="baselinePeriodLabel">Analyzing your personal historical observations...</p>
+                    </div>
+                    <span class="badge bg-navy-soft" id="baselineDaysBadge">0 days observed</span>
+                </div>
+
+                <div class="alert alert-info small mb-4" id="baselineMethodologyNote"></div>
+
+                <div class="row g-3 mb-4" id="baselineMetricsGrid"></div>
+
+                <div class="row g-3">
+                    <div class="col-lg-7">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Personal Baseline Range vs Recent Observations</h6></div>
+                            <div class="card-body"><div class="chart-h-300"><canvas id="baselineComparisonChart"></canvas></div></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Explainable Deviations &amp; Activity Context</h6></div>
+                            <div class="card-body" id="baselineInsightsContainer"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== VIEW 5: AI HEALTH ASSISTANT ==================== -->
+            <section id="view-assistant" class="ms-view">
+                <div class="mb-3">
+                    <h1 class="h3 mb-1 fw-bold text-navy">Personalized AI Health Assistant</h1>
+                    <p class="text-muted mb-0 small">Grounded in your uploaded medical records, wearable observations, and personal baseline. Educational only—not medical diagnosis.</p>
+                </div>
+
+                <div class="chat-app-container">
+                    <!-- Context Sidebar (BootUI Chat Sidebar) -->
+                    <div class="chat-sidebar">
+                        <div class="chat-sidebar-header">
+                            <h6 class="fw-bold text-navy mb-1">Active Health Context</h6>
+                            <small class="text-muted d-block" id="aiContextStats">Loading context...</small>
+                        </div>
+                        <div class="p-3 border-bottom">
+                            <small class="fw-bold text-uppercase text-muted d-block mb-2" style="font-size:0.7rem;">Try Contextual Questions</small>
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-sm btn-soft-primary text-start" onclick="MediSyncPatient.askQuickPrompt('Why have I been experiencing headaches recently?')">
+                                    Why have I been experiencing headaches recently?
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary text-start" onclick="MediSyncPatient.askQuickPrompt('How do my recent sleep and resting heart rate compare to my personal baseline?')">
+                                    Compare recent sleep &amp; HR to my baseline
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary text-start" onclick="MediSyncPatient.askQuickPrompt('Summarize my uploaded lab results, medications, and allergies.')">
+                                    Summarize my records &amp; medications
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-3 small text-muted">
+                            <strong class="text-navy d-block mb-1">Safety Boundaries</strong>
+                            <ul class="ps-3 mb-0">
+                                <li>Distinguishes records, wearables, baseline &amp; missing data.</li>
+                                <li>Never diagnoses diseases or prescribes medication.</li>
+                                <li>Never advises stopping prescribed treatment.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Chat Main -->
+                    <div class="chat-main">
+                        <div class="chat-main-header">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="ms-icon-badge bg-teal-soft" style="width:36px;height:36px;"><i data-feather="cpu" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-navy">MediSync Contextual Intelligence</h6>
+                                    <small class="text-muted">Source-cited · Non-diagnostic educational synthesis</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages" id="aiChatMessages"></div>
+
+                        <form class="chat-input-area" id="aiChatForm">
+                            <input type="text" class="form-control" id="aiQuestionInput" placeholder="Ask about your health patterns, recent headaches, lab results, or sleep..." required>
+                            <button type="submit" class="btn btn-primary px-3" id="aiSendBtn">
+                                <i data-feather="send" style="width:16px;height:16px;"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== VIEW 6: HEALTH TIMELINE ==================== -->
+            <section id="view-timeline" class="ms-view">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                    <div>
+                        <h1 class="h3 mb-1 fw-bold text-navy">Longitudinal Health Timeline</h1>
+                        <p class="text-muted mb-0 small">Medical reports, prescriptions, checkups, wearable syncs, deviations, and user-entered events.</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addEventModal"><i data-feather="plus" style="width:14px;height:14px;" class="me-1"></i> Log Health Event</button>
+                </div>
+
+                <div class="card p-4">
+                    <div id="patientTimelineContainer"></div>
+                </div>
+            </section>
+
+            <!-- ==================== VIEW 7: PRIVACY & CONSENT ==================== -->
+            <section id="view-consent" class="ms-view">
+                <div class="mb-4">
+                    <h1 class="h3 mb-1 fw-bold text-navy">Privacy, Permissions &amp; Consent Control</h1>
+                    <p class="text-muted mb-0 small">You control which verified healthcare professionals can view your health context. Permissions are scoped and revocable anytime.</p>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header"><h6 class="card-title mb-0 fw-bold">Professional Access Requests</h6></div>
+                    <div class="card-body" id="consentRequestsList"></div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header"><h6 class="card-title mb-0 fw-bold">Active &amp; Historical Consents</h6></div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0 align-middle">
+                                <thead><tr><th>Clinician</th><th>Scopes</th><th>Status</th><th>Granted</th><th>Expires</th><th>Action</th></tr></thead>
+                                <tbody id="consentsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h6 class="card-title mb-0 fw-bold">Access &amp; Activity Audit History</h6></div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-hover mb-0">
+                                <thead><tr><th>Timestamp</th><th>Actor</th><th>Action</th><th>Details</th></tr></thead>
+                                <tbody id="patientAuditBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="backdrop-overlay"></div>
+
+<!-- Modals -->
+<div class="modal fade" id="editProfileModal" tabindex="-1">
+    <div class="modal-dialog">
+        <form class="modal-content" id="editProfileForm">
+            <div class="modal-header"><h5 class="modal-title fw-bold">Edit Health Profile</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body row g-3">
+                <div class="col-4"><label class="form-label small">Age</label><input type="number" class="form-control" id="editAge"></div>
+                <div class="col-4"><label class="form-label small">Sex</label><input type="text" class="form-control" id="editSex"></div>
+                <div class="col-4"><label class="form-label small">Blood Group</label><input type="text" class="form-control" id="editBlood"></div>
+                <div class="col-6"><label class="form-label small">Height (cm)</label><input type="number" step="0.1" class="form-control" id="editHeight"></div>
+                <div class="col-6"><label class="form-label small">Weight (kg)</label><input type="number" step="0.1" class="form-control" id="editWeight"></div>
+                <div class="col-12"><label class="form-label small">Emergency / Allergy Note</label><input type="text" class="form-control" id="editNote"></div>
+            </div>
+            <div class="modal-footer"><button type="submit" class="btn btn-primary">Save Profile</button></div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="editEntityModal" tabindex="-1">
+    <div class="modal-dialog">
+        <form class="modal-content" id="editEntityForm">
+            <div class="modal-header"><h5 class="modal-title fw-bold">Review &amp; Correct Extracted Information</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <input type="hidden" id="editEntId">
+                <div class="mb-2"><label class="form-label small">Category</label>
+                    <select class="form-select" id="editEntCategory">
+                        <option value="condition">Condition</option><option value="medication">Medication</option>
+                        <option value="allergy">Allergy</option><option value="lab_result">Lab Result</option>
+                        <option value="observation">Observation</option><option value="event">Event</option>
+                    </select>
+                </div>
+                <div class="mb-2"><label class="form-label small">Name</label><input type="text" class="form-control" id="editEntName" required></div>
+                <div class="row g-2 mb-2">
+                    <div class="col-6"><label class="form-label small">Value / Dose</label><input type="text" class="form-control" id="editEntValue"></div>
+                    <div class="col-3"><label class="form-label small">Unit</label><input type="text" class="form-control" id="editEntUnit"></div>
+                    <div class="col-3"><label class="form-label small">Flag</label><input type="text" class="form-control" id="editEntFlag"></div>
+                </div>
+                <div class="mb-2"><label class="form-label small">Reference Range</label><input type="text" class="form-control" id="editEntRef"></div>
+            </div>
+            <div class="modal-footer"><button type="submit" class="btn btn-primary">Mark Verified &amp; Save</button></div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="addEntityModal" tabindex="-1">
+    <div class="modal-dialog">
+        <form class="modal-content" id="addEntityForm">
+            <div class="modal-header"><h5 class="modal-title fw-bold">Add Medical History Entry</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <div class="mb-2"><label class="form-label small">Category</label>
+                    <select class="form-select" id="addEntCategory">
+                        <option value="condition">Condition</option><option value="medication">Medication</option>
+                        <option value="allergy">Allergy</option><option value="lab_result">Lab Result</option>
+                    </select>
+                </div>
+                <div class="mb-2"><label class="form-label small">Name</label><input type="text" class="form-control" id="addEntName" required></div>
+                <div class="row g-2 mb-2">
+                    <div class="col-6"><label class="form-label small">Value / Dosage</label><input type="text" class="form-control" id="addEntValue"></div>
+                    <div class="col-6"><label class="form-label small">Unit</label><input type="text" class="form-control" id="addEntUnit"></div>
+                </div>
+                <div class="mb-2"><label class="form-label small">Observed Date</label><input type="date" class="form-control" id="addEntDate"></div>
+            </div>
+            <div class="modal-footer"><button type="submit" class="btn btn-primary">Add Entry</button></div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="rawDocModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title fw-bold" id="rawDocTitle">Source Document Text</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body"><pre id="rawDocContent" class="bg-light p-3 rounded border small" style="white-space:pre-wrap;max-height:420px;overflow:auto;"></pre></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addEventModal" tabindex="-1">
+    <div class="modal-dialog">
+        <form class="modal-content" id="addEventForm">
+            <div class="modal-header"><h5 class="modal-title fw-bold">Log Personal Health Event</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <div class="mb-2"><label class="form-label small">Event Type</label>
+                    <select class="form-select" id="evType">
+                        <option value="symptom">Symptom Observation</option>
+                        <option value="checkup">Doctor Checkup</option>
+                        <option value="medication_note">Medication Note</option>
+                        <option value="observation">General Observation</option>
+                    </select>
+                </div>
+                <div class="mb-2"><label class="form-label small">Title</label><input type="text" class="form-control" id="evTitle" placeholder="e.g., Afternoon headache" required></div>
+                <div class="mb-2"><label class="form-label small">Date</label><input type="date" class="form-control" id="evDate" required></div>
+                <div class="mb-2"><label class="form-label small">Description</label><textarea class="form-control" id="evDesc" rows="3" required></textarea></div>
+            </div>
+            <div class="modal-footer"><button type="submit" class="btn btn-primary">Add to Timeline</button></div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/medisync-api.js"></script>
+<script src="assets/js/patient-dashboard.js"></script>
+</body>
+</html>

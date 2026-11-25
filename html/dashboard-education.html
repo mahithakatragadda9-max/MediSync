@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Dashboard - BootUI Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app-wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/img/light-logo.png" alt="BootUI" class="logo-img">
+            <span class="logo-text">BootUI</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>DASHBOARDS</span></div>
+            <div class="menu-item has-submenu open">
+                <a href="#" class="menu-link">
+                    <i data-feather="home" class="menu-icon"></i>
+                    <span class="menu-text">Dashboards</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="index.html" class="menu-link"><span class="submenu-dot"></span>eCommerce</a></div>
+                    <div class="menu-item"><a href="dashboard-analytics.html" class="menu-link"><span class="submenu-dot"></span>Analytics</a></div>
+                    <div class="menu-item"><a href="dashboard-crm.html" class="menu-link"><span class="submenu-dot"></span>CRM</a></div>
+                    <div class="menu-item"><a href="dashboard-project.html" class="menu-link"><span class="submenu-dot"></span>Project</a></div>
+                    <div class="menu-item"><a href="dashboard-hrm.html" class="menu-link"><span class="submenu-dot"></span>HRM</a></div>
+                    <div class="menu-item"><a href="dashboard-finance.html" class="menu-link"><span class="submenu-dot"></span>Finance</a></div>
+                    <div class="menu-item"><a href="dashboard-marketing.html" class="menu-link"><span class="submenu-dot"></span>Marketing</a></div>
+                    <div class="menu-item"><a href="dashboard-healthcare.html" class="menu-link"><span class="submenu-dot"></span>Healthcare</a></div>
+                    <div class="menu-item"><a href="dashboard-education.html" class="menu-link active"><span class="submenu-dot"></span>Education</a></div>
+                    <div class="menu-item"><a href="dashboard-realestate.html" class="menu-link"><span class="submenu-dot"></span>Real Estate</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>APPS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="shopping-cart" class="menu-icon"></i>
+                    <span class="menu-text">eCommerce</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="products.html" class="menu-link"><span class="submenu-dot"></span>Products</a></div>
+                    <div class="menu-item"><a href="product-detail.html" class="menu-link"><span class="submenu-dot"></span>Product Detail</a></div>
+                    <div class="menu-item"><a href="product-add.html" class="menu-link"><span class="submenu-dot"></span>Add Product</a></div>
+                    <div class="menu-item"><a href="cart.html" class="menu-link"><span class="submenu-dot"></span>Cart</a></div>
+                    <div class="menu-item"><a href="checkout.html" class="menu-link"><span class="submenu-dot"></span>Checkout</a></div>
+                    <div class="menu-item"><a href="orders.html" class="menu-link"><span class="submenu-dot"></span>Orders</a></div>
+                    <div class="menu-item"><a href="order-detail.html" class="menu-link"><span class="submenu-dot"></span>Order Detail</a></div>
+                    <div class="menu-item"><a href="customers.html" class="menu-link"><span class="submenu-dot"></span>Customers</a></div>
+                    <div class="menu-item"><a href="sellers.html" class="menu-link"><span class="submenu-dot"></span>Sellers</a></div>
+                    <div class="menu-item"><a href="reviews.html" class="menu-link"><span class="submenu-dot"></span>Reviews</a></div>
+                </div>
+            </div>
+            <div class="menu-item"><a href="chat.html" class="menu-link"><i data-feather="message-square" class="menu-icon"></i><span class="menu-text">Chat</span></a></div>
+            <div class="menu-item"><a href="email.html" class="menu-link"><i data-feather="mail" class="menu-icon"></i><span class="menu-text">Email</span></a></div>
+            <div class="menu-item"><a href="calendar.html" class="menu-link"><i data-feather="calendar" class="menu-icon"></i><span class="menu-text">Calendar</span></a></div>
+            <div class="menu-item"><a href="tasks.html" class="menu-link"><i data-feather="check-square" class="menu-icon"></i><span class="menu-text">Tasks</span></a></div>
+            <div class="menu-item"><a href="notes.html" class="menu-link"><i data-feather="edit-3" class="menu-icon"></i><span class="menu-text">Notes</span></a></div>
+            <div class="menu-item"><a href="file-manager.html" class="menu-link"><i data-feather="folder" class="menu-icon"></i><span class="menu-text">File Manager</span></a></div>
+            <div class="menu-item"><a href="contacts.html" class="menu-link"><i data-feather="users" class="menu-icon"></i><span class="menu-text">Contacts</span></a></div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="briefcase" class="menu-icon"></i>
+                    <span class="menu-text">Projects</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="projects-list.html" class="menu-link"><span class="submenu-dot"></span>Project List</a></div>
+                    <div class="menu-item"><a href="project-detail.html" class="menu-link"><span class="submenu-dot"></span>Project Detail</a></div>
+                    <div class="menu-item"><a href="project-create.html" class="menu-link"><span class="submenu-dot"></span>Create Project</a></div>
+                    <div class="menu-item"><a href="kanban.html" class="menu-link"><span class="submenu-dot"></span>Kanban Board</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="target" class="menu-icon"></i>
+                    <span class="menu-text">CRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="crm-leads.html" class="menu-link"><span class="submenu-dot"></span>Leads</a></div>
+                    <div class="menu-item"><a href="crm-deals.html" class="menu-link"><span class="submenu-dot"></span>Deals</a></div>
+                    <div class="menu-item"><a href="crm-companies.html" class="menu-link"><span class="submenu-dot"></span>Companies</a></div>
+                    <div class="menu-item"><a href="crm-contacts.html" class="menu-link"><span class="submenu-dot"></span>Contacts</a></div>
+                    <div class="menu-item"><a href="crm-pipeline.html" class="menu-link"><span class="submenu-dot"></span>Pipeline</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="users" class="menu-icon"></i>
+                    <span class="menu-text">HRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="hrm-employees.html" class="menu-link"><span class="submenu-dot"></span>Employees</a></div>
+                    <div class="menu-item"><a href="hrm-departments.html" class="menu-link"><span class="submenu-dot"></span>Departments</a></div>
+                    <div class="menu-item"><a href="hrm-attendance.html" class="menu-link"><span class="submenu-dot"></span>Attendance</a></div>
+                    <div class="menu-item"><a href="hrm-payroll.html" class="menu-link"><span class="submenu-dot"></span>Payroll</a></div>
+                    <div class="menu-item"><a href="hrm-leave.html" class="menu-link"><span class="submenu-dot"></span>Leave Management</a></div>
+                    <div class="menu-item"><a href="hrm-holidays.html" class="menu-link"><span class="submenu-dot"></span>Holidays</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="dollar-sign" class="menu-icon"></i>
+                    <span class="menu-text">Finance</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="invoices.html" class="menu-link"><span class="submenu-dot"></span>Invoices</a></div>
+                    <div class="menu-item"><a href="invoice-detail.html" class="menu-link"><span class="submenu-dot"></span>Invoice Detail</a></div>
+                    <div class="menu-item"><a href="invoice-create.html" class="menu-link"><span class="submenu-dot"></span>Create Invoice</a></div>
+                    <div class="menu-item"><a href="transactions.html" class="menu-link"><span class="submenu-dot"></span>Transactions</a></div>
+                    <div class="menu-item"><a href="pricing.html" class="menu-link"><span class="submenu-dot"></span>Pricing</a></div>
+                    <div class="menu-item"><a href="wallet.html" class="menu-link"><span class="submenu-dot"></span>Wallet</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>COMPONENTS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="box" class="menu-icon"></i>
+                    <span class="menu-text">UI Elements</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="ui-alerts.html" class="menu-link"><span class="submenu-dot"></span>Alerts</a></div>
+                    <div class="menu-item"><a href="ui-badges.html" class="menu-link"><span class="submenu-dot"></span>Badges</a></div>
+                    <div class="menu-item"><a href="ui-buttons.html" class="menu-link"><span class="submenu-dot"></span>Buttons</a></div>
+                    <div class="menu-item"><a href="ui-cards.html" class="menu-link"><span class="submenu-dot"></span>Cards</a></div>
+                    <div class="menu-item"><a href="ui-dropdowns.html" class="menu-link"><span class="submenu-dot"></span>Dropdowns</a></div>
+                    <div class="menu-item"><a href="ui-modals.html" class="menu-link"><span class="submenu-dot"></span>Modals</a></div>
+                    <div class="menu-item"><a href="ui-tabs.html" class="menu-link"><span class="submenu-dot"></span>Tabs & Pills</a></div>
+                    <div class="menu-item"><a href="ui-progress.html" class="menu-link"><span class="submenu-dot"></span>Progress</a></div>
+                    <div class="menu-item"><a href="ui-spinners.html" class="menu-link"><span class="submenu-dot"></span>Spinners</a></div>
+                    <div class="menu-item"><a href="ui-toasts.html" class="menu-link"><span class="submenu-dot"></span>Toasts</a></div>
+                    <div class="menu-item"><a href="ui-tooltips.html" class="menu-link"><span class="submenu-dot"></span>Tooltips</a></div>
+                    <div class="menu-item"><a href="ui-accordion.html" class="menu-link"><span class="submenu-dot"></span>Accordion</a></div>
+                    <div class="menu-item"><a href="ui-carousel.html" class="menu-link"><span class="submenu-dot"></span>Carousel</a></div>
+                    <div class="menu-item"><a href="ui-offcanvas.html" class="menu-link"><span class="submenu-dot"></span>Offcanvas</a></div>
+                    <div class="menu-item"><a href="ui-avatars.html" class="menu-link"><span class="submenu-dot"></span>Avatars</a></div>
+                    <div class="menu-item"><a href="ui-list-group.html" class="menu-link"><span class="submenu-dot"></span>List Group</a></div>
+                    <div class="menu-item"><a href="ui-breadcrumbs.html" class="menu-link"><span class="submenu-dot"></span>Breadcrumbs</a></div>
+                    <div class="menu-item"><a href="ui-pagination.html" class="menu-link"><span class="submenu-dot"></span>Pagination</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="edit" class="menu-icon"></i>
+                    <span class="menu-text">Forms</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="form-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Elements</a></div>
+                    <div class="menu-item"><a href="form-advanced.html" class="menu-link"><span class="submenu-dot"></span>Advanced</a></div>
+                    <div class="menu-item"><a href="form-validation.html" class="menu-link"><span class="submenu-dot"></span>Validation</a></div>
+                    <div class="menu-item"><a href="form-wizard.html" class="menu-link"><span class="submenu-dot"></span>Wizard</a></div>
+                    <div class="menu-item"><a href="form-editors.html" class="menu-link"><span class="submenu-dot"></span>Editors</a></div>
+                    <div class="menu-item"><a href="form-upload.html" class="menu-link"><span class="submenu-dot"></span>File Upload</a></div>
+                    <div class="menu-item"><a href="form-layouts.html" class="menu-link"><span class="submenu-dot"></span>Form Layouts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="grid" class="menu-icon"></i>
+                    <span class="menu-text">Tables</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="table-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Tables</a></div>
+                    <div class="menu-item"><a href="table-datatable.html" class="menu-link"><span class="submenu-dot"></span>DataTables</a></div>
+                    <div class="menu-item"><a href="table-responsive.html" class="menu-link"><span class="submenu-dot"></span>Responsive</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="pie-chart" class="menu-icon"></i>
+                    <span class="menu-text">Charts</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="chart-line.html" class="menu-link"><span class="submenu-dot"></span>Line Charts</a></div>
+                    <div class="menu-item"><a href="chart-bar.html" class="menu-link"><span class="submenu-dot"></span>Bar Charts</a></div>
+                    <div class="menu-item"><a href="chart-pie.html" class="menu-link"><span class="submenu-dot"></span>Pie Charts</a></div>
+                    <div class="menu-item"><a href="chart-mixed.html" class="menu-link"><span class="submenu-dot"></span>Mixed Charts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="map" class="menu-icon"></i>
+                    <span class="menu-text">Maps</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="maps-google.html" class="menu-link"><span class="submenu-dot"></span>Google Maps</a></div>
+                    <div class="menu-item"><a href="maps-vector.html" class="menu-link"><span class="submenu-dot"></span>Vector Maps</a></div>
+                    <div class="menu-item"><a href="maps-leaflet.html" class="menu-link"><span class="submenu-dot"></span>Leaflet Maps</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="icons.html" class="menu-link"><i data-feather="feather" class="menu-icon"></i><span class="menu-text">Icons</span></a></div>
+            <div class="menu-item"><a href="widgets.html" class="menu-link"><i data-feather="layers" class="menu-icon"></i><span class="menu-text">Widgets</span></a></div>
+
+            <div class="menu-label"><span>PAGES</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="lock" class="menu-icon"></i>
+                    <span class="menu-text">Authentication</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="auth-login.html" class="menu-link"><span class="submenu-dot"></span>Login</a></div>
+                    <div class="menu-item"><a href="auth-register.html" class="menu-link"><span class="submenu-dot"></span>Register</a></div>
+                    <div class="menu-item"><a href="auth-forgot.html" class="menu-link"><span class="submenu-dot"></span>Forgot Password</a></div>
+                    <div class="menu-item"><a href="auth-reset.html" class="menu-link"><span class="submenu-dot"></span>Reset Password</a></div>
+                    <div class="menu-item"><a href="auth-lockscreen.html" class="menu-link"><span class="submenu-dot"></span>Lock Screen</a></div>
+                    <div class="menu-item"><a href="auth-2fa.html" class="menu-link"><span class="submenu-dot"></span>Two Factor</a></div>
+                    <div class="menu-item"><a href="auth-verify.html" class="menu-link"><span class="submenu-dot"></span>Email Verify</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="alert-triangle" class="menu-icon"></i>
+                    <span class="menu-text">Error Pages</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="error-400.html" class="menu-link"><span class="submenu-dot"></span>400</a></div>
+                    <div class="menu-item"><a href="error-401.html" class="menu-link"><span class="submenu-dot"></span>401</a></div>
+                    <div class="menu-item"><a href="error-403.html" class="menu-link"><span class="submenu-dot"></span>403</a></div>
+                    <div class="menu-item"><a href="error-404.html" class="menu-link"><span class="submenu-dot"></span>404</a></div>
+                    <div class="menu-item"><a href="error-500.html" class="menu-link"><span class="submenu-dot"></span>500</a></div>
+                    <div class="menu-item"><a href="error-503.html" class="menu-link"><span class="submenu-dot"></span>503</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="profile.html" class="menu-link"><i data-feather="user" class="menu-icon"></i><span class="menu-text">Profile</span></a></div>
+            <div class="menu-item"><a href="settings.html" class="menu-link"><i data-feather="settings" class="menu-icon"></i><span class="menu-text">Settings</span></a></div>
+            <div class="menu-item"><a href="faq.html" class="menu-link"><i data-feather="help-circle" class="menu-icon"></i><span class="menu-text">FAQ</span></a></div>
+            <div class="menu-item"><a href="timeline.html" class="menu-link"><i data-feather="clock" class="menu-icon"></i><span class="menu-text">Timeline</span></a></div>
+            <div class="menu-item"><a href="gallery.html" class="menu-link"><i data-feather="image" class="menu-icon"></i><span class="menu-text">Gallery</span></a></div>
+            <div class="menu-item"><a href="search-results.html" class="menu-link"><i data-feather="search" class="menu-icon"></i><span class="menu-text">Search Results</span></a></div>
+        </div>
+    </aside>
+
+    <div class="app-main">
+        <header class="app-header">
+            <div class="header-left">
+                <img src="assets/img/dark-logo.png" alt="BootUI" class="mobile-logo"><button class="sidebar-toggle" type="button"><i data-feather="menu"></i></button>
+                <div class="header-search">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search anything..." class="form-control">
+                    <span class="search-shortcut">Ctrl+K</span>
+                </div>
+            </div>
+            <div class="header-right">
+
+                <!-- Apps Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Apps"><i data-feather="grid"></i></button>
+                    <div class="dropdown-menu dropdown-menu-lg">
+                        <div class="dropdown-menu-header"><h6>Quick Access</h6></div>
+                        <div class="apps-grid">
+                            <a href="chat.html" class="apps-grid-item"><div class="apps-icon bg-gradient-primary"><i data-feather="message-square"></i></div><span>Chat</span></a>
+                            <a href="email.html" class="apps-grid-item"><div class="apps-icon bg-gradient-success"><i data-feather="mail"></i></div><span>Email</span></a>
+                            <a href="calendar.html" class="apps-grid-item"><div class="apps-icon bg-gradient-warning"><i data-feather="calendar"></i></div><span>Calendar</span></a>
+                            <a href="tasks.html" class="apps-grid-item"><div class="apps-icon bg-gradient-danger"><i data-feather="check-square"></i></div><span>Tasks</span></a>
+                            <a href="file-manager.html" class="apps-grid-item"><div class="apps-icon bg-gradient-info"><i data-feather="folder"></i></div><span>Files</span></a>
+                            <a href="contacts.html" class="apps-grid-item"><div class="apps-icon bg-gradient-purple"><i data-feather="users"></i></div><span>Contacts</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn notif-toggle" title="Notifications"><i data-feather="bell"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Notifications</h6><span class="badge bg-primary rounded-pill">5 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-soft-primary"><i data-feather="shopping-bag"></i></div><div class="notif-content"><p><strong>New Order</strong> received from Sarah</p><span class="notif-time">2 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-success"><i data-feather="check-circle"></i></div><div class="notif-content"><p><strong>Payment</strong> of $2,450 confirmed</p><span class="notif-time">15 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-warning"><i data-feather="alert-triangle"></i></div><div class="notif-content"><p><strong>Server CPU</strong> usage is at 92%</p><span class="notif-time">1 hour ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-info"><i data-feather="user-plus"></i></div><div class="notif-content"><p><strong>New user</strong> registered: Mike Chen</p><span class="notif-time">3 hours ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-danger"><i data-feather="alert-circle"></i></div><div class="notif-content"><p><strong>Disk space</strong> running low on server</p><span class="notif-time">5 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="#">View All Notifications</a></div>
+                    </div>
+                </div>
+
+                <!-- Messages Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Messages"><i data-feather="message-square"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Messages</h6><span class="badge bg-success rounded-pill">3 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-gradient-primary" class="avatar-badge">SW</div><div class="notif-content"><p><strong>Sarah Wilson</strong>: Can you review the design files?</p><span class="notif-time">5 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-success" class="avatar-badge">JD</div><div class="notif-content"><p><strong>John Doe</strong>: Meeting rescheduled to 3pm</p><span class="notif-time">30 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-warning" class="avatar-badge">AL</div><div class="notif-content"><p><strong>Anna Lee</strong>: Invoice #1024 has been paid</p><span class="notif-time">2 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="chat.html">View All Messages</a></div>
+                    </div>
+                </div>
+
+                <!-- User Dropdown -->
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user"><div class="header-user-avatar">DD</div><div class="header-user-info"><div class="header-user-name">David Dev</div><div class="header-user-role">Admin</div></div></div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header"><div class="avatar-circle">DD</div><h6 class="mb-0" class="text-heading">David Dev</h6><small class="text-muted">david@bootui.com</small></div>
+                        <div class="p-2">
+                            <a href="profile.html" class="dropdown-item"><i data-feather="user"></i> My Profile</a>
+                            <a href="settings.html" class="dropdown-item"><i data-feather="settings"></i> Settings</a>
+                            <a href="wallet.html" class="dropdown-item"><i data-feather="credit-card"></i> Billing</a>
+                            <a href="faq.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item text-danger"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-content">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div><h1 class="h3 mb-1 fw-semibold">Education Dashboard</h1><nav aria-label="breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="#">Home</a></li><li class="breadcrumb-item active">Education</li></ol></nav></div>
+            </div>
+
+<!-- Top Section -->
+<div class="row g-3 mb-4">
+    <div class="col-xl-4">
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="card border-0 radius-12 bg-gradient-indigo-purple mb-0">
+                    <div class="card-body text-white d-flex align-items-center gap-3">
+                        <div class="icon-box icon-box-48 bg-white-20"><i data-feather="users" class="icon-22 text-white"></i></div>
+                        <div><h4 class="fw-bold text-white mb-0">15,842</h4><small class="text-white-80">Total Students</small></div>
+                        <span class="badge ms-auto badge-white-20 fs-11"><i data-feather="arrow-up" class="icon-11"></i> 8.5%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card border-0 radius-12 bg-gradient-orange-dark mb-0">
+                    <div class="card-body text-white d-flex align-items-center gap-3">
+                        <div class="icon-box icon-box-48 bg-white-20"><i data-feather="book-open" class="icon-22 text-white"></i></div>
+                        <div><h4 class="fw-bold text-white mb-0">342</h4><small class="text-white-80">Active Courses</small></div>
+                        <span class="badge ms-auto badge-white-20 fs-11"><i data-feather="arrow-up" class="icon-11"></i> +12</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card border-0 radius-12 bg-gradient-emerald-dark mb-0">
+                    <div class="card-body text-white d-flex align-items-center gap-3">
+                        <div class="icon-box icon-box-48 bg-white-20"><i data-feather="award" class="icon-22 text-white"></i></div>
+                        <div><h4 class="fw-bold text-white mb-0">186</h4><small class="text-white-80">Teachers</small></div>
+                        <span class="badge ms-auto badge-white-20 fs-11"><i data-feather="arrow-up" class="icon-11"></i> +5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-8">
+        <div class="card border-0 h-100 radius-12">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h5 class="fw-bold mb-1">Enrollment Trends</h5>
+                        <p class="text-muted small mb-0">Student enrollment over the past 12 months</p>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center">
+                        <span class="d-flex align-items-center gap-1 small"><span class="legend-dot legend-dot-indigo"></span> New</span>
+                        <span class="d-flex align-items-center gap-1 small"><span class="legend-dot legend-dot-orange"></span> Returning</span>
+                    </div>
+                </div>
+                <div class="chart-h-200"><canvas id="enrollmentChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ROW 3: Enrollment Trend (col-xl-8) + Course Categories (col-xl-4) -->
+            <div class="row g-3 mb-4">
+                <div class="col-xl-8">
+                    <div class="card mb-0">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title mb-0">Enrollment Trend</h5>
+                            <select class="form-select form-select-sm form-select-auto"><option selected>Last 8 Months</option><option>This Year</option></select>
+                        </div>
+                        <div class="card-body"><div class="chart-h-320"><canvas id="enrollmentTrendChart"></canvas></div></div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Course Categories</h5></div>
+                        <div class="card-body">
+                            <div class="chart-h-200"><canvas id="categoryChart"></canvas></div>
+                            <div class="mt-3">
+                                <div class="d-flex justify-content-between mb-2"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-indigo me-2"></span><span class="small">Web Dev</span></div><span class="fw-medium small">35%</span></div>
+                                <div class="d-flex justify-content-between mb-2"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-emerald me-2"></span><span class="small">Data Science</span></div><span class="fw-medium small">25%</span></div>
+                                <div class="d-flex justify-content-between mb-2"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-amber me-2"></span><span class="small">Design</span></div><span class="fw-medium small">20%</span></div>
+                                <div class="d-flex justify-content-between mb-2"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-red me-2"></span><span class="small">Business</span></div><span class="fw-medium small">12%</span></div>
+                                <div class="d-flex justify-content-between"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-violet me-2"></span><span class="small">Other</span></div><span class="fw-medium small">8%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 4: Popular Courses (col-xl-5) + Student Performance (col-xl-7) -->
+            <div class="row g-3 mb-4">
+                <div class="col-xl-5">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Popular Courses</h5></div>
+                        <div class="card-body p-0">
+                            <div class="p-3 border-bottom">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="course-icon-box course-icon-blue me-3">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="4" width="18" height="14" rx="2" stroke="#2563eb" stroke-width="1.5"/><polyline points="2,6 11,12 20,6" stroke="#2563eb" stroke-width="1.5" fill="none"/></svg>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 small fw-semibold">Full-Stack Web Development</h6>
+                                        <small class="text-muted">Prof. Sarah Chen</small>
+                                    </div>
+                                    <span class="badge bg-primary">$89</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 small text-muted mb-2">
+                                    <span><i data-feather="users" class="icon-xs"></i> 342 enrolled</span>
+                                    <span class="text-amber">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</span>
+                                </div>
+                                <div class="progress progress-xs"><div class="progress-bar bg-primary" style="width:88%"></div></div>
+                            </div>
+                            <div class="p-3 border-bottom">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="course-icon-box course-icon-green me-3">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="2" stroke="#059669" stroke-width="1.5"/><line x1="3" y1="8" x2="19" y2="8" stroke="#059669" stroke-width="1"/><line x1="8" y1="8" x2="8" y2="19" stroke="#059669" stroke-width="1"/></svg>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 small fw-semibold">Data Science Fundamentals</h6>
+                                        <small class="text-muted">Dr. Michael Ross</small>
+                                    </div>
+                                    <span class="badge bg-success">$79</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 small text-muted mb-2">
+                                    <span><i data-feather="users" class="icon-xs"></i> 289 enrolled</span>
+                                    <span class="text-amber">&#9733;&#9733;&#9733;&#9733;&#9734; 4.9</span>
+                                </div>
+                                <div class="progress progress-xs"><div class="progress-bar bg-success" style="width:82%"></div></div>
+                            </div>
+                            <div class="p-3 border-bottom">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="course-icon-box course-icon-amber me-3">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="#d97706" stroke-width="1.5"/><path d="M11 7v4l3 2" stroke="#d97706" stroke-width="1.5" fill="none"/></svg>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 small fw-semibold">UX/UI Design Mastery</h6>
+                                        <small class="text-muted">Lisa Park</small>
+                                    </div>
+                                    <span class="badge bg-warning text-dark">$69</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 small text-muted mb-2">
+                                    <span><i data-feather="users" class="icon-xs"></i> 256 enrolled</span>
+                                    <span class="text-amber">&#9733;&#9733;&#9733;&#9733;&#9734; 4.7</span>
+                                </div>
+                                <div class="progress progress-xs"><div class="progress-bar bg-warning" style="width:75%"></div></div>
+                            </div>
+                            <div class="p-3 border-bottom">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="course-icon-box course-icon-violet me-3">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4" y="2" width="14" height="18" rx="2" stroke="#7c3aed" stroke-width="1.5"/><line x1="8" y1="7" x2="14" y2="7" stroke="#7c3aed" stroke-width="1"/><line x1="8" y1="11" x2="14" y2="11" stroke="#7c3aed" stroke-width="1"/><line x1="8" y1="15" x2="12" y2="15" stroke="#7c3aed" stroke-width="1"/></svg>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 small fw-semibold">Business Analytics Pro</h6>
+                                        <small class="text-muted">David Kim</small>
+                                    </div>
+                                    <span class="badge badge-purple">$59</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 small text-muted mb-2">
+                                    <span><i data-feather="users" class="icon-xs"></i> 198 enrolled</span>
+                                    <span class="text-amber">&#9733;&#9733;&#9733;&#9733;&#9734; 4.5</span>
+                                </div>
+                                <div class="progress progress-xs"><div class="progress-bar progress-bar-purple" style="width:68%"></div></div>
+                            </div>
+                            <div class="p-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="course-icon-box course-icon-pink me-3">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L13.5 8H19L14.5 12L16 18L11 14.5L6 18L7.5 12L3 8H8.5L11 2Z" stroke="#db2777" stroke-width="1.5" fill="none"/></svg>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 small fw-semibold">Machine Learning A-Z</h6>
+                                        <small class="text-muted">Prof. Alan Turing Jr</small>
+                                    </div>
+                                    <span class="badge bg-danger">$99</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 small text-muted mb-2">
+                                    <span><i data-feather="users" class="icon-xs"></i> 175 enrolled</span>
+                                    <span class="text-amber">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</span>
+                                </div>
+                                <div class="progress progress-xs"><div class="progress-bar bg-danger" style="width:60%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="card mb-0">
+                        <div class="card-header d-flex align-items-center justify-content-between"><h5 class="card-title mb-0">Student Performance</h5><a href="#" class="btn btn-sm btn-outline-primary">Export</a></div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead><tr><th>Student</th><th>Course</th><th>Progress</th><th>Grade</th><th>Last Active</th><th>Status</th></tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32-lg me-2 text-white bg-av-indigo-600">EW</div><span class="fw-medium small">Emma Wilson</span></div></td>
+                                            <td class="small">Web Development</td>
+                                            <td><div class="d-flex align-items-center gap-2"><div class="progress flex-grow-1 progress-xs progress-w-70"><div class="progress-bar bg-success" style="width:92%"></div></div><span class="small fw-medium">92%</span></div></td>
+                                            <td><span class="badge bg-success">A+</span></td>
+                                            <td class="small text-muted">2 hrs ago</td>
+                                            <td><span class="badge bg-success-subtle text-success">On Track</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32-lg me-2 text-white bg-av-emerald-600">LA</div><span class="fw-medium small">Liam Anderson</span></div></td>
+                                            <td class="small">Data Science</td>
+                                            <td><div class="d-flex align-items-center gap-2"><div class="progress flex-grow-1 progress-xs progress-w-70"><div class="progress-bar bg-primary" style="width:85%"></div></div><span class="small fw-medium">85%</span></div></td>
+                                            <td><span class="badge bg-success">A</span></td>
+                                            <td class="small text-muted">5 hrs ago</td>
+                                            <td><span class="badge bg-success-subtle text-success">On Track</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32-lg me-2 text-white bg-av-amber-500">SM</div><span class="fw-medium small">Sophia Martinez</span></div></td>
+                                            <td class="small">UX Design</td>
+                                            <td><div class="d-flex align-items-center gap-2"><div class="progress flex-grow-1 progress-xs progress-w-70"><div class="progress-bar bg-info" style="width:78%"></div></div><span class="small fw-medium">78%</span></div></td>
+                                            <td><span class="badge bg-primary">B+</span></td>
+                                            <td class="small text-muted">1 day ago</td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Good</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32-lg me-2 text-white bg-av-violet-500">NT</div><span class="fw-medium small">Noah Thompson</span></div></td>
+                                            <td class="small">Business Analytics</td>
+                                            <td><div class="d-flex align-items-center gap-2"><div class="progress flex-grow-1 progress-xs progress-w-70"><div class="progress-bar bg-warning" style="width:68%"></div></div><span class="small fw-medium">68%</span></div></td>
+                                            <td><span class="badge bg-warning text-dark">B</span></td>
+                                            <td class="small text-muted">2 days ago</td>
+                                            <td><span class="badge bg-warning-subtle text-warning">Average</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32-lg me-2 text-white bg-av-red-500">OD</div><span class="fw-medium small">Olivia Davis</span></div></td>
+                                            <td class="small">Machine Learning</td>
+                                            <td><div class="d-flex align-items-center gap-2"><div class="progress flex-grow-1 progress-xs progress-w-70"><div class="progress-bar bg-danger" style="width:55%"></div></div><span class="small fw-medium">55%</span></div></td>
+                                            <td><span class="badge bg-warning text-dark">C+</span></td>
+                                            <td class="small text-muted">3 days ago</td>
+                                            <td><span class="badge bg-danger-subtle text-danger">At Risk</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32-lg me-2 text-white bg-av-cyan-500">JG</div><span class="fw-medium small">James Garcia</span></div></td>
+                                            <td class="small">Web Development</td>
+                                            <td><div class="d-flex align-items-center gap-2"><div class="progress flex-grow-1 progress-xs progress-w-70"><div class="progress-bar bg-success" style="width:96%"></div></div><span class="small fw-medium">96%</span></div></td>
+                                            <td><span class="badge bg-success">A+</span></td>
+                                            <td class="small text-muted">1 hr ago</td>
+                                            <td><span class="badge bg-success-subtle text-success">On Track</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32-lg me-2 text-white bg-av-pink-500">AJ</div><span class="fw-medium small">Ava Johnson</span></div></td>
+                                            <td class="small">Data Science</td>
+                                            <td><div class="d-flex align-items-center gap-2"><div class="progress flex-grow-1 progress-xs progress-w-70"><div class="progress-bar bg-primary" style="width:80%"></div></div><span class="small fw-medium">80%</span></div></td>
+                                            <td><span class="badge bg-primary">B+</span></td>
+                                            <td class="small text-muted">6 hrs ago</td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Good</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32-lg me-2 text-white bg-av-teal-500">WB</div><span class="fw-medium small">William Brown</span></div></td>
+                                            <td class="small">UX Design</td>
+                                            <td><div class="d-flex align-items-center gap-2"><div class="progress flex-grow-1 progress-xs progress-w-70"><div class="progress-bar bg-info" style="width:72%"></div></div><span class="small fw-medium">72%</span></div></td>
+                                            <td><span class="badge bg-primary">B</span></td>
+                                            <td class="small text-muted">1 day ago</td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Good</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 5: Full-width Upcoming Schedule (col-12) -->
+            <div class="row g-3 mb-4">
+                <div class="col-12">
+                    <div class="card mb-0">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title mb-0">Upcoming Schedule</h5>
+                            <a href="calendar.html" class="btn btn-sm btn-outline-primary">View Calendar</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-xl col-md-6">
+                                    <div class="border rounded-3 p-3 h-100 position-relative overflow-hidden schedule-card-blue">
+                                        <svg class="schedule-svg-overlay" width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="24" fill="#2563eb"/></svg>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="text-center me-3 rounded p-2 schedule-date schedule-date-blue"><div class="fw-bold date-num">14</div><small>Mar</small></div>
+                                            <div>
+                                                <span class="badge bg-primary mb-1">Lecture</span>
+                                                <h6 class="mb-0 small fw-semibold">Advanced JavaScript</h6>
+                                            </div>
+                                        </div>
+                                        <div class="small text-muted"><i data-feather="clock" class="icon-xs"></i> 09:00 - 10:30 AM</div>
+                                        <div class="small text-muted"><i data-feather="user" class="icon-xs"></i> Prof. Sarah Chen</div>
+                                        <div class="small text-muted"><i data-feather="map-pin" class="icon-xs"></i> Room A-201</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl col-md-6">
+                                    <div class="border rounded-3 p-3 h-100 position-relative overflow-hidden schedule-card-green">
+                                        <svg class="schedule-svg-overlay" width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="24" fill="#16a34a"/></svg>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="text-center me-3 rounded p-2 schedule-date schedule-date-green"><div class="fw-bold date-num">15</div><small>Mar</small></div>
+                                            <div>
+                                                <span class="badge bg-success mb-1">Lab</span>
+                                                <h6 class="mb-0 small fw-semibold">Python Data Lab</h6>
+                                            </div>
+                                        </div>
+                                        <div class="small text-muted"><i data-feather="clock" class="icon-xs"></i> 02:00 - 04:00 PM</div>
+                                        <div class="small text-muted"><i data-feather="user" class="icon-xs"></i> Dr. Michael Ross</div>
+                                        <div class="small text-muted"><i data-feather="map-pin" class="icon-xs"></i> Lab C-105</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl col-md-6">
+                                    <div class="border rounded-3 p-3 h-100 position-relative overflow-hidden schedule-card-red">
+                                        <svg class="schedule-svg-overlay" width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="24" fill="#dc2626"/></svg>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="text-center me-3 rounded p-2 schedule-date schedule-date-red"><div class="fw-bold date-num">17</div><small>Mar</small></div>
+                                            <div>
+                                                <span class="badge bg-danger mb-1">Exam</span>
+                                                <h6 class="mb-0 small fw-semibold">Data Science Midterm</h6>
+                                            </div>
+                                        </div>
+                                        <div class="small text-muted"><i data-feather="clock" class="icon-xs"></i> 10:00 - 12:00 PM</div>
+                                        <div class="small text-muted"><i data-feather="user" class="icon-xs"></i> Dr. Michael Ross</div>
+                                        <div class="small text-muted"><i data-feather="map-pin" class="icon-xs"></i> Hall B-300</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl col-md-6">
+                                    <div class="border rounded-3 p-3 h-100 position-relative overflow-hidden schedule-card-amber">
+                                        <svg class="schedule-svg-overlay" width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="24" fill="#ca8a04"/></svg>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="text-center me-3 rounded p-2 schedule-date schedule-date-amber"><div class="fw-bold date-num">18</div><small>Mar</small></div>
+                                            <div>
+                                                <span class="badge bg-warning text-dark mb-1">Lecture</span>
+                                                <h6 class="mb-0 small fw-semibold">UX Research Methods</h6>
+                                            </div>
+                                        </div>
+                                        <div class="small text-muted"><i data-feather="clock" class="icon-xs"></i> 11:00 - 12:30 PM</div>
+                                        <div class="small text-muted"><i data-feather="user" class="icon-xs"></i> Lisa Park</div>
+                                        <div class="small text-muted"><i data-feather="map-pin" class="icon-xs"></i> Room D-412</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl col-md-6">
+                                    <div class="border rounded-3 p-3 h-100 position-relative overflow-hidden schedule-card-purple">
+                                        <svg class="schedule-svg-overlay" width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="24" fill="#7c3aed"/></svg>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="text-center me-3 rounded p-2 schedule-date schedule-date-purple"><div class="fw-bold date-num">20</div><small>Mar</small></div>
+                                            <div>
+                                                <span class="badge badge-purple mb-1">Lab</span>
+                                                <h6 class="mb-0 small fw-semibold">ML Model Training</h6>
+                                            </div>
+                                        </div>
+                                        <div class="small text-muted"><i data-feather="clock" class="icon-xs"></i> 03:00 - 05:00 PM</div>
+                                        <div class="small text-muted"><i data-feather="user" class="icon-xs"></i> Prof. Alan Turing Jr</div>
+                                        <div class="small text-muted"><i data-feather="map-pin" class="icon-xs"></i> Lab E-102</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 6: Revenue (col-xl-4) + Instructor Ratings (col-xl-4) + Feedback (col-xl-4) -->
+            <div class="row g-3 mb-4">
+                <div class="col-xl-4">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Revenue from Courses</h5></div>
+                        <div class="card-body"><div class="chart-h-260"><canvas id="revenueChart"></canvas></div></div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Top Instructor Ratings</h5></div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="avatar-36 me-3 text-white bg-av-indigo-600">SC</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">Prof. Sarah Chen</span><span class="small fw-medium">4.9</span></div>
+                                    <div class="progress progress-xs"><div class="progress-bar bg-primary" style="width:98%"></div></div>
+                                    <small class="text-muted">12 courses</small>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="avatar-36 me-3 text-white bg-av-emerald-600">MR</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">Dr. Michael Ross</span><span class="small fw-medium">4.8</span></div>
+                                    <div class="progress progress-xs"><div class="progress-bar bg-success" style="width:96%"></div></div>
+                                    <small class="text-muted">9 courses</small>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="avatar-36 me-3 text-white bg-av-amber-500">LP</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">Lisa Park</span><span class="small fw-medium">4.7</span></div>
+                                    <div class="progress progress-xs"><div class="progress-bar bg-warning" style="width:94%"></div></div>
+                                    <small class="text-muted">8 courses</small>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="avatar-36 me-3 text-white bg-av-violet-500">DK</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">David Kim</span><span class="small fw-medium">4.6</span></div>
+                                    <div class="progress progress-xs"><div class="progress-bar progress-bar-purple" style="width:92%"></div></div>
+                                    <small class="text-muted">6 courses</small>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-36 me-3 text-white bg-av-pink-500">AT</div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">Prof. Alan Turing Jr</span><span class="small fw-medium">4.5</span></div>
+                                    <div class="progress progress-xs"><div class="progress-bar progress-bar-pink" style="width:90%"></div></div>
+                                    <small class="text-muted">5 courses</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Student Feedback</h5></div>
+                        <div class="card-body">
+                            <div class="p-3 rounded mb-3 feedback-card-blue">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="avatar-28 me-2 text-white bg-av-indigo-600">EW</div>
+                                    <span class="small fw-semibold">Emma Wilson</span>
+                                    <span class="ms-auto small text-amber">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                </div>
+                                <p class="small mb-0 text-muted">"The Web Development course is incredibly well-structured. Prof. Chen explains complex concepts with great clarity."</p>
+                            </div>
+                            <div class="p-3 rounded mb-3 feedback-card-green">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="avatar-28 me-2 text-white bg-av-emerald-600">JG</div>
+                                    <span class="small fw-semibold">James Garcia</span>
+                                    <span class="ms-auto small text-amber">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                </div>
+                                <p class="small mb-0 text-muted">"Data Science Fundamentals opened my eyes to a whole new world. The hands-on projects are fantastic."</p>
+                            </div>
+                            <div class="p-3 rounded feedback-card-purple">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="avatar-28 me-2 text-white bg-av-violet-500">SM</div>
+                                    <span class="small fw-semibold">Sophia Martinez</span>
+                                    <span class="ms-auto small text-amber">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                </div>
+                                <p class="small mb-0 text-muted">"UX Design Mastery is a game-changer. Lisa Park's teaching style makes everything so engaging and practical."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="app-footer"><span>2024 &copy; BootUI - Premium Admin Dashboard</span><span>Crafted with &#9829; by BootUI</span></footer>
+    </div>
+</div>
+<div class="backdrop-overlay"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

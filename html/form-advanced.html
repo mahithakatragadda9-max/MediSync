@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Forms - BootUI Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+<body>
+<div class="app-wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/img/light-logo.png" alt="BootUI" class="logo-img">
+            <span class="logo-text">BootUI</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>DASHBOARDS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="home" class="menu-icon"></i>
+                    <span class="menu-text">Dashboards</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="index.html" class="menu-link"><span class="submenu-dot"></span>eCommerce</a></div>
+                    <div class="menu-item"><a href="dashboard-analytics.html" class="menu-link"><span class="submenu-dot"></span>Analytics</a></div>
+                    <div class="menu-item"><a href="dashboard-crm.html" class="menu-link"><span class="submenu-dot"></span>CRM</a></div>
+                    <div class="menu-item"><a href="dashboard-project.html" class="menu-link"><span class="submenu-dot"></span>Project</a></div>
+                    <div class="menu-item"><a href="dashboard-hrm.html" class="menu-link"><span class="submenu-dot"></span>HRM</a></div>
+                    <div class="menu-item"><a href="dashboard-finance.html" class="menu-link"><span class="submenu-dot"></span>Finance</a></div>
+                    <div class="menu-item"><a href="dashboard-marketing.html" class="menu-link"><span class="submenu-dot"></span>Marketing</a></div>
+                    <div class="menu-item"><a href="dashboard-healthcare.html" class="menu-link"><span class="submenu-dot"></span>Healthcare</a></div>
+                    <div class="menu-item"><a href="dashboard-education.html" class="menu-link"><span class="submenu-dot"></span>Education</a></div>
+                    <div class="menu-item"><a href="dashboard-realestate.html" class="menu-link"><span class="submenu-dot"></span>Real Estate</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>APPS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="shopping-cart" class="menu-icon"></i>
+                    <span class="menu-text">eCommerce</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="products.html" class="menu-link"><span class="submenu-dot"></span>Products</a></div>
+                    <div class="menu-item"><a href="product-detail.html" class="menu-link"><span class="submenu-dot"></span>Product Detail</a></div>
+                    <div class="menu-item"><a href="product-add.html" class="menu-link"><span class="submenu-dot"></span>Add Product</a></div>
+                    <div class="menu-item"><a href="cart.html" class="menu-link"><span class="submenu-dot"></span>Cart</a></div>
+                    <div class="menu-item"><a href="checkout.html" class="menu-link"><span class="submenu-dot"></span>Checkout</a></div>
+                    <div class="menu-item"><a href="orders.html" class="menu-link"><span class="submenu-dot"></span>Orders</a></div>
+                    <div class="menu-item"><a href="order-detail.html" class="menu-link"><span class="submenu-dot"></span>Order Detail</a></div>
+                    <div class="menu-item"><a href="customers.html" class="menu-link"><span class="submenu-dot"></span>Customers</a></div>
+                    <div class="menu-item"><a href="sellers.html" class="menu-link"><span class="submenu-dot"></span>Sellers</a></div>
+                    <div class="menu-item"><a href="reviews.html" class="menu-link"><span class="submenu-dot"></span>Reviews</a></div>
+                </div>
+            </div>
+            <div class="menu-item"><a href="chat.html" class="menu-link"><i data-feather="message-square" class="menu-icon"></i><span class="menu-text">Chat</span></a></div>
+            <div class="menu-item"><a href="email.html" class="menu-link"><i data-feather="mail" class="menu-icon"></i><span class="menu-text">Email</span></a></div>
+            <div class="menu-item"><a href="calendar.html" class="menu-link"><i data-feather="calendar" class="menu-icon"></i><span class="menu-text">Calendar</span></a></div>
+            <div class="menu-item"><a href="tasks.html" class="menu-link"><i data-feather="check-square" class="menu-icon"></i><span class="menu-text">Tasks</span></a></div>
+            <div class="menu-item"><a href="notes.html" class="menu-link"><i data-feather="edit-3" class="menu-icon"></i><span class="menu-text">Notes</span></a></div>
+            <div class="menu-item"><a href="file-manager.html" class="menu-link"><i data-feather="folder" class="menu-icon"></i><span class="menu-text">File Manager</span></a></div>
+            <div class="menu-item"><a href="contacts.html" class="menu-link"><i data-feather="users" class="menu-icon"></i><span class="menu-text">Contacts</span></a></div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="briefcase" class="menu-icon"></i>
+                    <span class="menu-text">Projects</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="projects-list.html" class="menu-link"><span class="submenu-dot"></span>Project List</a></div>
+                    <div class="menu-item"><a href="project-detail.html" class="menu-link"><span class="submenu-dot"></span>Project Detail</a></div>
+                    <div class="menu-item"><a href="project-create.html" class="menu-link"><span class="submenu-dot"></span>Create Project</a></div>
+                    <div class="menu-item"><a href="kanban.html" class="menu-link"><span class="submenu-dot"></span>Kanban Board</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="target" class="menu-icon"></i>
+                    <span class="menu-text">CRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="crm-leads.html" class="menu-link"><span class="submenu-dot"></span>Leads</a></div>
+                    <div class="menu-item"><a href="crm-deals.html" class="menu-link"><span class="submenu-dot"></span>Deals</a></div>
+                    <div class="menu-item"><a href="crm-companies.html" class="menu-link"><span class="submenu-dot"></span>Companies</a></div>
+                    <div class="menu-item"><a href="crm-contacts.html" class="menu-link"><span class="submenu-dot"></span>Contacts</a></div>
+                    <div class="menu-item"><a href="crm-pipeline.html" class="menu-link"><span class="submenu-dot"></span>Pipeline</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="users" class="menu-icon"></i>
+                    <span class="menu-text">HRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="hrm-employees.html" class="menu-link"><span class="submenu-dot"></span>Employees</a></div>
+                    <div class="menu-item"><a href="hrm-departments.html" class="menu-link"><span class="submenu-dot"></span>Departments</a></div>
+                    <div class="menu-item"><a href="hrm-attendance.html" class="menu-link"><span class="submenu-dot"></span>Attendance</a></div>
+                    <div class="menu-item"><a href="hrm-payroll.html" class="menu-link"><span class="submenu-dot"></span>Payroll</a></div>
+                    <div class="menu-item"><a href="hrm-leave.html" class="menu-link"><span class="submenu-dot"></span>Leave Management</a></div>
+                    <div class="menu-item"><a href="hrm-holidays.html" class="menu-link"><span class="submenu-dot"></span>Holidays</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="dollar-sign" class="menu-icon"></i>
+                    <span class="menu-text">Finance</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="invoices.html" class="menu-link"><span class="submenu-dot"></span>Invoices</a></div>
+                    <div class="menu-item"><a href="invoice-detail.html" class="menu-link"><span class="submenu-dot"></span>Invoice Detail</a></div>
+                    <div class="menu-item"><a href="invoice-create.html" class="menu-link"><span class="submenu-dot"></span>Create Invoice</a></div>
+                    <div class="menu-item"><a href="transactions.html" class="menu-link"><span class="submenu-dot"></span>Transactions</a></div>
+                    <div class="menu-item"><a href="pricing.html" class="menu-link"><span class="submenu-dot"></span>Pricing</a></div>
+                    <div class="menu-item"><a href="wallet.html" class="menu-link"><span class="submenu-dot"></span>Wallet</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>COMPONENTS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="box" class="menu-icon"></i>
+                    <span class="menu-text">UI Elements</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="ui-alerts.html" class="menu-link"><span class="submenu-dot"></span>Alerts</a></div>
+                    <div class="menu-item"><a href="ui-badges.html" class="menu-link"><span class="submenu-dot"></span>Badges</a></div>
+                    <div class="menu-item"><a href="ui-buttons.html" class="menu-link"><span class="submenu-dot"></span>Buttons</a></div>
+                    <div class="menu-item"><a href="ui-cards.html" class="menu-link"><span class="submenu-dot"></span>Cards</a></div>
+                    <div class="menu-item"><a href="ui-dropdowns.html" class="menu-link"><span class="submenu-dot"></span>Dropdowns</a></div>
+                    <div class="menu-item"><a href="ui-modals.html" class="menu-link"><span class="submenu-dot"></span>Modals</a></div>
+                    <div class="menu-item"><a href="ui-tabs.html" class="menu-link"><span class="submenu-dot"></span>Tabs & Pills</a></div>
+                    <div class="menu-item"><a href="ui-progress.html" class="menu-link"><span class="submenu-dot"></span>Progress</a></div>
+                    <div class="menu-item"><a href="ui-spinners.html" class="menu-link"><span class="submenu-dot"></span>Spinners</a></div>
+                    <div class="menu-item"><a href="ui-toasts.html" class="menu-link"><span class="submenu-dot"></span>Toasts</a></div>
+                    <div class="menu-item"><a href="ui-tooltips.html" class="menu-link"><span class="submenu-dot"></span>Tooltips</a></div>
+                    <div class="menu-item"><a href="ui-accordion.html" class="menu-link"><span class="submenu-dot"></span>Accordion</a></div>
+                    <div class="menu-item"><a href="ui-carousel.html" class="menu-link"><span class="submenu-dot"></span>Carousel</a></div>
+                    <div class="menu-item"><a href="ui-offcanvas.html" class="menu-link"><span class="submenu-dot"></span>Offcanvas</a></div>
+                    <div class="menu-item"><a href="ui-avatars.html" class="menu-link"><span class="submenu-dot"></span>Avatars</a></div>
+                    <div class="menu-item"><a href="ui-list-group.html" class="menu-link"><span class="submenu-dot"></span>List Group</a></div>
+                    <div class="menu-item"><a href="ui-breadcrumbs.html" class="menu-link"><span class="submenu-dot"></span>Breadcrumbs</a></div>
+                    <div class="menu-item"><a href="ui-pagination.html" class="menu-link"><span class="submenu-dot"></span>Pagination</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu open">
+                <a href="#" class="menu-link">
+                    <i data-feather="edit" class="menu-icon"></i>
+                    <span class="menu-text">Forms</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="form-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Elements</a></div>
+                    <div class="menu-item"><a href="form-advanced.html" class="menu-link active"><span class="submenu-dot"></span>Advanced</a></div>
+                    <div class="menu-item"><a href="form-validation.html" class="menu-link"><span class="submenu-dot"></span>Validation</a></div>
+                    <div class="menu-item"><a href="form-wizard.html" class="menu-link"><span class="submenu-dot"></span>Wizard</a></div>
+                    <div class="menu-item"><a href="form-editors.html" class="menu-link"><span class="submenu-dot"></span>Editors</a></div>
+                    <div class="menu-item"><a href="form-upload.html" class="menu-link"><span class="submenu-dot"></span>File Upload</a></div>
+                    <div class="menu-item"><a href="form-layouts.html" class="menu-link"><span class="submenu-dot"></span>Form Layouts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="grid" class="menu-icon"></i>
+                    <span class="menu-text">Tables</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="table-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Tables</a></div>
+                    <div class="menu-item"><a href="table-datatable.html" class="menu-link"><span class="submenu-dot"></span>DataTables</a></div>
+                    <div class="menu-item"><a href="table-responsive.html" class="menu-link"><span class="submenu-dot"></span>Responsive</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="pie-chart" class="menu-icon"></i>
+                    <span class="menu-text">Charts</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="chart-line.html" class="menu-link"><span class="submenu-dot"></span>Line Charts</a></div>
+                    <div class="menu-item"><a href="chart-bar.html" class="menu-link"><span class="submenu-dot"></span>Bar Charts</a></div>
+                    <div class="menu-item"><a href="chart-pie.html" class="menu-link"><span class="submenu-dot"></span>Pie Charts</a></div>
+                    <div class="menu-item"><a href="chart-mixed.html" class="menu-link"><span class="submenu-dot"></span>Mixed Charts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="map" class="menu-icon"></i>
+                    <span class="menu-text">Maps</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="maps-google.html" class="menu-link"><span class="submenu-dot"></span>Google Maps</a></div>
+                    <div class="menu-item"><a href="maps-vector.html" class="menu-link"><span class="submenu-dot"></span>Vector Maps</a></div>
+                    <div class="menu-item"><a href="maps-leaflet.html" class="menu-link"><span class="submenu-dot"></span>Leaflet Maps</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="icons.html" class="menu-link"><i data-feather="feather" class="menu-icon"></i><span class="menu-text">Icons</span></a></div>
+            <div class="menu-item"><a href="widgets.html" class="menu-link"><i data-feather="layers" class="menu-icon"></i><span class="menu-text">Widgets</span></a></div>
+
+            <div class="menu-label"><span>PAGES</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="lock" class="menu-icon"></i>
+                    <span class="menu-text">Authentication</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="auth-login.html" class="menu-link"><span class="submenu-dot"></span>Login</a></div>
+                    <div class="menu-item"><a href="auth-register.html" class="menu-link"><span class="submenu-dot"></span>Register</a></div>
+                    <div class="menu-item"><a href="auth-forgot.html" class="menu-link"><span class="submenu-dot"></span>Forgot Password</a></div>
+                    <div class="menu-item"><a href="auth-reset.html" class="menu-link"><span class="submenu-dot"></span>Reset Password</a></div>
+                    <div class="menu-item"><a href="auth-lockscreen.html" class="menu-link"><span class="submenu-dot"></span>Lock Screen</a></div>
+                    <div class="menu-item"><a href="auth-2fa.html" class="menu-link"><span class="submenu-dot"></span>Two Factor</a></div>
+                    <div class="menu-item"><a href="auth-verify.html" class="menu-link"><span class="submenu-dot"></span>Email Verify</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="alert-triangle" class="menu-icon"></i>
+                    <span class="menu-text">Error Pages</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="error-400.html" class="menu-link"><span class="submenu-dot"></span>400</a></div>
+                    <div class="menu-item"><a href="error-401.html" class="menu-link"><span class="submenu-dot"></span>401</a></div>
+                    <div class="menu-item"><a href="error-403.html" class="menu-link"><span class="submenu-dot"></span>403</a></div>
+                    <div class="menu-item"><a href="error-404.html" class="menu-link"><span class="submenu-dot"></span>404</a></div>
+                    <div class="menu-item"><a href="error-500.html" class="menu-link"><span class="submenu-dot"></span>500</a></div>
+                    <div class="menu-item"><a href="error-503.html" class="menu-link"><span class="submenu-dot"></span>503</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="profile.html" class="menu-link"><i data-feather="user" class="menu-icon"></i><span class="menu-text">Profile</span></a></div>
+            <div class="menu-item"><a href="settings.html" class="menu-link"><i data-feather="settings" class="menu-icon"></i><span class="menu-text">Settings</span></a></div>
+            <div class="menu-item"><a href="faq.html" class="menu-link"><i data-feather="help-circle" class="menu-icon"></i><span class="menu-text">FAQ</span></a></div>
+            <div class="menu-item"><a href="timeline.html" class="menu-link"><i data-feather="clock" class="menu-icon"></i><span class="menu-text">Timeline</span></a></div>
+            <div class="menu-item"><a href="gallery.html" class="menu-link"><i data-feather="image" class="menu-icon"></i><span class="menu-text">Gallery</span></a></div>
+            <div class="menu-item"><a href="search-results.html" class="menu-link"><i data-feather="search" class="menu-icon"></i><span class="menu-text">Search Results</span></a></div>
+        </div>
+    </aside>
+
+    <div class="app-main">
+        <header class="app-header">
+            <div class="header-left">
+                <img src="assets/img/dark-logo.png" alt="BootUI" class="mobile-logo"><button class="sidebar-toggle" type="button"><i data-feather="menu"></i></button>
+                <div class="header-search">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search anything..." class="form-control">
+                    <span class="search-shortcut">Ctrl+K</span>
+                </div>
+            </div>
+            <div class="header-right">
+
+                <!-- Apps Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Apps"><i data-feather="grid"></i></button>
+                    <div class="dropdown-menu dropdown-menu-lg">
+                        <div class="dropdown-menu-header"><h6>Quick Access</h6></div>
+                        <div class="apps-grid">
+                            <a href="chat.html" class="apps-grid-item"><div class="apps-icon bg-gradient-primary"><i data-feather="message-square"></i></div><span>Chat</span></a>
+                            <a href="email.html" class="apps-grid-item"><div class="apps-icon bg-gradient-success"><i data-feather="mail"></i></div><span>Email</span></a>
+                            <a href="calendar.html" class="apps-grid-item"><div class="apps-icon bg-gradient-warning"><i data-feather="calendar"></i></div><span>Calendar</span></a>
+                            <a href="tasks.html" class="apps-grid-item"><div class="apps-icon bg-gradient-danger"><i data-feather="check-square"></i></div><span>Tasks</span></a>
+                            <a href="file-manager.html" class="apps-grid-item"><div class="apps-icon bg-gradient-info"><i data-feather="folder"></i></div><span>Files</span></a>
+                            <a href="contacts.html" class="apps-grid-item"><div class="apps-icon bg-gradient-purple"><i data-feather="users"></i></div><span>Contacts</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn notif-toggle" title="Notifications"><i data-feather="bell"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Notifications</h6><span class="badge bg-primary rounded-pill">5 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-soft-primary"><i data-feather="shopping-bag"></i></div><div class="notif-content"><p><strong>New Order</strong> received from Sarah</p><span class="notif-time">2 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-success"><i data-feather="check-circle"></i></div><div class="notif-content"><p><strong>Payment</strong> of $2,450 confirmed</p><span class="notif-time">15 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-warning"><i data-feather="alert-triangle"></i></div><div class="notif-content"><p><strong>Server CPU</strong> usage is at 92%</p><span class="notif-time">1 hour ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-info"><i data-feather="user-plus"></i></div><div class="notif-content"><p><strong>New user</strong> registered: Mike Chen</p><span class="notif-time">3 hours ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-danger"><i data-feather="alert-circle"></i></div><div class="notif-content"><p><strong>Disk space</strong> running low on server</p><span class="notif-time">5 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="#">View All Notifications</a></div>
+                    </div>
+                </div>
+
+                <!-- Messages Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Messages"><i data-feather="message-square"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Messages</h6><span class="badge bg-success rounded-pill">3 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-gradient-primary" class="avatar-badge">SW</div><div class="notif-content"><p><strong>Sarah Wilson</strong>: Can you review the design files?</p><span class="notif-time">5 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-success" class="avatar-badge">JD</div><div class="notif-content"><p><strong>John Doe</strong>: Meeting rescheduled to 3pm</p><span class="notif-time">30 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-warning" class="avatar-badge">AL</div><div class="notif-content"><p><strong>Anna Lee</strong>: Invoice #1024 has been paid</p><span class="notif-time">2 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="chat.html">View All Messages</a></div>
+                    </div>
+                </div>
+
+                <!-- User Dropdown -->
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user"><div class="header-user-avatar">DD</div><div class="header-user-info"><div class="header-user-name">David Dev</div><div class="header-user-role">Admin</div></div></div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header"><div class="avatar-circle">DD</div><h6 class="mb-0" class="text-heading">David Dev</h6><small class="text-muted">david@bootui.com</small></div>
+                        <div class="p-2">
+                            <a href="profile.html" class="dropdown-item"><i data-feather="user"></i> My Profile</a>
+                            <a href="settings.html" class="dropdown-item"><i data-feather="settings"></i> Settings</a>
+                            <a href="wallet.html" class="dropdown-item"><i data-feather="credit-card"></i> Billing</a>
+                            <a href="faq.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item text-danger"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-content">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div>
+                    <h1 class="h3 mb-1 fw-semibold">Advanced Forms</h1>
+                    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="#">Forms</a></li><li class="breadcrumb-item active">Advanced</li></ol></nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Input with Clear Button -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Input with Clear Button</h5></div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Search Input</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Type to search..." value="Dashboard Templates" id="clearInput1">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('clearInput1').value=''"><i data-feather="x" class="icon-md"></i></button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Filter Input</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i data-feather="filter" class="icon-md"></i></span>
+                                    <input type="text" class="form-control" placeholder="Filter results..." value="Active Users" id="clearInput2">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('clearInput2').value=''"><i data-feather="x" class="icon-md"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Password with Strength Meter -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Password with Strength Meter</h5></div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Create Password</label>
+                                <input type="password" class="form-control" id="pwdInput" placeholder="Enter password" oninput="updateStrength(this.value)">
+                                <div class="strength-meter mt-2"><div class="bar bar-danger" id="strengthBar" style="width:0%"></div></div>
+                                <small class="text-muted" id="strengthText">Enter a password to see strength</small>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Weak Example</label>
+                                <input type="text" class="form-control" value="abc" readonly>
+                                <div class="strength-meter mt-2"><div class="bar bar-danger" style="width:20%"></div></div>
+                                <small class="text-danger">Weak</small>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Medium Example</label>
+                                <input type="text" class="form-control" value="MyPass1" readonly>
+                                <div class="strength-meter mt-2"><div class="bar bar-warning" style="width:60%"></div></div>
+                                <small class="text-warning">Medium</small>
+                            </div>
+                            <div class="mb-0">
+                                <label class="form-label">Strong Example</label>
+                                <input type="text" class="form-control" value="Str0ng!P@ss#2026" readonly>
+                                <div class="strength-meter mt-2"><div class="bar bar-success" style="width:100%"></div></div>
+                                <small class="text-success">Strong</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Character Counter -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Character Counter Textarea</h5></div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Bio (max 200 characters)</label>
+                                <textarea class="form-control" rows="4" maxlength="200" id="charArea" oninput="document.getElementById('charCount').textContent=this.value.length">Full-stack developer passionate about building beautiful and functional web applications.</textarea>
+                                <div class="d-flex justify-content-end mt-1"><small class="text-muted"><span id="charCount">86</span> / 200</small></div>
+                            </div>
+                            <div class="mb-0">
+                                <label class="form-label">Tweet (max 280 characters)</label>
+                                <textarea class="form-control" rows="3" maxlength="280" id="tweetArea" oninput="document.getElementById('tweetCount').textContent=this.value.length">Just launched our new dashboard template! Check it out.</textarea>
+                                <div class="d-flex justify-content-between mt-1">
+                                    <small class="text-muted">Characters remaining: <span id="tweetRemaining">226</span></small>
+                                    <small class="text-muted"><span id="tweetCount">54</span> / 280</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags/Chips Input -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Tags / Chips Input</h5></div>
+                        <div class="card-body">
+                            <label class="form-label">Skills</label>
+                            <div class="border rounded p-2 mb-3 min-h-46">
+                                <span class="tag-chip">JavaScript <span class="remove">&times;</span></span>
+                                <span class="tag-chip">React <span class="remove">&times;</span></span>
+                                <span class="tag-chip">Node.js <span class="remove">&times;</span></span>
+                                <span class="tag-chip">TypeScript <span class="remove">&times;</span></span>
+                                <span class="tag-chip">PostgreSQL <span class="remove">&times;</span></span>
+                            </div>
+                            <label class="form-label">Categories</label>
+                            <div class="border rounded p-2 mb-3 min-h-46">
+                                <span class="tag-chip tag-chip-green">Design <span class="remove">&times;</span></span>
+                                <span class="tag-chip tag-chip-amber">Marketing <span class="remove">&times;</span></span>
+                                <span class="tag-chip tag-chip-red">Development <span class="remove">&times;</span></span>
+                            </div>
+                            <label class="form-label">Add New Tag</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Type and press Enter...">
+                                <button class="btn btn-primary" type="button">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Star Rating -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Star Rating Input</h5></div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <label class="form-label">Product Rating</label>
+                                <div class="star-rating">
+                                    <input type="radio" name="rating1" id="r1-5" value="5"><label for="r1-5">&#9733;</label>
+                                    <input type="radio" name="rating1" id="r1-4" value="4" checked><label for="r1-4">&#9733;</label>
+                                    <input type="radio" name="rating1" id="r1-3" value="3"><label for="r1-3">&#9733;</label>
+                                    <input type="radio" name="rating1" id="r1-2" value="2"><label for="r1-2">&#9733;</label>
+                                    <input type="radio" name="rating1" id="r1-1" value="1"><label for="r1-1">&#9733;</label>
+                                </div>
+                                <small class="text-muted">4 out of 5 stars</small>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Service Rating</label>
+                                <div class="star-rating">
+                                    <input type="radio" name="rating2" id="r2-5" value="5" checked><label for="r2-5">&#9733;</label>
+                                    <input type="radio" name="rating2" id="r2-4" value="4"><label for="r2-4">&#9733;</label>
+                                    <input type="radio" name="rating2" id="r2-3" value="3"><label for="r2-3">&#9733;</label>
+                                    <input type="radio" name="rating2" id="r2-2" value="2"><label for="r2-2">&#9733;</label>
+                                    <input type="radio" name="rating2" id="r2-1" value="1"><label for="r2-1">&#9733;</label>
+                                </div>
+                                <small class="text-muted">5 out of 5 stars - Excellent!</small>
+                            </div>
+                            <div class="mb-0">
+                                <label class="form-label">Delivery Rating</label>
+                                <div class="star-rating">
+                                    <input type="radio" name="rating3" id="r3-5" value="5"><label for="r3-5">&#9733;</label>
+                                    <input type="radio" name="rating3" id="r3-4" value="4"><label for="r3-4">&#9733;</label>
+                                    <input type="radio" name="rating3" id="r3-3" value="3" checked><label for="r3-3">&#9733;</label>
+                                    <input type="radio" name="rating3" id="r3-2" value="2"><label for="r3-2">&#9733;</label>
+                                    <input type="radio" name="rating3" id="r3-1" value="1"><label for="r3-1">&#9733;</label>
+                                </div>
+                                <small class="text-muted">3 out of 5 stars - Average</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Buttons Group -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Toggle Buttons Group</h5></div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <label class="form-label d-block">Billing Cycle</label>
+                                <div class="btn-group w-100" role="group">
+                                    <input type="radio" class="btn-check" name="billing" id="billMonth" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="billMonth">Monthly</label>
+                                    <input type="radio" class="btn-check" name="billing" id="billQuarter" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="billQuarter">Quarterly</label>
+                                    <input type="radio" class="btn-check" name="billing" id="billYear" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="billYear">Yearly</label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label d-block">Priority Level</label>
+                                <div class="btn-group" role="group">
+                                    <input type="radio" class="btn-check" name="priority" id="priLow" autocomplete="off">
+                                    <label class="btn btn-outline-success" for="priLow">Low</label>
+                                    <input type="radio" class="btn-check" name="priority" id="priMed" autocomplete="off" checked>
+                                    <label class="btn btn-outline-warning" for="priMed">Medium</label>
+                                    <input type="radio" class="btn-check" name="priority" id="priHigh" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="priHigh">High</label>
+                                    <input type="radio" class="btn-check" name="priority" id="priCrit" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="priCrit">Critical</label>
+                                </div>
+                            </div>
+                            <div class="mb-0">
+                                <label class="form-label d-block">View Mode</label>
+                                <div class="btn-group" role="group">
+                                    <input type="checkbox" class="btn-check" id="viewGrid" autocomplete="off" checked>
+                                    <label class="btn btn-outline-secondary" for="viewGrid"><i data-feather="grid" class="icon-md"></i></label>
+                                    <input type="checkbox" class="btn-check" id="viewList" autocomplete="off">
+                                    <label class="btn btn-outline-secondary" for="viewList"><i data-feather="list" class="icon-md"></i></label>
+                                    <input type="checkbox" class="btn-check" id="viewMap" autocomplete="off">
+                                    <label class="btn btn-outline-secondary" for="viewMap"><i data-feather="map" class="icon-md"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Quantity Spinner -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Quantity Spinner & Price Input</h5></div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <label class="form-label">Quantity</label>
+                                <div class="input-group w-180">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="let i=document.getElementById('qty1');i.value=Math.max(0,parseInt(i.value)-1)">-</button>
+                                    <input type="number" class="form-control text-center" id="qty1" value="3" min="0" max="99">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="let i=document.getElementById('qty1');i.value=Math.min(99,parseInt(i.value)+1)">+</button>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Number of Seats</label>
+                                <div class="input-group w-200">
+                                    <button class="btn btn-primary" type="button" onclick="let i=document.getElementById('qty2');i.value=Math.max(1,parseInt(i.value)-1)">-</button>
+                                    <input type="number" class="form-control text-center fw-bold" id="qty2" value="8" min="1" max="100">
+                                    <button class="btn btn-primary" type="button" onclick="let i=document.getElementById('qty2');i.value=Math.min(100,parseInt(i.value)+1)">+</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-3">
+                                <label class="form-label">Price Input</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" placeholder="0.00" value="49.99" step="0.01">
+                                    <span class="input-group-text">USD</span>
+                                </div>
+                            </div>
+                            <div class="mb-0">
+                                <label class="form-label">Amount with Currency</label>
+                                <div class="input-group">
+                                    <select class="form-select max-w-100">
+                                        <option>USD</option>
+                                        <option>EUR</option>
+                                        <option>GBP</option>
+                                        <option>JPY</option>
+                                    </select>
+                                    <input type="number" class="form-control" placeholder="0.00" value="1299.00">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone & Search -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Phone & Search Inputs</h5></div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Phone with Country Code</label>
+                                <div class="input-group">
+                                    <select class="form-select max-w-120">
+                                        <option>+1 US</option>
+                                        <option>+44 UK</option>
+                                        <option>+91 IN</option>
+                                        <option>+49 DE</option>
+                                        <option>+33 FR</option>
+                                        <option>+81 JP</option>
+                                        <option>+86 CN</option>
+                                    </select>
+                                    <input type="tel" class="form-control" placeholder="(555) 000-0000" value="(555) 123-4567">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">International Format</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i data-feather="phone" class="icon-md"></i></span>
+                                    <input type="tel" class="form-control" placeholder="+1 555 000 0000" value="+44 20 7123 4567">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-3">
+                                <label class="form-label">Search with Suggestions</label>
+                                <div class="position-relative">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i data-feather="search" class="icon-md"></i></span>
+                                        <input type="text" class="form-control" placeholder="Search users..." value="John">
+                                    </div>
+                                    <div class="position-absolute w-100 mt-1 bg-white border rounded shadow-sm z-10">
+                                        <a href="#" class="d-flex align-items-center px-3 py-2 text-decoration-none text-dark border-bottom">
+                                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-2 size-32 fs-08rem">JD</div>
+                                            <div><div class="fw-medium">John Doe</div><small class="text-muted">john@example.com</small></div>
+                                        </a>
+                                        <a href="#" class="d-flex align-items-center px-3 py-2 text-decoration-none text-dark border-bottom">
+                                            <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center me-2 size-32 fs-08rem">JS</div>
+                                            <div><div class="fw-medium">John Smith</div><small class="text-muted">jsmith@example.com</small></div>
+                                        </a>
+                                        <a href="#" class="d-flex align-items-center px-3 py-2 text-decoration-none text-dark">
+                                            <div class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center me-2 size-32 fs-08rem">JW</div>
+                                            <div><div class="fw-medium">Johnny Walker</div><small class="text-muted">jwalker@example.com</small></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dual List Box -->
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-header"><h5 class="card-title mb-0">Dual List Box</h5></div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <label class="form-label fw-semibold">Available Permissions</label>
+                                    <div class="dual-list">
+                                        <select multiple class="form-select border-none" size="8">
+                                            <option>View Dashboard</option>
+                                            <option>Manage Users</option>
+                                            <option>Edit Content</option>
+                                            <option>Delete Records</option>
+                                            <option>Export Data</option>
+                                            <option>Import Data</option>
+                                            <option>View Reports</option>
+                                            <option>Manage Settings</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 text-center py-3">
+                                    <div class="d-flex flex-column gap-2 align-items-center">
+                                        <button class="btn btn-sm btn-primary w-48px" type="button">&raquo;</button>
+                                        <button class="btn btn-sm btn-outline-primary w-48px" type="button">&gt;</button>
+                                        <button class="btn btn-sm btn-outline-primary w-48px" type="button">&lt;</button>
+                                        <button class="btn btn-sm btn-primary w-48px" type="button">&laquo;</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <label class="form-label fw-semibold">Assigned Permissions</label>
+                                    <div class="dual-list">
+                                        <select multiple class="form-select border-none" size="8">
+                                            <option>View Dashboard</option>
+                                            <option>View Reports</option>
+                                            <option>Edit Content</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            <span>2024 &copy; BootUI - Premium Admin Dashboard</span>
+            <span>Crafted with &#9829; by BootUI</span>
+        </footer>
+    </div>
+</div>
+<div class="backdrop-overlay"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

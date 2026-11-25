@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Dashboard - BootUI Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app-wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/img/light-logo.png" alt="BootUI" class="logo-img">
+            <span class="logo-text">BootUI</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>DASHBOARDS</span></div>
+            <div class="menu-item has-submenu open">
+                <a href="#" class="menu-link">
+                    <i data-feather="home" class="menu-icon"></i>
+                    <span class="menu-text">Dashboards</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="index.html" class="menu-link"><span class="submenu-dot"></span>eCommerce</a></div>
+                    <div class="menu-item"><a href="dashboard-analytics.html" class="menu-link"><span class="submenu-dot"></span>Analytics</a></div>
+                    <div class="menu-item"><a href="dashboard-crm.html" class="menu-link"><span class="submenu-dot"></span>CRM</a></div>
+                    <div class="menu-item"><a href="dashboard-project.html" class="menu-link"><span class="submenu-dot"></span>Project</a></div>
+                    <div class="menu-item"><a href="dashboard-hrm.html" class="menu-link"><span class="submenu-dot"></span>HRM</a></div>
+                    <div class="menu-item"><a href="dashboard-finance.html" class="menu-link"><span class="submenu-dot"></span>Finance</a></div>
+                    <div class="menu-item"><a href="dashboard-marketing.html" class="menu-link"><span class="submenu-dot"></span>Marketing</a></div>
+                    <div class="menu-item"><a href="dashboard-healthcare.html" class="menu-link"><span class="submenu-dot"></span>Healthcare</a></div>
+                    <div class="menu-item"><a href="dashboard-education.html" class="menu-link"><span class="submenu-dot"></span>Education</a></div>
+                    <div class="menu-item"><a href="dashboard-realestate.html" class="menu-link active"><span class="submenu-dot"></span>Real Estate</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>APPS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="shopping-cart" class="menu-icon"></i>
+                    <span class="menu-text">eCommerce</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="products.html" class="menu-link"><span class="submenu-dot"></span>Products</a></div>
+                    <div class="menu-item"><a href="product-detail.html" class="menu-link"><span class="submenu-dot"></span>Product Detail</a></div>
+                    <div class="menu-item"><a href="product-add.html" class="menu-link"><span class="submenu-dot"></span>Add Product</a></div>
+                    <div class="menu-item"><a href="cart.html" class="menu-link"><span class="submenu-dot"></span>Cart</a></div>
+                    <div class="menu-item"><a href="checkout.html" class="menu-link"><span class="submenu-dot"></span>Checkout</a></div>
+                    <div class="menu-item"><a href="orders.html" class="menu-link"><span class="submenu-dot"></span>Orders</a></div>
+                    <div class="menu-item"><a href="order-detail.html" class="menu-link"><span class="submenu-dot"></span>Order Detail</a></div>
+                    <div class="menu-item"><a href="customers.html" class="menu-link"><span class="submenu-dot"></span>Customers</a></div>
+                    <div class="menu-item"><a href="sellers.html" class="menu-link"><span class="submenu-dot"></span>Sellers</a></div>
+                    <div class="menu-item"><a href="reviews.html" class="menu-link"><span class="submenu-dot"></span>Reviews</a></div>
+                </div>
+            </div>
+            <div class="menu-item"><a href="chat.html" class="menu-link"><i data-feather="message-square" class="menu-icon"></i><span class="menu-text">Chat</span></a></div>
+            <div class="menu-item"><a href="email.html" class="menu-link"><i data-feather="mail" class="menu-icon"></i><span class="menu-text">Email</span></a></div>
+            <div class="menu-item"><a href="calendar.html" class="menu-link"><i data-feather="calendar" class="menu-icon"></i><span class="menu-text">Calendar</span></a></div>
+            <div class="menu-item"><a href="tasks.html" class="menu-link"><i data-feather="check-square" class="menu-icon"></i><span class="menu-text">Tasks</span></a></div>
+            <div class="menu-item"><a href="notes.html" class="menu-link"><i data-feather="edit-3" class="menu-icon"></i><span class="menu-text">Notes</span></a></div>
+            <div class="menu-item"><a href="file-manager.html" class="menu-link"><i data-feather="folder" class="menu-icon"></i><span class="menu-text">File Manager</span></a></div>
+            <div class="menu-item"><a href="contacts.html" class="menu-link"><i data-feather="users" class="menu-icon"></i><span class="menu-text">Contacts</span></a></div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="briefcase" class="menu-icon"></i>
+                    <span class="menu-text">Projects</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="projects-list.html" class="menu-link"><span class="submenu-dot"></span>Project List</a></div>
+                    <div class="menu-item"><a href="project-detail.html" class="menu-link"><span class="submenu-dot"></span>Project Detail</a></div>
+                    <div class="menu-item"><a href="project-create.html" class="menu-link"><span class="submenu-dot"></span>Create Project</a></div>
+                    <div class="menu-item"><a href="kanban.html" class="menu-link"><span class="submenu-dot"></span>Kanban Board</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="target" class="menu-icon"></i>
+                    <span class="menu-text">CRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="crm-leads.html" class="menu-link"><span class="submenu-dot"></span>Leads</a></div>
+                    <div class="menu-item"><a href="crm-deals.html" class="menu-link"><span class="submenu-dot"></span>Deals</a></div>
+                    <div class="menu-item"><a href="crm-companies.html" class="menu-link"><span class="submenu-dot"></span>Companies</a></div>
+                    <div class="menu-item"><a href="crm-contacts.html" class="menu-link"><span class="submenu-dot"></span>Contacts</a></div>
+                    <div class="menu-item"><a href="crm-pipeline.html" class="menu-link"><span class="submenu-dot"></span>Pipeline</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="users" class="menu-icon"></i>
+                    <span class="menu-text">HRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="hrm-employees.html" class="menu-link"><span class="submenu-dot"></span>Employees</a></div>
+                    <div class="menu-item"><a href="hrm-departments.html" class="menu-link"><span class="submenu-dot"></span>Departments</a></div>
+                    <div class="menu-item"><a href="hrm-attendance.html" class="menu-link"><span class="submenu-dot"></span>Attendance</a></div>
+                    <div class="menu-item"><a href="hrm-payroll.html" class="menu-link"><span class="submenu-dot"></span>Payroll</a></div>
+                    <div class="menu-item"><a href="hrm-leave.html" class="menu-link"><span class="submenu-dot"></span>Leave Management</a></div>
+                    <div class="menu-item"><a href="hrm-holidays.html" class="menu-link"><span class="submenu-dot"></span>Holidays</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="dollar-sign" class="menu-icon"></i>
+                    <span class="menu-text">Finance</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="invoices.html" class="menu-link"><span class="submenu-dot"></span>Invoices</a></div>
+                    <div class="menu-item"><a href="invoice-detail.html" class="menu-link"><span class="submenu-dot"></span>Invoice Detail</a></div>
+                    <div class="menu-item"><a href="invoice-create.html" class="menu-link"><span class="submenu-dot"></span>Create Invoice</a></div>
+                    <div class="menu-item"><a href="transactions.html" class="menu-link"><span class="submenu-dot"></span>Transactions</a></div>
+                    <div class="menu-item"><a href="pricing.html" class="menu-link"><span class="submenu-dot"></span>Pricing</a></div>
+                    <div class="menu-item"><a href="wallet.html" class="menu-link"><span class="submenu-dot"></span>Wallet</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>COMPONENTS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="box" class="menu-icon"></i>
+                    <span class="menu-text">UI Elements</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="ui-alerts.html" class="menu-link"><span class="submenu-dot"></span>Alerts</a></div>
+                    <div class="menu-item"><a href="ui-badges.html" class="menu-link"><span class="submenu-dot"></span>Badges</a></div>
+                    <div class="menu-item"><a href="ui-buttons.html" class="menu-link"><span class="submenu-dot"></span>Buttons</a></div>
+                    <div class="menu-item"><a href="ui-cards.html" class="menu-link"><span class="submenu-dot"></span>Cards</a></div>
+                    <div class="menu-item"><a href="ui-dropdowns.html" class="menu-link"><span class="submenu-dot"></span>Dropdowns</a></div>
+                    <div class="menu-item"><a href="ui-modals.html" class="menu-link"><span class="submenu-dot"></span>Modals</a></div>
+                    <div class="menu-item"><a href="ui-tabs.html" class="menu-link"><span class="submenu-dot"></span>Tabs & Pills</a></div>
+                    <div class="menu-item"><a href="ui-progress.html" class="menu-link"><span class="submenu-dot"></span>Progress</a></div>
+                    <div class="menu-item"><a href="ui-spinners.html" class="menu-link"><span class="submenu-dot"></span>Spinners</a></div>
+                    <div class="menu-item"><a href="ui-toasts.html" class="menu-link"><span class="submenu-dot"></span>Toasts</a></div>
+                    <div class="menu-item"><a href="ui-tooltips.html" class="menu-link"><span class="submenu-dot"></span>Tooltips</a></div>
+                    <div class="menu-item"><a href="ui-accordion.html" class="menu-link"><span class="submenu-dot"></span>Accordion</a></div>
+                    <div class="menu-item"><a href="ui-carousel.html" class="menu-link"><span class="submenu-dot"></span>Carousel</a></div>
+                    <div class="menu-item"><a href="ui-offcanvas.html" class="menu-link"><span class="submenu-dot"></span>Offcanvas</a></div>
+                    <div class="menu-item"><a href="ui-avatars.html" class="menu-link"><span class="submenu-dot"></span>Avatars</a></div>
+                    <div class="menu-item"><a href="ui-list-group.html" class="menu-link"><span class="submenu-dot"></span>List Group</a></div>
+                    <div class="menu-item"><a href="ui-breadcrumbs.html" class="menu-link"><span class="submenu-dot"></span>Breadcrumbs</a></div>
+                    <div class="menu-item"><a href="ui-pagination.html" class="menu-link"><span class="submenu-dot"></span>Pagination</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="edit" class="menu-icon"></i>
+                    <span class="menu-text">Forms</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="form-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Elements</a></div>
+                    <div class="menu-item"><a href="form-advanced.html" class="menu-link"><span class="submenu-dot"></span>Advanced</a></div>
+                    <div class="menu-item"><a href="form-validation.html" class="menu-link"><span class="submenu-dot"></span>Validation</a></div>
+                    <div class="menu-item"><a href="form-wizard.html" class="menu-link"><span class="submenu-dot"></span>Wizard</a></div>
+                    <div class="menu-item"><a href="form-editors.html" class="menu-link"><span class="submenu-dot"></span>Editors</a></div>
+                    <div class="menu-item"><a href="form-upload.html" class="menu-link"><span class="submenu-dot"></span>File Upload</a></div>
+                    <div class="menu-item"><a href="form-layouts.html" class="menu-link"><span class="submenu-dot"></span>Form Layouts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="grid" class="menu-icon"></i>
+                    <span class="menu-text">Tables</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="table-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Tables</a></div>
+                    <div class="menu-item"><a href="table-datatable.html" class="menu-link"><span class="submenu-dot"></span>DataTables</a></div>
+                    <div class="menu-item"><a href="table-responsive.html" class="menu-link"><span class="submenu-dot"></span>Responsive</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="pie-chart" class="menu-icon"></i>
+                    <span class="menu-text">Charts</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="chart-line.html" class="menu-link"><span class="submenu-dot"></span>Line Charts</a></div>
+                    <div class="menu-item"><a href="chart-bar.html" class="menu-link"><span class="submenu-dot"></span>Bar Charts</a></div>
+                    <div class="menu-item"><a href="chart-pie.html" class="menu-link"><span class="submenu-dot"></span>Pie Charts</a></div>
+                    <div class="menu-item"><a href="chart-mixed.html" class="menu-link"><span class="submenu-dot"></span>Mixed Charts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="map" class="menu-icon"></i>
+                    <span class="menu-text">Maps</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="maps-google.html" class="menu-link"><span class="submenu-dot"></span>Google Maps</a></div>
+                    <div class="menu-item"><a href="maps-vector.html" class="menu-link"><span class="submenu-dot"></span>Vector Maps</a></div>
+                    <div class="menu-item"><a href="maps-leaflet.html" class="menu-link"><span class="submenu-dot"></span>Leaflet Maps</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="icons.html" class="menu-link"><i data-feather="feather" class="menu-icon"></i><span class="menu-text">Icons</span></a></div>
+            <div class="menu-item"><a href="widgets.html" class="menu-link"><i data-feather="layers" class="menu-icon"></i><span class="menu-text">Widgets</span></a></div>
+
+            <div class="menu-label"><span>PAGES</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="lock" class="menu-icon"></i>
+                    <span class="menu-text">Authentication</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="auth-login.html" class="menu-link"><span class="submenu-dot"></span>Login</a></div>
+                    <div class="menu-item"><a href="auth-register.html" class="menu-link"><span class="submenu-dot"></span>Register</a></div>
+                    <div class="menu-item"><a href="auth-forgot.html" class="menu-link"><span class="submenu-dot"></span>Forgot Password</a></div>
+                    <div class="menu-item"><a href="auth-reset.html" class="menu-link"><span class="submenu-dot"></span>Reset Password</a></div>
+                    <div class="menu-item"><a href="auth-lockscreen.html" class="menu-link"><span class="submenu-dot"></span>Lock Screen</a></div>
+                    <div class="menu-item"><a href="auth-2fa.html" class="menu-link"><span class="submenu-dot"></span>Two Factor</a></div>
+                    <div class="menu-item"><a href="auth-verify.html" class="menu-link"><span class="submenu-dot"></span>Email Verify</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="alert-triangle" class="menu-icon"></i>
+                    <span class="menu-text">Error Pages</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="error-400.html" class="menu-link"><span class="submenu-dot"></span>400</a></div>
+                    <div class="menu-item"><a href="error-401.html" class="menu-link"><span class="submenu-dot"></span>401</a></div>
+                    <div class="menu-item"><a href="error-403.html" class="menu-link"><span class="submenu-dot"></span>403</a></div>
+                    <div class="menu-item"><a href="error-404.html" class="menu-link"><span class="submenu-dot"></span>404</a></div>
+                    <div class="menu-item"><a href="error-500.html" class="menu-link"><span class="submenu-dot"></span>500</a></div>
+                    <div class="menu-item"><a href="error-503.html" class="menu-link"><span class="submenu-dot"></span>503</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="profile.html" class="menu-link"><i data-feather="user" class="menu-icon"></i><span class="menu-text">Profile</span></a></div>
+            <div class="menu-item"><a href="settings.html" class="menu-link"><i data-feather="settings" class="menu-icon"></i><span class="menu-text">Settings</span></a></div>
+            <div class="menu-item"><a href="faq.html" class="menu-link"><i data-feather="help-circle" class="menu-icon"></i><span class="menu-text">FAQ</span></a></div>
+            <div class="menu-item"><a href="timeline.html" class="menu-link"><i data-feather="clock" class="menu-icon"></i><span class="menu-text">Timeline</span></a></div>
+            <div class="menu-item"><a href="gallery.html" class="menu-link"><i data-feather="image" class="menu-icon"></i><span class="menu-text">Gallery</span></a></div>
+            <div class="menu-item"><a href="search-results.html" class="menu-link"><i data-feather="search" class="menu-icon"></i><span class="menu-text">Search Results</span></a></div>
+        </div>
+    </aside>
+
+    <div class="app-main">
+        <header class="app-header">
+            <div class="header-left">
+                <img src="assets/img/dark-logo.png" alt="BootUI" class="mobile-logo"><button class="sidebar-toggle" type="button"><i data-feather="menu"></i></button>
+                <div class="header-search">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search anything..." class="form-control">
+                    <span class="search-shortcut">Ctrl+K</span>
+                </div>
+            </div>
+            <div class="header-right">
+
+                <!-- Apps Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Apps"><i data-feather="grid"></i></button>
+                    <div class="dropdown-menu dropdown-menu-lg">
+                        <div class="dropdown-menu-header"><h6>Quick Access</h6></div>
+                        <div class="apps-grid">
+                            <a href="chat.html" class="apps-grid-item"><div class="apps-icon bg-gradient-primary"><i data-feather="message-square"></i></div><span>Chat</span></a>
+                            <a href="email.html" class="apps-grid-item"><div class="apps-icon bg-gradient-success"><i data-feather="mail"></i></div><span>Email</span></a>
+                            <a href="calendar.html" class="apps-grid-item"><div class="apps-icon bg-gradient-warning"><i data-feather="calendar"></i></div><span>Calendar</span></a>
+                            <a href="tasks.html" class="apps-grid-item"><div class="apps-icon bg-gradient-danger"><i data-feather="check-square"></i></div><span>Tasks</span></a>
+                            <a href="file-manager.html" class="apps-grid-item"><div class="apps-icon bg-gradient-info"><i data-feather="folder"></i></div><span>Files</span></a>
+                            <a href="contacts.html" class="apps-grid-item"><div class="apps-icon bg-gradient-purple"><i data-feather="users"></i></div><span>Contacts</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn notif-toggle" title="Notifications"><i data-feather="bell"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Notifications</h6><span class="badge bg-primary rounded-pill">5 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-soft-primary"><i data-feather="shopping-bag"></i></div><div class="notif-content"><p><strong>New Order</strong> received from Sarah</p><span class="notif-time">2 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-success"><i data-feather="check-circle"></i></div><div class="notif-content"><p><strong>Payment</strong> of $2,450 confirmed</p><span class="notif-time">15 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-warning"><i data-feather="alert-triangle"></i></div><div class="notif-content"><p><strong>Server CPU</strong> usage is at 92%</p><span class="notif-time">1 hour ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-info"><i data-feather="user-plus"></i></div><div class="notif-content"><p><strong>New user</strong> registered: Mike Chen</p><span class="notif-time">3 hours ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-danger"><i data-feather="alert-circle"></i></div><div class="notif-content"><p><strong>Disk space</strong> running low on server</p><span class="notif-time">5 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="#">View All Notifications</a></div>
+                    </div>
+                </div>
+
+                <!-- Messages Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Messages"><i data-feather="message-square"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Messages</h6><span class="badge bg-success rounded-pill">3 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-gradient-primary" class="avatar-badge">SW</div><div class="notif-content"><p><strong>Sarah Wilson</strong>: Can you review the design files?</p><span class="notif-time">5 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-success" class="avatar-badge">JD</div><div class="notif-content"><p><strong>John Doe</strong>: Meeting rescheduled to 3pm</p><span class="notif-time">30 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-warning" class="avatar-badge">AL</div><div class="notif-content"><p><strong>Anna Lee</strong>: Invoice #1024 has been paid</p><span class="notif-time">2 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="chat.html">View All Messages</a></div>
+                    </div>
+                </div>
+
+                <!-- User Dropdown -->
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user"><div class="header-user-avatar">DD</div><div class="header-user-info"><div class="header-user-name">David Dev</div><div class="header-user-role">Admin</div></div></div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header"><div class="avatar-circle">DD</div><h6 class="mb-0" class="text-heading">David Dev</h6><small class="text-muted">david@bootui.com</small></div>
+                        <div class="p-2">
+                            <a href="profile.html" class="dropdown-item"><i data-feather="user"></i> My Profile</a>
+                            <a href="settings.html" class="dropdown-item"><i data-feather="settings"></i> Settings</a>
+                            <a href="wallet.html" class="dropdown-item"><i data-feather="credit-card"></i> Billing</a>
+                            <a href="faq.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item text-danger"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-content">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div><h1 class="h3 mb-1 fw-semibold">Real Estate Dashboard</h1><nav aria-label="breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="#">Home</a></li><li class="breadcrumb-item active">Real Estate</li></ol></nav></div>
+                <button class="btn btn-primary"><i data-feather="plus" class="me-1" class="icon-md"></i> Add Listing</button>
+            </div>
+
+<!-- Top Section -->
+<div class="row g-3 mb-4">
+    <div class="col-xl-5">
+        <div class="card border-0 h-100 radius-12 mb-0">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                        <p class="text-muted small mb-0">Total Portfolio Value</p>
+                        <h2 class="fw-bold mb-0">$8.4M</h2>
+                        <span class="badge text-success mt-1 badge-success-soft fs-11"><i data-feather="arrow-up" class="icon-11"></i> 15.2% this quarter</span>
+                    </div>
+                    <div class="btn-group btn-group-sm">
+                        <button class="btn btn-outline-secondary active rounded-start-2">Monthly</button>
+                        <button class="btn btn-outline-secondary rounded-end-2">Yearly</button>
+                    </div>
+                </div>
+                <div class="chart-h-160"><canvas id="portfolioChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-7">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="card border-0 radius-12 re-stat-orange mb-0">
+                    <div class="card-body d-flex align-items-center gap-3">
+                        <div class="icon-box icon-box-48 re-icon-orange"><i data-feather="home" class="icon-22 text-re-orange"></i></div>
+                        <div>
+                            <h4 class="fw-bold mb-0">2,456</h4>
+                            <small class="text-muted">Total Properties</small>
+                            <div><span class="badge text-success badge-success-soft fs-10"><i data-feather="arrow-up" class="icon-10"></i> +124 new</span></div>
+                            <p class="text-muted fs-11 mb-0 mt-1">Across 18 cities &middot; 6 regions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 radius-12 re-stat-blue mb-0">
+                    <div class="card-body d-flex align-items-center gap-3">
+                        <div class="icon-box icon-box-48 re-icon-blue"><i data-feather="map-pin" class="icon-22 text-re-blue"></i></div>
+                        <div>
+                            <h4 class="fw-bold mb-0">847</h4>
+                            <small class="text-muted">Active Listings</small>
+                            <div><span class="badge text-success badge-success-soft fs-10"><i data-feather="arrow-up" class="icon-10"></i> +5.8%</span></div>
+                            <p class="text-muted fs-11 mb-0 mt-1">214 added this month</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 radius-12 re-stat-green mb-0">
+                    <div class="card-body d-flex align-items-center gap-3">
+                        <div class="icon-box icon-box-48 re-icon-green"><i data-feather="check-circle" class="icon-22 text-re-green"></i></div>
+                        <div>
+                            <h4 class="fw-bold mb-0">342</h4>
+                            <small class="text-muted">Properties Sold</small>
+                            <div><span class="badge text-success badge-success-soft fs-10"><i data-feather="arrow-up" class="icon-10"></i> +22.3%</span></div>
+                            <p class="text-muted fs-11 mb-0 mt-1">$48.2M closed value</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 radius-12 re-stat-pink mb-0">
+                    <div class="card-body d-flex align-items-center gap-3">
+                        <div class="icon-box icon-box-48 re-icon-pink"><i data-feather="percent" class="icon-22 text-re-pink"></i></div>
+                        <div>
+                            <h4 class="fw-bold mb-0">$24.5K</h4>
+                            <small class="text-muted">Avg. Price/sqft</small>
+                            <div><span class="badge text-danger badge-danger-soft fs-10"><i data-feather="arrow-down" class="icon-10"></i> -2.1%</span></div>
+                            <p class="text-muted fs-11 mb-0 mt-1">Down from $25.0K last week</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ROW 2: Revenue Trend (col-xl-7) + Property Types (col-xl-5) -->
+            <div class="row g-3 mb-4">
+                <div class="col-xl-7">
+                    <div class="card mb-0">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title mb-0">Revenue Trend</h5>
+                            <div class="btn-group btn-group-sm"><button class="btn btn-outline-primary">Monthly</button><button class="btn btn-primary">Yearly</button></div>
+                        </div>
+                        <div class="card-body"><div class="chart-h-320"><canvas id="revenueTrendChart"></canvas></div></div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Property Types</h5></div>
+                        <div class="card-body">
+                            <div class="chart-h-210"><canvas id="propertyTypeChart"></canvas></div>
+                            <div class="mt-3">
+                                <div class="d-flex justify-content-between mb-2"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-indigo me-2"></span><span class="small">Residential</span></div><span class="fw-medium small">45%</span></div>
+                                <div class="d-flex justify-content-between mb-2"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-emerald me-2"></span><span class="small">Commercial</span></div><span class="fw-medium small">25%</span></div>
+                                <div class="d-flex justify-content-between mb-2"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-amber me-2"></span><span class="small">Industrial</span></div><span class="fw-medium small">15%</span></div>
+                                <div class="d-flex justify-content-between mb-2"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-red me-2"></span><span class="small">Land</span></div><span class="fw-medium small">10%</span></div>
+                                <div class="d-flex justify-content-between"><div class="d-flex align-items-center"><span class="legend-dot legend-dot-violet me-2"></span><span class="small">Other</span></div><span class="fw-medium small">5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 3: Full-width Featured Listings (col-12) -->
+            <div class="row g-3 mb-4">
+                <div class="col-12">
+                    <div class="card mb-0">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title mb-0">Featured Listings</h5>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="border rounded-3 overflow-hidden h-100">
+                                        <div class="position-relative">
+                                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop" alt="Sunset Villa" class="w-100" style="height:170px;object-fit:cover;">
+                                            <span class="badge bg-success position-absolute badge-top-right">For Sale</span>
+                                        </div>
+                                        <div class="p-3">
+                                            <h6 class="fw-semibold mb-1">Sunset Villa</h6>
+                                            <p class="small text-muted mb-2"><i data-feather="map-pin" class="icon-xs"></i> Beverly Hills, CA</p>
+                                            <div class="d-flex gap-3 small text-muted mb-2">
+                                                <span><i data-feather="home" class="icon-xs"></i> 4 bed</span>
+                                                <span><i data-feather="droplet" class="icon-xs"></i> 3 bath</span>
+                                                <span><i data-feather="maximize" class="icon-xs"></i> 3,200 sqft</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="fw-bold text-indigo">$1,250,000</span>
+                                                <div class="avatar-28 text-white bg-av-indigo-600">SM</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="border rounded-3 overflow-hidden h-100">
+                                        <div class="position-relative">
+                                            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop" alt="Downtown Loft" class="w-100" style="height:170px;object-fit:cover;">
+                                            <span class="badge bg-info position-absolute badge-top-right">For Rent</span>
+                                        </div>
+                                        <div class="p-3">
+                                            <h6 class="fw-semibold mb-1">Downtown Loft</h6>
+                                            <p class="small text-muted mb-2"><i data-feather="map-pin" class="icon-xs"></i> Manhattan, NY</p>
+                                            <div class="d-flex gap-3 small text-muted mb-2">
+                                                <span><i data-feather="home" class="icon-xs"></i> 2 bed</span>
+                                                <span><i data-feather="droplet" class="icon-xs"></i> 2 bath</span>
+                                                <span><i data-feather="maximize" class="icon-xs"></i> 1,800 sqft</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="fw-bold text-emerald-700">$4,500/mo</span>
+                                                <div class="avatar-28 text-white bg-av-emerald-700">JD</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="border rounded-3 overflow-hidden h-100">
+                                        <div class="position-relative">
+                                            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=400&fit=crop" alt="Oak Park Residence" class="w-100" style="height:170px;object-fit:cover;">
+                                            <span class="badge bg-success position-absolute badge-top-right">For Sale</span>
+                                        </div>
+                                        <div class="p-3">
+                                            <h6 class="fw-semibold mb-1">Oak Park Residence</h6>
+                                            <p class="small text-muted mb-2"><i data-feather="map-pin" class="icon-xs"></i> Austin, TX</p>
+                                            <div class="d-flex gap-3 small text-muted mb-2">
+                                                <span><i data-feather="home" class="icon-xs"></i> 3 bed</span>
+                                                <span><i data-feather="droplet" class="icon-xs"></i> 2 bath</span>
+                                                <span><i data-feather="maximize" class="icon-xs"></i> 2,400 sqft</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="fw-bold text-amber-700">$425,000</span>
+                                                <div class="avatar-28 text-white bg-av-amber-700">MW</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="border rounded-3 overflow-hidden h-100">
+                                        <div class="position-relative">
+                                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop" alt="Skyline Penthouse" class="w-100" style="height:170px;object-fit:cover;">
+                                            <span class="badge bg-success position-absolute badge-top-right">For Sale</span>
+                                        </div>
+                                        <div class="p-3">
+                                            <h6 class="fw-semibold mb-1">Skyline Penthouse</h6>
+                                            <p class="small text-muted mb-2"><i data-feather="map-pin" class="icon-xs"></i> Miami, FL</p>
+                                            <div class="d-flex gap-3 small text-muted mb-2">
+                                                <span><i data-feather="home" class="icon-xs"></i> 3 bed</span>
+                                                <span><i data-feather="droplet" class="icon-xs"></i> 3 bath</span>
+                                                <span><i data-feather="maximize" class="icon-xs"></i> 2,800 sqft</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="fw-bold text-rose-700">$1,850,000</span>
+                                                <div class="avatar-28 text-white bg-av-rose-700">LB</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 4: Market Analysis (col-xl-6) + Location Performance (col-xl-6) -->
+            <div class="row g-3 mb-4">
+                <div class="col-xl-6">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Market Analysis</h5></div>
+                        <div class="card-body"><div class="chart-h-300"><canvas id="marketChart"></canvas></div></div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Location Performance</h5></div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">Manhattan</span><span class="small fw-medium text-muted">$1.2M revenue</span></div>
+                                <div class="progress progress-h-10"><div class="progress-bar progress-bar-gradient-indigo" style="width:85%"></div></div>
+                                <small class="text-muted">85% of target</small>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">Brooklyn</span><span class="small fw-medium text-muted">$890K revenue</span></div>
+                                <div class="progress progress-h-10"><div class="progress-bar progress-bar-gradient-green" style="width:72%"></div></div>
+                                <small class="text-muted">72% of target</small>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">Queens</span><span class="small fw-medium text-muted">$620K revenue</span></div>
+                                <div class="progress progress-h-10"><div class="progress-bar progress-bar-gradient-amber" style="width:58%"></div></div>
+                                <small class="text-muted">58% of target</small>
+                            </div>
+                            <div class="mb-0">
+                                <div class="d-flex justify-content-between mb-1"><span class="small fw-semibold">Bronx</span><span class="small fw-medium text-muted">$380K revenue</span></div>
+                                <div class="progress progress-h-10"><div class="progress-bar progress-bar-gradient-red" style="width:42%"></div></div>
+                                <small class="text-muted">42% of target</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 5: Agent Leaderboard (col-xl-5) + Recent Inquiries (col-xl-7) -->
+            <div class="row g-3 mb-4">
+                <div class="col-xl-5">
+                    <div class="card mb-0">
+                        <div class="card-header"><h5 class="card-title mb-0">Agent Leaderboard</h5></div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0 align-middle">
+                                    <thead><tr><th>#</th><th>Agent</th><th>Sold</th><th>Revenue</th><th>Rating</th></tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="badge bg-warning text-dark fw-bold">1</span></td>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32 me-2 text-white bg-av-indigo-600">SM</div><span class="fw-medium small">Sarah Mitchell</span></div></td>
+                                            <td class="small fw-medium">18</td>
+                                            <td class="small fw-medium">$4.2M</td>
+                                            <td><span class="small text-amber">&#9733; 4.9</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-secondary fw-bold">2</span></td>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32 me-2 text-white bg-av-emerald-600">JD</div><span class="fw-medium small">John Daniels</span></div></td>
+                                            <td class="small fw-medium">15</td>
+                                            <td class="small fw-medium">$3.8M</td>
+                                            <td><span class="small text-amber">&#9733; 4.8</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge badge-bronze">3</span></td>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32 me-2 text-white bg-av-amber-500">LB</div><span class="fw-medium small">Lisa Brooks</span></div></td>
+                                            <td class="small fw-medium">12</td>
+                                            <td class="small fw-medium">$2.9M</td>
+                                            <td><span class="small text-amber">&#9733; 4.7</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-light text-dark">4</span></td>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32 me-2 text-white bg-av-violet-500">MW</div><span class="fw-medium small">Mike Walker</span></div></td>
+                                            <td class="small fw-medium">10</td>
+                                            <td class="small fw-medium">$2.1M</td>
+                                            <td><span class="small text-amber">&#9733; 4.6</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-light text-dark">5</span></td>
+                                            <td><div class="d-flex align-items-center"><div class="avatar-32 me-2 text-white bg-av-pink-500">RT</div><span class="fw-medium small">Rachel Torres</span></div></td>
+                                            <td class="small fw-medium">8</td>
+                                            <td class="small fw-medium">$1.6M</td>
+                                            <td><span class="small text-amber">&#9733; 4.5</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="card mb-0">
+                        <div class="card-header d-flex align-items-center justify-content-between"><h5 class="card-title mb-0">Recent Inquiries</h5><a href="#" class="btn btn-sm btn-outline-primary">Export</a></div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0 align-middle">
+                                    <thead><tr><th>Date</th><th>Client</th><th>Property</th><th>Type</th><th>Budget</th><th>Status</th><th>Agent</th></tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="small text-muted">Mar 12</td>
+                                            <td class="small fw-medium">Alex Turner</td>
+                                            <td class="small">Sunset Villa</td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Buy</span></td>
+                                            <td class="small">$1.2M</td>
+                                            <td><span class="badge bg-success-subtle text-success">Hot Lead</span></td>
+                                            <td class="small">Sarah M.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="small text-muted">Mar 11</td>
+                                            <td class="small fw-medium">Karen White</td>
+                                            <td class="small">Downtown Loft</td>
+                                            <td><span class="badge bg-info-subtle text-info">Rent</span></td>
+                                            <td class="small">$5K/mo</td>
+                                            <td><span class="badge bg-warning-subtle text-warning">Follow Up</span></td>
+                                            <td class="small">John D.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="small text-muted">Mar 10</td>
+                                            <td class="small fw-medium">David Chen</td>
+                                            <td class="small">Oak Park</td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Buy</span></td>
+                                            <td class="small">$450K</td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Touring</span></td>
+                                            <td class="small">Mike W.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="small text-muted">Mar 10</td>
+                                            <td class="small fw-medium">Maria Lopez</td>
+                                            <td class="small">Skyline PH</td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Buy</span></td>
+                                            <td class="small">$2M</td>
+                                            <td><span class="badge bg-success-subtle text-success">Hot Lead</span></td>
+                                            <td class="small">Lisa B.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="small text-muted">Mar 09</td>
+                                            <td class="small fw-medium">Robert Kim</td>
+                                            <td class="small">Tech Hub Office</td>
+                                            <td><span class="badge bg-warning-subtle text-warning">Lease</span></td>
+                                            <td class="small">$8K/mo</td>
+                                            <td><span class="badge bg-warning-subtle text-warning">Follow Up</span></td>
+                                            <td class="small">Sarah M.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="small text-muted">Mar 08</td>
+                                            <td class="small fw-medium">Emily Park</td>
+                                            <td class="small">Lake Cottage</td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Buy</span></td>
+                                            <td class="small">$350K</td>
+                                            <td><span class="badge bg-danger-subtle text-danger">Cold</span></td>
+                                            <td class="small">Rachel T.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 6: 4 Bottom Cards (col-xl-3 each) -->
+            <div class="row g-3 mb-4">
+                <div class="col-xl-3 col-md-6">
+                    <div class="card border-0 position-relative overflow-hidden bottom-card-blue mb-0">
+                        <svg class="bottom-svg-overlay" width="100" height="100" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="8" stroke="#2563eb" stroke-width="3" fill="none"/><line x1="10" y1="35" x2="90" y2="35" stroke="#2563eb" stroke-width="2"/><line x1="35" y1="35" x2="35" y2="90" stroke="#2563eb" stroke-width="2"/><line x1="60" y1="35" x2="60" y2="90" stroke="#2563eb" stroke-width="2"/></svg>
+                        <div class="card-body text-center">
+                            <div class="bottom-icon-circle bottom-icon-blue mb-2"><i data-feather="calendar"></i></div>
+                            <h2 class="fw-bold mb-0 text-blue-800">12</h2>
+                            <p class="small fw-medium text-muted mb-2">Open Houses This Week</p>
+                            <div class="d-flex justify-content-center gap-1">
+                                <span class="badge bg-primary-subtle text-primary">Sat: 7</span>
+                                <span class="badge bg-primary-subtle text-primary">Sun: 5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card border-0 position-relative overflow-hidden bottom-card-green mb-0">
+                        <svg class="bottom-svg-overlay" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="#16a34a" stroke-width="3" fill="none"/><path d="M30 50 L45 65 L70 35" stroke="#16a34a" stroke-width="3" fill="none"/></svg>
+                        <div class="card-body text-center">
+                            <div class="bottom-icon-circle bottom-icon-green mb-2"><i data-feather="plus-circle"></i></div>
+                            <h2 class="fw-bold mb-0 text-green-800">8</h2>
+                            <p class="small fw-medium text-muted mb-2">New Listings Today</p>
+                            <div class="d-flex justify-content-center gap-1">
+                                <span class="badge bg-success-subtle text-success">Res: 5</span>
+                                <span class="badge bg-success-subtle text-success">Com: 3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card border-0 position-relative overflow-hidden bottom-card-amber mb-0">
+                        <svg class="bottom-svg-overlay" width="100" height="100" viewBox="0 0 100 100"><rect x="15" y="20" width="70" height="60" rx="5" stroke="#b45309" stroke-width="3" fill="none"/><line x1="15" y1="40" x2="85" y2="40" stroke="#b45309" stroke-width="2"/></svg>
+                        <div class="card-body text-center">
+                            <div class="bottom-icon-circle bottom-icon-amber mb-2"><i data-feather="file-text"></i></div>
+                            <h2 class="fw-bold mb-0 text-amber-800">15</h2>
+                            <p class="small fw-medium text-muted mb-2">Pending Contracts</p>
+                            <div class="progress mx-auto progress-h-6 progress-w-80p">
+                                <div class="progress-bar progress-bar-amber" style="width:65%"></div>
+                            </div>
+                            <small class="text-muted">65% to close</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card border-0 position-relative overflow-hidden bottom-card-purple mb-0">
+                        <svg class="bottom-svg-overlay" width="100" height="100" viewBox="0 0 100 100"><rect x="10" y="15" width="80" height="70" rx="8" stroke="#7c3aed" stroke-width="3" fill="none"/><line x1="30" y1="40" x2="70" y2="40" stroke="#7c3aed" stroke-width="2"/><line x1="30" y1="55" x2="60" y2="55" stroke="#7c3aed" stroke-width="2"/><line x1="30" y1="70" x2="50" y2="70" stroke="#7c3aed" stroke-width="2"/></svg>
+                        <div class="card-body text-center">
+                            <div class="bottom-icon-circle bottom-icon-purple mb-2"><i data-feather="credit-card"></i></div>
+                            <h2 class="fw-bold mb-0 text-violet-800">23</h2>
+                            <p class="small fw-medium text-muted mb-2">Mortgage Applications</p>
+                            <div class="d-flex justify-content-center gap-1">
+                                <span class="badge badge-purple-soft">Approved: 14</span>
+                                <span class="badge badge-purple-soft">Pending: 9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="app-footer"><span>2024 &copy; BootUI - Premium Admin Dashboard</span><span>Crafted with &#9829; by BootUI</span></footer>
+    </div>
+</div>
+<div class="backdrop-overlay"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - BootUI Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+<body>
+<div class="app-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/img/light-logo.png" alt="BootUI" class="logo-img">
+            <span class="logo-text">BootUI</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>DASHBOARDS</span></div>
+            <div class="menu-item has-submenu open">
+                <a href="#" class="menu-link">
+                    <i data-feather="home" class="menu-icon"></i>
+                    <span class="menu-text">Dashboards</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="index.html" class="menu-link"><span class="submenu-dot"></span>eCommerce</a></div>
+                    <div class="menu-item"><a href="dashboard-analytics.html" class="menu-link active"><span class="submenu-dot"></span>Analytics</a></div>
+                    <div class="menu-item"><a href="dashboard-crm.html" class="menu-link"><span class="submenu-dot"></span>CRM</a></div>
+                    <div class="menu-item"><a href="dashboard-project.html" class="menu-link"><span class="submenu-dot"></span>Project</a></div>
+                    <div class="menu-item"><a href="dashboard-hrm.html" class="menu-link"><span class="submenu-dot"></span>HRM</a></div>
+                    <div class="menu-item"><a href="dashboard-finance.html" class="menu-link"><span class="submenu-dot"></span>Finance</a></div>
+                    <div class="menu-item"><a href="dashboard-marketing.html" class="menu-link"><span class="submenu-dot"></span>Marketing</a></div>
+                    <div class="menu-item"><a href="dashboard-healthcare.html" class="menu-link"><span class="submenu-dot"></span>Healthcare</a></div>
+                    <div class="menu-item"><a href="dashboard-education.html" class="menu-link"><span class="submenu-dot"></span>Education</a></div>
+                    <div class="menu-item"><a href="dashboard-realestate.html" class="menu-link"><span class="submenu-dot"></span>Real Estate</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>APPS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="shopping-cart" class="menu-icon"></i>
+                    <span class="menu-text">eCommerce</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="products.html" class="menu-link"><span class="submenu-dot"></span>Products</a></div>
+                    <div class="menu-item"><a href="product-detail.html" class="menu-link"><span class="submenu-dot"></span>Product Detail</a></div>
+                    <div class="menu-item"><a href="product-add.html" class="menu-link"><span class="submenu-dot"></span>Add Product</a></div>
+                    <div class="menu-item"><a href="cart.html" class="menu-link"><span class="submenu-dot"></span>Cart</a></div>
+                    <div class="menu-item"><a href="checkout.html" class="menu-link"><span class="submenu-dot"></span>Checkout</a></div>
+                    <div class="menu-item"><a href="orders.html" class="menu-link"><span class="submenu-dot"></span>Orders</a></div>
+                    <div class="menu-item"><a href="order-detail.html" class="menu-link"><span class="submenu-dot"></span>Order Detail</a></div>
+                    <div class="menu-item"><a href="customers.html" class="menu-link"><span class="submenu-dot"></span>Customers</a></div>
+                    <div class="menu-item"><a href="sellers.html" class="menu-link"><span class="submenu-dot"></span>Sellers</a></div>
+                    <div class="menu-item"><a href="reviews.html" class="menu-link"><span class="submenu-dot"></span>Reviews</a></div>
+                </div>
+            </div>
+            <div class="menu-item"><a href="chat.html" class="menu-link"><i data-feather="message-square" class="menu-icon"></i><span class="menu-text">Chat</span></a></div>
+            <div class="menu-item"><a href="email.html" class="menu-link"><i data-feather="mail" class="menu-icon"></i><span class="menu-text">Email</span></a></div>
+            <div class="menu-item"><a href="calendar.html" class="menu-link"><i data-feather="calendar" class="menu-icon"></i><span class="menu-text">Calendar</span></a></div>
+            <div class="menu-item"><a href="tasks.html" class="menu-link"><i data-feather="check-square" class="menu-icon"></i><span class="menu-text">Tasks</span></a></div>
+            <div class="menu-item"><a href="notes.html" class="menu-link"><i data-feather="edit-3" class="menu-icon"></i><span class="menu-text">Notes</span></a></div>
+            <div class="menu-item"><a href="file-manager.html" class="menu-link"><i data-feather="folder" class="menu-icon"></i><span class="menu-text">File Manager</span></a></div>
+            <div class="menu-item"><a href="contacts.html" class="menu-link"><i data-feather="users" class="menu-icon"></i><span class="menu-text">Contacts</span></a></div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="briefcase" class="menu-icon"></i>
+                    <span class="menu-text">Projects</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="projects-list.html" class="menu-link"><span class="submenu-dot"></span>Project List</a></div>
+                    <div class="menu-item"><a href="project-detail.html" class="menu-link"><span class="submenu-dot"></span>Project Detail</a></div>
+                    <div class="menu-item"><a href="project-create.html" class="menu-link"><span class="submenu-dot"></span>Create Project</a></div>
+                    <div class="menu-item"><a href="kanban.html" class="menu-link"><span class="submenu-dot"></span>Kanban Board</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="target" class="menu-icon"></i>
+                    <span class="menu-text">CRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="crm-leads.html" class="menu-link"><span class="submenu-dot"></span>Leads</a></div>
+                    <div class="menu-item"><a href="crm-deals.html" class="menu-link"><span class="submenu-dot"></span>Deals</a></div>
+                    <div class="menu-item"><a href="crm-companies.html" class="menu-link"><span class="submenu-dot"></span>Companies</a></div>
+                    <div class="menu-item"><a href="crm-contacts.html" class="menu-link"><span class="submenu-dot"></span>Contacts</a></div>
+                    <div class="menu-item"><a href="crm-pipeline.html" class="menu-link"><span class="submenu-dot"></span>Pipeline</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="users" class="menu-icon"></i>
+                    <span class="menu-text">HRM</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="hrm-employees.html" class="menu-link"><span class="submenu-dot"></span>Employees</a></div>
+                    <div class="menu-item"><a href="hrm-departments.html" class="menu-link"><span class="submenu-dot"></span>Departments</a></div>
+                    <div class="menu-item"><a href="hrm-attendance.html" class="menu-link"><span class="submenu-dot"></span>Attendance</a></div>
+                    <div class="menu-item"><a href="hrm-payroll.html" class="menu-link"><span class="submenu-dot"></span>Payroll</a></div>
+                    <div class="menu-item"><a href="hrm-leave.html" class="menu-link"><span class="submenu-dot"></span>Leave Management</a></div>
+                    <div class="menu-item"><a href="hrm-holidays.html" class="menu-link"><span class="submenu-dot"></span>Holidays</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="dollar-sign" class="menu-icon"></i>
+                    <span class="menu-text">Finance</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="invoices.html" class="menu-link"><span class="submenu-dot"></span>Invoices</a></div>
+                    <div class="menu-item"><a href="invoice-detail.html" class="menu-link"><span class="submenu-dot"></span>Invoice Detail</a></div>
+                    <div class="menu-item"><a href="invoice-create.html" class="menu-link"><span class="submenu-dot"></span>Create Invoice</a></div>
+                    <div class="menu-item"><a href="transactions.html" class="menu-link"><span class="submenu-dot"></span>Transactions</a></div>
+                    <div class="menu-item"><a href="pricing.html" class="menu-link"><span class="submenu-dot"></span>Pricing</a></div>
+                    <div class="menu-item"><a href="wallet.html" class="menu-link"><span class="submenu-dot"></span>Wallet</a></div>
+                </div>
+            </div>
+
+            <div class="menu-label"><span>COMPONENTS</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="box" class="menu-icon"></i>
+                    <span class="menu-text">UI Elements</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="ui-alerts.html" class="menu-link"><span class="submenu-dot"></span>Alerts</a></div>
+                    <div class="menu-item"><a href="ui-badges.html" class="menu-link"><span class="submenu-dot"></span>Badges</a></div>
+                    <div class="menu-item"><a href="ui-buttons.html" class="menu-link"><span class="submenu-dot"></span>Buttons</a></div>
+                    <div class="menu-item"><a href="ui-cards.html" class="menu-link"><span class="submenu-dot"></span>Cards</a></div>
+                    <div class="menu-item"><a href="ui-dropdowns.html" class="menu-link"><span class="submenu-dot"></span>Dropdowns</a></div>
+                    <div class="menu-item"><a href="ui-modals.html" class="menu-link"><span class="submenu-dot"></span>Modals</a></div>
+                    <div class="menu-item"><a href="ui-tabs.html" class="menu-link"><span class="submenu-dot"></span>Tabs & Pills</a></div>
+                    <div class="menu-item"><a href="ui-progress.html" class="menu-link"><span class="submenu-dot"></span>Progress</a></div>
+                    <div class="menu-item"><a href="ui-spinners.html" class="menu-link"><span class="submenu-dot"></span>Spinners</a></div>
+                    <div class="menu-item"><a href="ui-toasts.html" class="menu-link"><span class="submenu-dot"></span>Toasts</a></div>
+                    <div class="menu-item"><a href="ui-tooltips.html" class="menu-link"><span class="submenu-dot"></span>Tooltips</a></div>
+                    <div class="menu-item"><a href="ui-accordion.html" class="menu-link"><span class="submenu-dot"></span>Accordion</a></div>
+                    <div class="menu-item"><a href="ui-carousel.html" class="menu-link"><span class="submenu-dot"></span>Carousel</a></div>
+                    <div class="menu-item"><a href="ui-offcanvas.html" class="menu-link"><span class="submenu-dot"></span>Offcanvas</a></div>
+                    <div class="menu-item"><a href="ui-avatars.html" class="menu-link"><span class="submenu-dot"></span>Avatars</a></div>
+                    <div class="menu-item"><a href="ui-list-group.html" class="menu-link"><span class="submenu-dot"></span>List Group</a></div>
+                    <div class="menu-item"><a href="ui-breadcrumbs.html" class="menu-link"><span class="submenu-dot"></span>Breadcrumbs</a></div>
+                    <div class="menu-item"><a href="ui-pagination.html" class="menu-link"><span class="submenu-dot"></span>Pagination</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="edit" class="menu-icon"></i>
+                    <span class="menu-text">Forms</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="form-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Elements</a></div>
+                    <div class="menu-item"><a href="form-advanced.html" class="menu-link"><span class="submenu-dot"></span>Advanced</a></div>
+                    <div class="menu-item"><a href="form-validation.html" class="menu-link"><span class="submenu-dot"></span>Validation</a></div>
+                    <div class="menu-item"><a href="form-wizard.html" class="menu-link"><span class="submenu-dot"></span>Wizard</a></div>
+                    <div class="menu-item"><a href="form-editors.html" class="menu-link"><span class="submenu-dot"></span>Editors</a></div>
+                    <div class="menu-item"><a href="form-upload.html" class="menu-link"><span class="submenu-dot"></span>File Upload</a></div>
+                    <div class="menu-item"><a href="form-layouts.html" class="menu-link"><span class="submenu-dot"></span>Form Layouts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="grid" class="menu-icon"></i>
+                    <span class="menu-text">Tables</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="table-basic.html" class="menu-link"><span class="submenu-dot"></span>Basic Tables</a></div>
+                    <div class="menu-item"><a href="table-datatable.html" class="menu-link"><span class="submenu-dot"></span>DataTables</a></div>
+                    <div class="menu-item"><a href="table-responsive.html" class="menu-link"><span class="submenu-dot"></span>Responsive</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="pie-chart" class="menu-icon"></i>
+                    <span class="menu-text">Charts</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="chart-line.html" class="menu-link"><span class="submenu-dot"></span>Line Charts</a></div>
+                    <div class="menu-item"><a href="chart-bar.html" class="menu-link"><span class="submenu-dot"></span>Bar Charts</a></div>
+                    <div class="menu-item"><a href="chart-pie.html" class="menu-link"><span class="submenu-dot"></span>Pie Charts</a></div>
+                    <div class="menu-item"><a href="chart-mixed.html" class="menu-link"><span class="submenu-dot"></span>Mixed Charts</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="map" class="menu-icon"></i>
+                    <span class="menu-text">Maps</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="maps-google.html" class="menu-link"><span class="submenu-dot"></span>Google Maps</a></div>
+                    <div class="menu-item"><a href="maps-vector.html" class="menu-link"><span class="submenu-dot"></span>Vector Maps</a></div>
+                    <div class="menu-item"><a href="maps-leaflet.html" class="menu-link"><span class="submenu-dot"></span>Leaflet Maps</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="icons.html" class="menu-link"><i data-feather="feather" class="menu-icon"></i><span class="menu-text">Icons</span></a></div>
+            <div class="menu-item"><a href="widgets.html" class="menu-link"><i data-feather="layers" class="menu-icon"></i><span class="menu-text">Widgets</span></a></div>
+
+            <div class="menu-label"><span>PAGES</span></div>
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="lock" class="menu-icon"></i>
+                    <span class="menu-text">Authentication</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="auth-login.html" class="menu-link"><span class="submenu-dot"></span>Login</a></div>
+                    <div class="menu-item"><a href="auth-register.html" class="menu-link"><span class="submenu-dot"></span>Register</a></div>
+                    <div class="menu-item"><a href="auth-forgot.html" class="menu-link"><span class="submenu-dot"></span>Forgot Password</a></div>
+                    <div class="menu-item"><a href="auth-reset.html" class="menu-link"><span class="submenu-dot"></span>Reset Password</a></div>
+                    <div class="menu-item"><a href="auth-lockscreen.html" class="menu-link"><span class="submenu-dot"></span>Lock Screen</a></div>
+                    <div class="menu-item"><a href="auth-2fa.html" class="menu-link"><span class="submenu-dot"></span>Two Factor</a></div>
+                    <div class="menu-item"><a href="auth-verify.html" class="menu-link"><span class="submenu-dot"></span>Email Verify</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item has-submenu">
+                <a href="#" class="menu-link">
+                    <i data-feather="alert-triangle" class="menu-icon"></i>
+                    <span class="menu-text">Error Pages</span>
+                    <i data-feather="chevron-right" class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <div class="menu-item"><a href="error-400.html" class="menu-link"><span class="submenu-dot"></span>400</a></div>
+                    <div class="menu-item"><a href="error-401.html" class="menu-link"><span class="submenu-dot"></span>401</a></div>
+                    <div class="menu-item"><a href="error-403.html" class="menu-link"><span class="submenu-dot"></span>403</a></div>
+                    <div class="menu-item"><a href="error-404.html" class="menu-link"><span class="submenu-dot"></span>404</a></div>
+                    <div class="menu-item"><a href="error-500.html" class="menu-link"><span class="submenu-dot"></span>500</a></div>
+                    <div class="menu-item"><a href="error-503.html" class="menu-link"><span class="submenu-dot"></span>503</a></div>
+                </div>
+            </div>
+
+            <div class="menu-item"><a href="profile.html" class="menu-link"><i data-feather="user" class="menu-icon"></i><span class="menu-text">Profile</span></a></div>
+            <div class="menu-item"><a href="settings.html" class="menu-link"><i data-feather="settings" class="menu-icon"></i><span class="menu-text">Settings</span></a></div>
+            <div class="menu-item"><a href="faq.html" class="menu-link"><i data-feather="help-circle" class="menu-icon"></i><span class="menu-text">FAQ</span></a></div>
+            <div class="menu-item"><a href="timeline.html" class="menu-link"><i data-feather="clock" class="menu-icon"></i><span class="menu-text">Timeline</span></a></div>
+            <div class="menu-item"><a href="gallery.html" class="menu-link"><i data-feather="image" class="menu-icon"></i><span class="menu-text">Gallery</span></a></div>
+            <div class="menu-item"><a href="search-results.html" class="menu-link"><i data-feather="search" class="menu-icon"></i><span class="menu-text">Search Results</span></a></div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="app-main">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <img src="assets/img/dark-logo.png" alt="BootUI" class="mobile-logo"><button class="sidebar-toggle" type="button"><i data-feather="menu"></i></button>
+                <div class="header-search">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search anything..." class="form-control">
+                    <span class="search-shortcut">Ctrl+K</span>
+                </div>
+            </div>
+            <div class="header-right">
+
+                <!-- Apps Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Apps"><i data-feather="grid"></i></button>
+                    <div class="dropdown-menu dropdown-menu-lg">
+                        <div class="dropdown-menu-header"><h6>Quick Access</h6></div>
+                        <div class="apps-grid">
+                            <a href="chat.html" class="apps-grid-item"><div class="apps-icon bg-gradient-primary"><i data-feather="message-square"></i></div><span>Chat</span></a>
+                            <a href="email.html" class="apps-grid-item"><div class="apps-icon bg-gradient-success"><i data-feather="mail"></i></div><span>Email</span></a>
+                            <a href="calendar.html" class="apps-grid-item"><div class="apps-icon bg-gradient-warning"><i data-feather="calendar"></i></div><span>Calendar</span></a>
+                            <a href="tasks.html" class="apps-grid-item"><div class="apps-icon bg-gradient-danger"><i data-feather="check-square"></i></div><span>Tasks</span></a>
+                            <a href="file-manager.html" class="apps-grid-item"><div class="apps-icon bg-gradient-info"><i data-feather="folder"></i></div><span>Files</span></a>
+                            <a href="contacts.html" class="apps-grid-item"><div class="apps-icon bg-gradient-purple"><i data-feather="users"></i></div><span>Contacts</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn notif-toggle" title="Notifications"><i data-feather="bell"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Notifications</h6><span class="badge bg-primary rounded-pill">5 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-soft-primary"><i data-feather="shopping-bag"></i></div><div class="notif-content"><p><strong>New Order</strong> received from Sarah</p><span class="notif-time">2 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-success"><i data-feather="check-circle"></i></div><div class="notif-content"><p><strong>Payment</strong> of $2,450 confirmed</p><span class="notif-time">15 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-warning"><i data-feather="alert-triangle"></i></div><div class="notif-content"><p><strong>Server CPU</strong> usage is at 92%</p><span class="notif-time">1 hour ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-info"><i data-feather="user-plus"></i></div><div class="notif-content"><p><strong>New user</strong> registered: Mike Chen</p><span class="notif-time">3 hours ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-soft-danger"><i data-feather="alert-circle"></i></div><div class="notif-content"><p><strong>Disk space</strong> running low on server</p><span class="notif-time">5 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="#">View All Notifications</a></div>
+                    </div>
+                </div>
+
+                <!-- Messages Dropdown -->
+                <div class="header-dropdown">
+                    <button class="header-btn" title="Messages"><i data-feather="message-square"></i><span class="badge-dot"></span></button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header"><h6>Messages</h6><span class="badge bg-success rounded-pill">3 New</span></div>
+                        <div class="dropdown-menu-body">
+                            <div class="notif-item"><div class="notif-icon bg-gradient-primary" class="avatar-badge">SW</div><div class="notif-content"><p><strong>Sarah Wilson</strong>: Can you review the design files?</p><span class="notif-time">5 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-success" class="avatar-badge">JD</div><div class="notif-content"><p><strong>John Doe</strong>: Meeting rescheduled to 3pm</p><span class="notif-time">30 min ago</span></div></div>
+                            <div class="notif-item"><div class="notif-icon bg-gradient-warning" class="avatar-badge">AL</div><div class="notif-content"><p><strong>Anna Lee</strong>: Invoice #1024 has been paid</p><span class="notif-time">2 hours ago</span></div></div>
+                        </div>
+                        <div class="dropdown-menu-footer"><a href="chat.html">View All Messages</a></div>
+                    </div>
+                </div>
+
+                <!-- User Dropdown -->
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user"><div class="header-user-avatar">DD</div><div class="header-user-info"><div class="header-user-name">David Dev</div><div class="header-user-role">Admin</div></div></div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header"><div class="avatar-circle">DD</div><h6 class="mb-0" class="text-heading">David Dev</h6><small class="text-muted">david@bootui.com</small></div>
+                        <div class="p-2">
+                            <a href="profile.html" class="dropdown-item"><i data-feather="user"></i> My Profile</a>
+                            <a href="settings.html" class="dropdown-item"><i data-feather="settings"></i> Settings</a>
+                            <a href="wallet.html" class="dropdown-item"><i data-feather="credit-card"></i> Billing</a>
+                            <a href="faq.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item text-danger"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="app-content">
+            <div class="container-fluid">
+
+                <!-- Top Section -->
+                <div class="row g-3 mb-4">
+                    <!-- Website Audience Metrics -->
+                    <div class="col-xl-8">
+                        <div class="card border-0 h-100 radius-12">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Website Audience Metrics</h5>
+                                        <p class="text-muted small mb-0">Audience to which the users belonged while on the current date range</p>
+                                    </div>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-secondary active rounded-6-start">Day</button>
+                                        <button class="btn btn-outline-secondary">Week</button>
+                                        <button class="btn btn-outline-secondary rounded-6-end">Month</button>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-4 mb-4">
+                                    <div><p class="text-muted small mb-0">Users</p><h4 class="fw-bold mb-0">13,956</h4></div>
+                                    <div><p class="text-muted small mb-0">Bounce Rate</p><h4 class="fw-bold mb-0">33.50%</h4></div>
+                                    <div><p class="text-muted small mb-0">Page Views</p><h4 class="fw-bold mb-0">83,123</h4></div>
+                                    <div><p class="text-muted small mb-0">Sessions</p><h4 class="fw-bold mb-0">16,869</h4></div>
+                                </div>
+                                <div class="chart-h-260"><canvas id="audienceChart"></canvas></div>
+                                <div class="row g-3 mt-3 pt-3 border-top">
+                                    <div class="col-md-3 col-6">
+                                        <div class="wam-tile wam-tile-primary">
+                                            <div class="wam-tile-icon"><i data-feather="user-plus"></i></div>
+                                            <div class="wam-tile-body">
+                                                <p class="wam-tile-label">New Visitors</p>
+                                                <h5 class="wam-tile-value">8,642</h5>
+                                                <div class="wam-tile-foot">
+                                                    <span class="wam-delta wam-delta-up"><i data-feather="trending-up"></i> 12.4%</span>
+                                                    <span class="wam-tile-sub">vs last week</span>
+                                                </div>
+                                                <div class="wam-bar"><div class="wam-bar-fill bg-primary" style="width:78%"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="wam-tile wam-tile-success">
+                                            <div class="wam-tile-icon"><i data-feather="repeat"></i></div>
+                                            <div class="wam-tile-body">
+                                                <p class="wam-tile-label">Returning</p>
+                                                <h5 class="wam-tile-value">5,314</h5>
+                                                <div class="wam-tile-foot">
+                                                    <span class="wam-delta wam-delta-up"><i data-feather="trending-up"></i> 5.8%</span>
+                                                    <span class="wam-tile-sub">vs last week</span>
+                                                </div>
+                                                <div class="wam-bar"><div class="wam-bar-fill bg-success" style="width:62%"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="wam-tile wam-tile-warning">
+                                            <div class="wam-tile-icon"><i data-feather="clock"></i></div>
+                                            <div class="wam-tile-body">
+                                                <p class="wam-tile-label">Avg. Duration</p>
+                                                <h5 class="wam-tile-value">3m 42s</h5>
+                                                <div class="wam-tile-foot">
+                                                    <span class="wam-delta wam-delta-up"><i data-feather="trending-up"></i> 0.6%</span>
+                                                    <span class="wam-tile-sub">vs last week</span>
+                                                </div>
+                                                <div class="wam-bar"><div class="wam-bar-fill bg-warning" style="width:54%"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="wam-tile wam-tile-info">
+                                            <div class="wam-tile-icon"><i data-feather="target"></i></div>
+                                            <div class="wam-tile-body">
+                                                <p class="wam-tile-label">Conversions</p>
+                                                <h5 class="wam-tile-value">1,287</h5>
+                                                <div class="wam-tile-foot">
+                                                    <span class="wam-delta wam-delta-down"><i data-feather="trending-down"></i> 2.1%</span>
+                                                    <span class="wam-tile-sub">vs last week</span>
+                                                </div>
+                                                <div class="wam-bar"><div class="wam-bar-fill bg-info" style="width:42%"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 Stacked Mini Cards -->
+                    <div class="col-xl-4">
+                        <div class="row g-3 h-100">
+                            <!-- Bounce Rate Card -->
+                            <div class="col-12">
+                                <div class="card border-0 radius-12 h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="fw-bold mb-0 text-emerald">33.50%</h3>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <small class="text-muted">Bounce Rate</small>
+                                                    <span class="badge text-success badge-success-soft fs-11"><i data-feather="arrow-up" class="icon-11"></i> 18.02%</span>
+                                                </div>
+                                                <p class="text-muted small mt-2 mb-2">Visitors who left after viewing only one page.</p>
+                                            </div>
+                                            <div class="sparkline-container sparkline-h-40"><canvas id="bounceSparkline"></canvas></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between small text-muted mb-1">
+                                            <span>Goal &middot; 30%</span><span class="fw-semibold text-success">Above target</span>
+                                        </div>
+                                        <div class="progress progress-xxs"><div class="progress-bar bg-success" style="width:88%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Total Users Card -->
+                            <div class="col-12">
+                                <div class="card border-0 radius-12 h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="fw-bold mb-0 text-orange">86k</h3>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <small class="text-muted">Total Users</small>
+                                                    <span class="badge text-danger badge-danger-soft fs-11"><i data-feather="arrow-down" class="icon-11"></i> 0.86%</span>
+                                                </div>
+                                                <p class="text-muted small mt-2 mb-2">Unique visitors across all channels this month.</p>
+                                            </div>
+                                            <div class="sparkline-container sparkline-h-40"><canvas id="usersBarSparkline"></canvas></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between small">
+                                            <span class="text-muted">New <span class="fw-semibold text-dark">62%</span></span>
+                                            <span class="text-muted">Returning <span class="fw-semibold text-dark">38%</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- All Sessions Card -->
+                            <div class="col-12">
+                                <div class="card border-0 radius-12 h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="fw-bold mb-0 text-primary">16,869</h3>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <small class="text-muted">All Sessions</small>
+                                                    <span class="badge text-success badge-success-soft fs-11"><i data-feather="arrow-up" class="icon-11"></i> 2.87%</span>
+                                                </div>
+                                                <p class="text-muted small mt-2 mb-2">Total sessions within the selected date range.</p>
+                                            </div>
+                                            <div class="sparkline-container sparkline-h-50"><canvas id="sessionsBarSparkline"></canvas></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between small">
+                                            <span class="text-muted">Avg. duration <span class="fw-semibold text-dark">3m 42s</span></span>
+                                            <span class="text-muted">Pages/session <span class="fw-semibold text-dark">4.9</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Website Traffic + Traffic Sources -->
+                <div class="row g-3 mb-4">
+                    <div class="col-xl-8">
+                        <div class="card border-0 h-100 shadow-card-sm">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0">Website Traffic</h6>
+                                <select class="form-select form-select-sm form-select-auto"><option>Last 12 Months</option><option>Last 6 Months</option></select>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="chart-h-320"><canvas id="trafficChart"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card border-0 h-100 shadow-card-sm">
+                            <div class="card-header bg-transparent border-0">
+                                <h6 class="card-title mb-0">Traffic Sources</h6>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="chart-h-220"><canvas id="sourceChart"></canvas></div>
+                                <div class="mt-3">
+                                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><div class="d-flex align-items-center gap-2"><span class="legend-dot bg-soft-primary"></span><span class="small">Direct</span></div><span class="small fw-semibold">35%</span></div>
+                                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><div class="d-flex align-items-center gap-2"><span class="legend-dot bg-soft-success"></span><span class="small">Organic</span></div><span class="small fw-semibold">40%</span></div>
+                                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><div class="d-flex align-items-center gap-2"><span class="legend-dot bg-soft-warning"></span><span class="small">Referral</span></div><span class="small fw-semibold">15%</span></div>
+                                    <div class="d-flex justify-content-between align-items-center py-2"><div class="d-flex align-items-center gap-2"><span class="legend-dot bg-soft-danger"></span><span class="small">Social</span></div><span class="small fw-semibold">10%</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Top Pages + Visitors by Country -->
+                <div class="row g-3 mb-4">
+                    <div class="col-xl-7">
+                        <div class="card border-0 h-100 shadow-card-sm">
+                            <div class="card-header bg-transparent border-0">
+                                <h6 class="card-title mb-0">Top Pages</h6>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead><tr><th class="small text-muted text-uppercase">Page URL</th><th class="small text-muted text-uppercase">Views</th><th class="small text-muted text-uppercase">Bounce Rate</th><th class="small text-muted text-uppercase">Avg Time</th></tr></thead>
+                                        <tbody>
+                                            <tr><td class="small fw-semibold text-primary">/home</td><td class="small">42,580</td><td class="small">32.4%</td><td class="small">3m 24s</td></tr>
+                                            <tr><td class="small fw-semibold text-primary">/products</td><td class="small">28,340</td><td class="small">38.1%</td><td class="small">2m 48s</td></tr>
+                                            <tr><td class="small fw-semibold text-primary">/pricing</td><td class="small">18,920</td><td class="small">41.2%</td><td class="small">4m 12s</td></tr>
+                                            <tr><td class="small fw-semibold text-primary">/blog/top-tips</td><td class="small">15,640</td><td class="small">28.7%</td><td class="small">5m 36s</td></tr>
+                                            <tr><td class="small fw-semibold text-primary">/about</td><td class="small">12,180</td><td class="small">45.3%</td><td class="small">2m 15s</td></tr>
+                                            <tr><td class="small fw-semibold text-primary">/contact</td><td class="small">9,870</td><td class="small">52.1%</td><td class="small">1m 42s</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="card border-0 h-100 shadow-card-sm">
+                            <div class="card-header bg-transparent border-0">
+                                <h6 class="card-title mb-0">Visitors by Country</h6>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                    <div class="d-flex align-items-center gap-2"><span class="fs-20">&#127482;&#127480;</span><span class="fw-medium small">United States</span></div>
+                                    <div class="d-flex align-items-center gap-2 w-55p"><div class="progress flex-grow-1 progress-sm"><div class="progress-bar bg-soft-primary" style="width:45%"></div></div><span class="small text-muted min-w-50 text-right">28,420</span></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                    <div class="d-flex align-items-center gap-2"><span class="fs-20">&#127468;&#127463;</span><span class="fw-medium small">United Kingdom</span></div>
+                                    <div class="d-flex align-items-center gap-2 w-55p"><div class="progress flex-grow-1 progress-sm"><div class="progress-bar bg-soft-success" style="width:28%"></div></div><span class="small text-muted min-w-50 text-right">17,640</span></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                    <div class="d-flex align-items-center gap-2"><span class="fs-20">&#127464;&#127462;</span><span class="fw-medium small">Canada</span></div>
+                                    <div class="d-flex align-items-center gap-2 w-55p"><div class="progress flex-grow-1 progress-sm"><div class="progress-bar bg-soft-warning" style="width:20%"></div></div><span class="small text-muted min-w-50 text-right">12,890</span></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                    <div class="d-flex align-items-center gap-2"><span class="fs-20">&#127465;&#127466;</span><span class="fw-medium small">Germany</span></div>
+                                    <div class="d-flex align-items-center gap-2 w-55p"><div class="progress flex-grow-1 progress-sm"><div class="progress-bar bg-soft-danger" style="width:15%"></div></div><span class="small text-muted min-w-50 text-right">9,560</span></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="d-flex align-items-center gap-2"><span class="fs-20">&#127462;&#127482;</span><span class="fw-medium small">Australia</span></div>
+                                    <div class="d-flex align-items-center gap-2 w-55p"><div class="progress flex-grow-1 progress-sm"><div class="progress-bar bg-soft-info" style="width:11%"></div></div><span class="small text-muted min-w-50 text-right">7,230</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4: Device + Browser + Real-time -->
+                <div class="row g-3 mb-4">
+                    <div class="col-xl-4">
+                        <div class="card border-0 h-100 shadow-card-sm">
+                            <div class="card-header bg-transparent border-0">
+                                <h6 class="card-title mb-0">Session by Device</h6>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="chart-h-250"><canvas id="deviceChart"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card border-0 h-100 shadow-card-sm">
+                            <div class="card-header bg-transparent border-0">
+                                <h6 class="card-title mb-0">Browser Stats</h6>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="chart-h-250"><canvas id="browserChart"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card border-0 h-100 shadow-card-sm">
+                            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0">Real-time Users</h6>
+                                <span class="d-flex align-items-center gap-1"><span class="pulse-live legend-dot-sm bg-soft-success"></span><small class="text-success fw-semibold">Live</small></span>
+                            </div>
+                            <div class="card-body pt-0 text-center">
+                                <div class="fw-bold mb-1 fs-48">847</div>
+                                <div class="text-muted small mb-4">Active users right now</div>
+                                <div class="text-start">
+                                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><span class="small text-primary fw-semibold">/home</span><span class="small text-muted">312 users</span></div>
+                                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><span class="small text-primary fw-semibold">/products</span><span class="small text-muted">248 users</span></div>
+                                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom"><span class="small text-primary fw-semibold">/pricing</span><span class="small text-muted">186 users</span></div>
+                                    <div class="d-flex justify-content-between align-items-center py-2"><span class="small text-primary fw-semibold">/blog</span><span class="small text-muted">101 users</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <span class="text-muted small">&copy; 2026 BootUI. All rights reserved.</span>
+                    <span class="text-muted small">Crafted with <span class="text-red">&#9829;</span> by BootUI</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<div class="backdrop-overlay"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

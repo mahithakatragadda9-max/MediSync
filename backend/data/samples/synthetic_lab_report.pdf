@@ -1,0 +1,60 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1528 >>
+stream
+BT
+/F1 11 Tf
+50 760 Td
+15 TL
+(SYNTHETIC DEMO MEDICAL REPORT - FOR HACKATHON DEMONSTRATION ONLY) Tj
+T* (MediSync Partner Diagnostic Lab \(Synthetic Sample\)) Tj
+T* (Report Date: 2026-10-18) Tj
+T* (Patient Reference: Synthetic Demo Patient \(Aarav Sharma\)) Tj
+T* (Ordering Clinician: Dr. Meenakshi Iyer \(General Medicine\)) Tj
+T* (------------------------------------------------------------) Tj
+T* (KNOWN CONDITIONS:) Tj
+T* (Condition: Episodic Tension-Type Headaches) Tj
+T* (Condition: Mild Vitamin D Deficiency) Tj
+T* (Condition: Borderline Subclinical Hypothyroidism \(Under Monitoring\)) Tj
+T* (ALLERGIES:) Tj
+T* (Allergy: Penicillin \(mild skin rash\)) Tj
+T* (Allergy: Sulfonamides \(urticaria\)) Tj
+T* (LABORATORY TEST RESULTS:) Tj
+T* (Lab Result: Vitamin D \(25-OH\) = 19.0 ng/mL [Ref: 30.0 - 100.0 ng/mL] \(Low\)) Tj
+T* (Lab Result: TSH = 4.85 mIU/L [Ref: 0.40 - 4.20 mIU/L] \(Borderline High\)) Tj
+T* (Lab Result: HbA1c = 5.6 % [Ref: 4.0 - 5.6 %] \(Normal\)) Tj
+T* (Lab Result: Hemoglobin = 14.4 g/dL [Ref: 13.5 - 17.5 g/dL] \(Normal\)) Tj
+T* (Lab Result: Fasting Glucose = 94 mg/dL [Ref: 70 - 99 mg/dL] \(Normal\)) Tj
+T* (Lab Result: LDL Cholesterol = 118 mg/dL [Ref: < 100 mg/dL] \(Borderline\)) Tj
+T* (Lab Result: Systolic/Diastolic BP = 126/82 mmHg \(Normal-Elevated\)) Tj
+T* (CLINICAL OBSERVATIONS:) Tj
+T* (Observation: Patient reports intermittent late-afternoon frontal headaches during periods of reduced sleep.) Tj
+T* (Observation: Advised consistent sleep schedule, hydration, and Vitamin D repletion.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001821 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1891
+%%EOF

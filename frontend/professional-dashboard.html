@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Professional Portal — MediSync</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/medisync.css">
+</head>
+<body>
+<div class="app-wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">M</div>
+            <span class="logo-text">MediSync</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>CLINICAL WORKSPACE</span></div>
+            <div class="menu-item"><a href="#lookup" class="menu-link active" data-view="lookup"><i data-feather="search" class="menu-icon"></i><span class="menu-text">Patient Lookup &amp; QR</span></a></div>
+            <div class="menu-item"><a href="#patient-chart" class="menu-link" data-view="patient-chart"><i data-feather="clipboard" class="menu-icon"></i><span class="menu-text">Consented Patient View</span></a></div>
+            <div class="menu-item"><a href="#profile" class="menu-link" data-view="profile"><i data-feather="user-check" class="menu-icon"></i><span class="menu-text">Clinician Profile</span></a></div>
+            <div class="menu-label"><span>NAVIGATION</span></div>
+            <div class="menu-item"><a href="index.html" class="menu-link"><i data-feather="globe" class="menu-icon"></i><span class="menu-text">Public Home</span></a></div>
+        </div>
+    </aside>
+
+    <div class="app-main">
+        <header class="app-header">
+            <div class="header-left">
+                <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar"><i data-feather="menu"></i></button>
+                <span id="proVerificationHeaderBadge" class="badge bg-teal-soft ms-2">Checking verification...</span>
+            </div>
+            <div class="header-right">
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user">
+                        <div class="header-user-avatar" id="proAvatar">DR</div>
+                        <div class="header-user-info">
+                            <div class="header-user-name" id="proName">Clinician</div>
+                            <div class="header-user-role">Healthcare Professional</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header">
+                            <h6 class="mb-0 text-heading" id="proDropName">Clinician</h6>
+                            <small class="text-muted" id="proDropEmail">—</small>
+                        </div>
+                        <div class="p-2">
+                            <a href="#" class="dropdown-item text-danger" onclick="MediSync.logout(); return false;"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-content">
+            <!-- VIEW 1: LOOKUP & CONSENT -->
+            <section id="view-lookup" class="ms-view active">
+                <div class="mb-4">
+                    <h1 class="h3 mb-1 fw-bold text-navy">Patient Lookup &amp; Consent Verification</h1>
+                    <p class="text-muted mb-0 small">Search by MediSync ID or scan a privacy-safe QR token. Protected health records remain locked until explicit patient consent is active.</p>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Lookup by MediSync ID or QR Payload</h6></div>
+                            <div class="card-body">
+                                <form id="lookupForm" class="d-flex gap-2 mb-3">
+                                    <input type="text" class="form-control" id="lookupQuery" placeholder="MS-2026-482910 or medisync://lookup/MS-2026-482910" required>
+                                    <button type="submit" class="btn btn-primary flex-shrink-0">Lookup ID</button>
+                                </form>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <button type="button" class="btn btn-sm btn-soft-primary" onclick="MediSyncPro.fillLookup('MS-2026-482910')">Use Demo Patient ID (MS-2026-482910)</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="MediSyncPro.fillLookup('medisync://lookup/MS-2026-482910')">Simulate QR Scan Payload</button>
+                                </div>
+                                <div id="lookupResultBox" class="d-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Consented Patients &amp; Access Requests</h6></div>
+                            <div class="card-body">
+                                <h6 class="small fw-bold text-navy mb-2">Consented Patients</h6>
+                                <div id="consentedPatientsList" class="mb-3"></div>
+                                <hr>
+                                <h6 class="small fw-bold text-navy mb-2">Submitted Access Requests</h6>
+                                <div id="proRequestsList"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW 2: CONSENTED PATIENT CHART -->
+            <section id="view-patient-chart" class="ms-view">
+                <div id="noPatientSelected" class="card p-5 text-center">
+                    <i data-feather="lock" class="text-primary mx-auto mb-3" style="width:36px;height:36px;"></i>
+                    <h5 class="fw-bold text-navy">No Consented Patient Selected</h5>
+                    <p class="text-muted small mb-3">Look up a patient by MediSync ID and confirm active patient consent before viewing longitudinal records.</p>
+                    <button class="btn btn-primary btn-sm mx-auto" style="width:auto;" onclick="MediSyncPro.switchView('lookup')">Go to Patient Lookup</button>
+                </div>
+
+                <div id="patientChartContent" class="d-none">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <h1 class="h3 mb-0 fw-bold text-navy" id="chartPatientName">Patient</h1>
+                                <span class="ms-id-pill" id="chartMsId">MS-2026-...</span>
+                            </div>
+                            <small class="text-muted" id="chartConsentMeta">Active consent</small>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm" onclick="MediSyncPro.switchView('lookup')">&larr; Back to Lookup</button>
+                    </div>
+
+                    <!-- AI Contextual Summary -->
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h6 class="card-title mb-0 fw-bold">AI-Generated Contextual Prep Summary</h6>
+                            <span class="badge bg-teal-soft">Source-Cited · Non-Diagnostic</span>
+                        </div>
+                        <div class="card-body" id="chartAiSummary"></div>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-header"><h6 class="card-title mb-0 fw-bold">Medical History &amp; Extracted Reports</h6></div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-hover mb-0">
+                                            <thead><tr><th>Category</th><th>Item</th><th>Value</th><th>Source</th></tr></thead>
+                                            <tbody id="chartExtractedBody"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-header"><h6 class="card-title mb-0 fw-bold">Personal Baseline &amp; Deviations</h6></div>
+                                <div class="card-body" id="chartBaselinesBody"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-lg-7">
+                            <div class="card h-100">
+                                <div class="card-header"><h6 class="card-title mb-0 fw-bold">Wearable Trends (Sleep &amp; Resting HR)</h6></div>
+                                <div class="card-body"><div class="chart-h-250"><canvas id="proWearableChart"></canvas></div></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="card h-100">
+                                <div class="card-header"><h6 class="card-title mb-0 fw-bold">Patient Timeline</h6></div>
+                                <div class="card-body" id="chartTimelineBody" style="max-height:320px;overflow:auto;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW 3: PROFESSIONAL PROFILE -->
+            <section id="view-profile" class="ms-view">
+                <h1 class="h3 mb-3 fw-bold text-navy">Healthcare Professional Profile</h1>
+                <div class="card p-4" id="proProfileDetails"></div>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="backdrop-overlay"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/medisync-api.js"></script>
+<script src="assets/js/professional-dashboard.js"></script>
+</body>
+</html>

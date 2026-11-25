@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Control Panel — MediSync</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/medisync.css">
+</head>
+<body>
+<div class="app-wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">M</div>
+            <span class="logo-text">MediSync</span>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label"><span>ADMINISTRATION</span></div>
+            <div class="menu-item"><a href="#overview" class="menu-link active" data-view="overview"><i data-feather="sliders" class="menu-icon"></i><span class="menu-text">Platform Overview</span></a></div>
+            <div class="menu-item"><a href="#users" class="menu-link" data-view="users"><i data-feather="users" class="menu-icon"></i><span class="menu-text">Users &amp; Verifications</span></a></div>
+            <div class="menu-item"><a href="#devices" class="menu-link" data-view="devices"><i data-feather="cpu" class="menu-icon"></i><span class="menu-text">Devices &amp; System Health</span></a></div>
+            <div class="menu-item"><a href="#audits" class="menu-link" data-view="audits"><i data-feather="shield" class="menu-icon"></i><span class="menu-text">Audit Logs</span></a></div>
+            <div class="menu-label"><span>NAVIGATION</span></div>
+            <div class="menu-item"><a href="index.html" class="menu-link"><i data-feather="globe" class="menu-icon"></i><span class="menu-text">Public Home</span></a></div>
+        </div>
+    </aside>
+
+    <div class="app-main">
+        <header class="app-header">
+            <div class="header-left">
+                <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar"><i data-feather="menu"></i></button>
+                <span class="badge bg-navy-soft ms-2">Minimum Necessary Access Enforced</span>
+            </div>
+            <div class="header-right">
+                <div class="header-dropdown user-dropdown">
+                    <div class="header-user">
+                        <div class="header-user-avatar" id="adminAvatar">AD</div>
+                        <div class="header-user-info">
+                            <div class="header-user-name" id="adminName">Admin</div>
+                            <div class="header-user-role">Platform Admin</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-md">
+                        <div class="user-dropdown-header">
+                            <h6 class="mb-0 text-heading" id="adminDropName">Admin</h6>
+                            <small class="text-muted" id="adminDropEmail">—</small>
+                        </div>
+                        <div class="p-2">
+                            <a href="#" class="dropdown-item text-danger" onclick="MediSync.logout(); return false;"><i data-feather="log-out"></i> Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="app-content">
+            <div class="alert alert-secondary small mb-4 d-flex align-items-center justify-content-between">
+                <span><strong>Privacy Guard Active:</strong> Patient medical documents, extracted diagnoses, and wearable readings are isolated from Administrative endpoints by default.</span>
+                <span class="badge bg-dark">Minimum Access</span>
+            </div>
+
+            <!-- VIEW 1: PLATFORM OVERVIEW -->
+            <section id="view-overview" class="ms-view active">
+                <h1 class="h3 mb-1 fw-bold text-navy">Platform Overview &amp; Usage Statistics</h1>
+                <p class="text-muted small mb-4">Operational health, registrations, clinician verification queue, and platform telemetry.</p>
+
+                <div class="row g-3 mb-4" id="adminKpiGrid"></div>
+
+                <div class="row g-3">
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header"><h6 class="card-title mb-0 fw-bold">Application Usage Statistics</h6></div>
+                            <div class="card-body"><div class="chart-h-250"><canvas id="adminUsageChart"></canvas></div></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0 fw-bold">Pending Professional Verifications</h6>
+                                <button class="btn btn-sm btn-link p-0 text-primary" onclick="MediSyncAdmin.switchView('users')">Manage All &rarr;</button>
+                            </div>
+                            <div class="card-body" id="adminPendingProsBox"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW 2: USERS & VERIFICATIONS -->
+            <section id="view-users" class="ms-view">
+                <h1 class="h3 mb-1 fw-bold text-navy">User Management &amp; Professional Verification</h1>
+                <p class="text-muted small mb-4">Verify healthcare professional credentials and manage account activation or suspension. Every action is logged.</p>
+
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0 align-middle">
+                                <thead><tr><th>Name &amp; Email</th><th>Role</th><th>MediSync ID / Credentials</th><th>Verification</th><th>Status</th><th>Actions</th></tr></thead>
+                                <tbody id="adminUsersBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW 3: DEVICES & SYSTEM HEALTH -->
+            <section id="view-devices" class="ms-view">
+                <h1 class="h3 mb-1 fw-bold text-navy">Device Integration Monitoring &amp; System Health</h1>
+                <p class="text-muted small mb-4">Connector telemetry and infrastructure status.</p>
+
+                <div class="card mb-4" id="adminSystemHealthCard"></div>
+
+                <div class="card">
+                    <div class="card-header"><h6 class="card-title mb-0 fw-bold">Wearable Connector Telemetry</h6></div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead><tr><th>Connector</th><th>Mode</th><th>Status</th><th>Configured Accounts</th><th>Records Imported</th></tr></thead>
+                                <tbody id="adminDeviceMonitoringBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW 4: AUDIT LOGS -->
+            <section id="view-audits" class="ms-view">
+                <h1 class="h3 mb-1 fw-bold text-navy">Platform Audit Logs</h1>
+                <p class="text-muted small mb-4">Immutable operational record of authentication, consent decisions, PHI lookups, and administrative actions.</p>
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-hover mb-0">
+                                <thead><tr><th>Timestamp</th><th>Actor</th><th>Role</th><th>Action</th><th>Target</th><th>Details</th></tr></thead>
+                                <tbody id="adminAuditBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="backdrop-overlay"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/medisync-api.js"></script>
+<script src="assets/js/admin-dashboard.js"></script>
+</body>
+</html>
