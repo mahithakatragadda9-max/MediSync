@@ -12,13 +12,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env", override=True)
 
 DATA_DIR = BASE_DIR / "data"
-SAMPLE_DIR = DATA_DIR / "samples"
 RUNTIME_DIR = Path("/tmp/medisync_data") if os.getenv("VERCEL") else DATA_DIR
+SAMPLE_DIR = RUNTIME_DIR / "samples"
 UPLOAD_DIR = RUNTIME_DIR / "uploads"
 DB_PATH = Path(os.getenv("MEDISYNC_DB_PATH", str(RUNTIME_DIR / "medisync.db")))
 
 RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
+SAMPLE_DIR.mkdir(parents=True, exist_ok=True)
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+
 
 
 
