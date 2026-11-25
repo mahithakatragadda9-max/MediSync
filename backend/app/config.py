@@ -12,13 +12,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env", override=True)
 
 DATA_DIR = BASE_DIR / "data"
-UPLOAD_DIR = DATA_DIR / "uploads"
 SAMPLE_DIR = DATA_DIR / "samples"
-DB_PATH = Path(os.getenv("MEDISYNC_DB_PATH", str(DATA_DIR / "medisync.db")))
+RUNTIME_DIR = Path("/tmp/medisync_data") if os.getenv("VERCEL") else DATA_DIR
+UPLOAD_DIR = RUNTIME_DIR / "uploads"
+DB_PATH = Path(os.getenv("MEDISYNC_DB_PATH", str(RUNTIME_DIR / "medisync.db")))
 
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
-SAMPLE_DIR.mkdir(parents=True, exist_ok=True)
+
 
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").strip().strip('"').strip("'")
 SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "").strip().strip('"').strip("'")
