@@ -1432,3 +1432,4 @@ def admin_audit_logs(limit: int = Query(default=50, ge=1, le=200), user: dict = 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "frontend"
 if FRONTEND_DIR.exists():
     app.mount("/", StaticFiles(directory=str(FRONTEND_DIR), html=True), name="frontend")
+
