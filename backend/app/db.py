@@ -66,6 +66,10 @@ class _PgConnWrapper:
         cur = _PgCursorWrapper(self._conn.cursor(cursor_factory=RealDictCursor))
         return cur.execute(sql, params)
 
+    def executemany(self, sql: str, seq_of_params):
+        cur = _PgCursorWrapper(self._conn.cursor(cursor_factory=RealDictCursor))
+        return cur.executemany(sql, seq_of_params)
+
     def executescript(self, script: str):
         with self._conn.cursor() as cur:
             cur.execute(script)
