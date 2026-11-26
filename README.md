@@ -2,6 +2,11 @@
 
 **Your Health. Your History. Your Intelligence.**
 
+## Live Links
+
+- **Live Deployed App:** [https://vercel.app](https://medi-sync-ashen.vercel.app?_vercel_share=oGCj4emgNXTVSa6u2wktivDAGYb8HDzP)
+- **Demo Video Walkthrough:** [Watch Demo Video](https://your-demo-video-link-here)(coming soon)
+
 MediSync unifies fragmented wearable telemetry, diagnostic laboratory reports, and clinical prescriptions into a longitudinal personal health context. Instead of relying on static population averages, MediSync establishes an individualized **Personal Health Baseline**, detects meaningful multi-metric deviations, and provides context-grounded, non-diagnostic insights through a personalized **AI Health Assistant**.
 
 ---
