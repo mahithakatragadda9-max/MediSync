@@ -24,10 +24,14 @@ def utcnow_iso() -> str:
 
 
 def _translate_sql(sql: str) -> str:
-    # Convert SQLite '?' placeholders and 'INSERT OR IGNORE' to PostgreSQL syntax
-    translated = sql.replace("?", "%s")
+    translated = sql.replace("?", "%s").strip()
     if "INSERT OR IGNORE" in translated:
+        has_semi = translated.endswith(";")
+        if has_semi:
+            translated = translated[:-1].rstrip()
         translated = translated.replace("INSERT OR IGNORE", "INSERT") + " ON CONFLICT DO NOTHING"
+        if has_semi:
+            translated += ";"
     return translated
 
 
