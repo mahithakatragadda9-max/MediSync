@@ -1,10 +1,14 @@
 import json
+import os
 import secrets
 import sqlite3
 import uuid
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from typing import Any
+
+import psycopg2
+from psycopg2.extras import RealDictCursor
 
 from app.config import DB_PATH, UPLOAD_DIR
 from app.sample_data import (
@@ -19,11 +23,72 @@ def utcnow_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def _translate_sql(sql: str) -> str:
+    # Convert SQLite '?' placeholders and 'INSERT OR IGNORE' to PostgreSQL syntax
+    translated = sql.replace("?", "%s")
+    if "INSERT OR IGNORE" in translated:
+        translated = translated.replace("INSERT OR IGNORE", "INSERT") + " ON CONFLICT DO NOTHING"
+    return translated
+
+
+class _PgCursorWrapper:
+    def __init__(self, cur):
+        self._cur = cur
+
+    def execute(self, sql: str, params=None):
+        pg_sql = _translate_sql(sql)
+        if params is not None:
+            self._cur.execute(pg_sql, params)
+        else:
+            self._cur.execute(pg_sql)
+        return self
+
+    def executemany(self, sql: str, seq_of_params):
+        self._cur.executemany(_translate_sql(sql), seq_of_params)
+        return self
+
+    def fetchone(self):
+        return self._cur.fetchone()
+
+    def fetchall(self):
+        return self._cur.fetchall()
+
+    @property
+    def rowcount(self):
+        return self._cur.rowcount
+
+
+class _PgConnWrapper:
+    def __init__(self, raw_conn):
+        self._conn = raw_conn
+
+    def execute(self, sql: str, params=None):
+        cur = _PgCursorWrapper(self._conn.cursor(cursor_factory=RealDictCursor))
+        return cur.execute(sql, params)
+
+    def executescript(self, script: str):
+        with self._conn.cursor() as cur:
+            cur.execute(script)
+
+    def cursor(self):
+        return _PgCursorWrapper(self._conn.cursor(cursor_factory=RealDictCursor))
+
+    def commit(self):
+        self._conn.commit()
+
+    def close(self):
+        self._conn.close()
+
+
 @contextmanager
 def get_conn():
-    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
-    conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA foreign_keys = ON;")
+    db_url = os.getenv("DATABASE_URL")
+    if db_url:
+        conn = _PgConnWrapper(psycopg2.connect(db_url))
+    else:
+        conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+        conn.row_factory = sqlite3.Row
+        conn.execute("PRAGMA foreign_keys = ON;")
     try:
         yield conn
         conn.commit()
